@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            FLP Project
+        </title>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuVWoUT48yzX3XVAUCkS6m7b_f0AsicC4&libraries=places"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+    </head>
+    <body>
+        
+        <div id="title" class="titleDiv">
+            <h2 class="title">
+                G GeoCode and Weather Forecast by FLP
+            </h2>
+        </div>
+        
+        <div id="buttonDiv" class="div">
+            <input id="button" class="button" type="button" value="Start APP" onclick="getLocation()" />
+        </div>
+        
+        <div id="mapSearchDiv" class="div" style="display: none">
+            <input id="mapSearch" class="inputCamp" name="inputText" type="text" size="40" maxlength="200" placeholder="Cerca una citt&agrave" />
+        </div>
+        
+        <div id="map" style="width: 80%; height: 700px; margin-left: auto; margin-right: auto"></div>
+        
+        <div id="widgetDiv" class="widgetDiv" style="display: none">
+            <div class="weatherApp">
+                <div class="left">
+                    <div class="temperature"><span id="temperature"></span>&deg;C</div>
+                </div>	
+                <div class="right">
+                    <img style="width: 50px" id="icon" src="imgs/transparent.png" />
+                </div>
+                <div class="location">
+                    <span id="location"></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
