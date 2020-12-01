@@ -34,7 +34,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
     - Cybersecurity Resources: OWASP, DEFCON, PHRAK, IEEE S&P 
 1. *Brainstorming session - what is a cybersecure web app?* [lab 1h] 
     - Students
-      - (if) working individually, propose up to 10 keywords related to cybersecurity (using https://www.mentimeter.com/) [15m]
+      - (if) working individually, propose up to 10 keywords related to cybersecurity [15m]
       - (elif) working in group, propose (duckduckgo is your friend) a definition of cybersecurity (in the context of web apps) [30m]
     - Proposals Review & Open Discussion [45/30m]
 2. Coffee break [10m]
