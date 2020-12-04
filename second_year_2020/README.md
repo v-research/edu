@@ -3,7 +3,7 @@
 - Title: Introduction to Web Cybersecurity
 - Lecturers: Marco Rocchetto (marco@v-research.it) & Mattia Pacchin (mattia@v-research.it)
 - Students: ITS 2nd year (@311Verona)
-- When: 20h in December 2020 
+- When: December 2020 
 - Office hours: you can always drop us an email or just pass by our office (311Verona, 2nd floor, door on the left with "V-Research" printed on it) to talk about cybersecurity (or "the ultimate question of life, the Universe, and everything") but we'll be online at [this virtual room](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NmYxMzYzOGYtYWUxZi00OGI5LWI1NzYtZWFiZGIzZmVjNjM4%40thread.v2/0?context=%7b%22Tid%22%3a%22210f6a61-e517-4752-a4f1-ba8e00e939f2%22%2c%22Oid%22%3a%2218e4ff36-8bbb-44e3-8611-2af7dbb48ef0%22%7d) (via MS Teams) every Friday (4/11/18/25-December-2020 9.00-11.00) where you can just join and ask us some questions.
 
 ## Learning Outcomes
