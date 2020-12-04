@@ -13,11 +13,13 @@ No specific skill is required but the basic understanding of programming is pres
 Within the course, an introduction to the basic concepts of HTML, JavaScript, SQL will be provided.
 
 ## Course Material
+
 ### Learning Platforms
 - [OWASP WebGoat](https://owasp.org/www-project-webgoat/) as the reference learning platform
 - [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) as a "playground" where the students will test their cybersecurity skills and understanding
 - [XSS Game](https://xss-game.appspot.com/) as a "playground" for testing XSS skills
 - [Hacker101 CTF](https://ctf.hacker101.com/) as a first step towards CTFs
+
 ### Main Testing Tools Presented in the Course
 - [ZAP](https://www.zaproxy.org/)
 - [SQL-map](http://sqlmap.org/)
