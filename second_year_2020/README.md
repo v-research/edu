@@ -56,7 +56,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 3. *Cybersecurity Topic #2 - Path Traversal* [lab 30m]
     - WebGoat lesson (A1 - Injection -> Path Traversal) [30m]
 
-### [L2. 14-December-2020](./lesson_2) (Wednesday) [9.15-13.15]
+### [L2. 14-December-2020](./lesson_2) (Monday) [9.15-13.15]
 0. *Intro to JavaScript & HTML* [30m]
 1. *Cybersecurity Topic #3 - XSS*
     - XSS short intro [15m]
@@ -64,7 +64,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 2. Cofee break [10m]
 3. *[XSS Game](https://xss-game.appspot.com/)* [1h30m]
 
-### [L3. 16-December-2020](./lesson_3) (Monday) [9.15-13.15]
+### [L3. 16-December-2020](./lesson_3) (Wednesday) [9.15-13.15]
 0. *Crypto Overview & Integrity Deep Dive* [1h30m]
     - Steganography, Encryption & Decryption
     - Symmetric and Asymmetric Encryption
@@ -79,7 +79,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 3. *Cybersecurity Topic #5 - Broken Authentication*
     - WebGoat exercises [1h]
 
-### [L4. 21-December-2020](./lesson_4) (Wednesday) [9.15-13.15]
+### [L4. 21-December-2020](./lesson_4) (Monday) [9.15-13.15]
 0. *[OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)* [2h50m]
 1. Coffee break [10m]
 2. *Results Review & Discussion* [1h]
