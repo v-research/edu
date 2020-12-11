@@ -60,7 +60,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 0. *Intro to JavaScript & HTML* [30m]
 1. *Cybersecurity Topic #3 - XSS*
     - XSS short intro [15m]
-    - WebGoat exercises [1h]
+    - WebGoat exercises (A7 - Cross-site Scripting) [1h]
 2. Cofee break [10m]
 3. *[XSS Game](https://xss-game.appspot.com/)* [1h30m]
 
