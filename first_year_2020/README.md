@@ -39,11 +39,11 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
     - The HTTP protocol and the Client-Server architecture [15m]
     - Webgoat lesson (General->HTTPBasic) [1h30m]
       - ZAP HUD Tutorial [OPTIONAL]
-
 ##### Lesson 0 - Material
 - Lesson 0 - slide ([pdf](lesson_0/l0_slide.pdf), [odp](lesson_0/l0_slide.odp))
 - WebGoat & ZAP [installation](lesson_0/webgoat_zap_installation.odt)
  
+
 ### L1. 26-January-2021 (Tuesday) [14.15-18.15]
 0. *Cybersecurity Topic #1 - SQL-injection*  [theory 30m + lab 2h]
     - Intro to Databases and DBMS [15m]
@@ -53,19 +53,22 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 2. Open Discussion [30m]
 3. *Cybersecurity Topic #2 - Path Traversal* [lab 30m]
     - WebGoat lesson (A1 - Injection -> Path Traversal) [30m]
-
-#### LESSON 1 - MATERIAL
+##### Lesson 1 - Material
 - Lesson 1 - slide ([pdf](lesson_1/l1_slide.pdf), [odp]( lesson_1/l1_slide.odp))
 
-### [L2. 14-December-2020](./lesson_2) (Monday) [9.15-13.15]
+
+### L2. 1-February-2021 (Monday) [14.15-18.15]
 0. *Intro to JavaScript & HTML* [30m]
 1. *Cybersecurity Topic #3 - XSS*
     - XSS short intro [15m]
     - WebGoat exercises (A7 - Cross-site Scripting) [1h]
 2. Cofee break [10m]
 3. *[XSS Game](https://xss-game.appspot.com/)* [1h30m]
+##### Lesson 2 - Material
+- Lesson 2 - slide ([pdf](lesson_2/l2_slide.pdf), [odp]( lesson_2/l2_slide.odp))
 
-### [L3. 16-December-2020](./lesson_3) (Wednesday) [9.15-13.15]
+
+### L3. 9-February-2021 (Tuesday) [14.15-18.15]
 0. *Crypto Overview & Integrity Deep Dive* [1h30m]
     - Steganography, Encryption & Decryption
     - Symmetric and Asymmetric Encryption
@@ -79,13 +82,13 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
     - WebGoat lesson (A8:2013 Request Forgery) [1h]
 3. *Cybersecurity Topic #5 - Broken Authentication*
     - WebGoat exercises [1h]
+##### Lesson 3 - Material
+- Lesson 3 - slide ([pdf](lesson_3/l3_slide.pdf), [odp]( lesson_3/l3_slide.odp))
 
-### [L4. 21-December-2020](./lesson_4) (Monday) [9.15-13.15]
+
+### L4. 16-February-2021 (Tuesday) [14.15-18.15]
 0. *[OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)* [2h50m]
 1. Coffee break [10m]
 2. *Results Review & Discussion* [1h]
-
-### Extra
-0. *CTF & Bug Bounty Programs*
-1. *[Hacker101 CTF](https://ctf.hacker101.com/)* [3h]
-2. *Open Discussion* [1h]
+##### Lesson 4 - Material
+- Lesson 4 - slide ([pdf](lesson_4/l4_slide.pdf), [odp]( lesson_4/l4_slide.odp))
