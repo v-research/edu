@@ -1,5 +1,5 @@
 ### ITS@311Verona
-- [Intro to Cybersecurity](./first_year_2020) - First Year (2021)
+- [Intro to Web Cybersecurity](./first_year_2020) - First Year (2021)
 - [Intro to Web Cybersecurity](./second_year_2020) - Second Year (2020)
 
 ### University of Verona
