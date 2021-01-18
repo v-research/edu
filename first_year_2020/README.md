@@ -40,7 +40,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
     - Webgoat lesson (General->HTTPBasic) [1h30m]
       - ZAP HUD Tutorial [OPTIONAL]
 
-##### LESSON 0 - MATERIAL
+##### Lesson 0 - Material
 - Lesson 0 - slide ([pdf](lesson_0/l0_slide.pdf), [odp](lesson_0/l0_slide.odp))
 - WebGoat & ZAP [installation](lesson_0/webgoat_zap_installation.odt)
  
