@@ -47,7 +47,6 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 ### L1. 26-January-2021 (Tuesday) [14.15-18.15]
 0. *Cybersecurity Topic #1 - SQL-injection*  [theory 30m + lab 2h]
     - Intro to Databases and DBMS [15m]
-    - Introduction to [SQLmap with examples](https://www.youtube.com/user/inquisb/videos) [15m]
     - WebGoat lesson (A1 - Injection, path traversal excluded) [2h]
 1. Coffee break [10m] 
 2. Open Discussion [30m]
