@@ -40,7 +40,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
     - Webgoat lesson (General->HTTPBasic) [1h30m]
       - ZAP HUD Tutorial [OPTIONAL]
 ##### Lesson 0 - Material
-- Lesson 0 - slide ([pdf](lesson_0/l0_slide.pdf), [odp](lesson_0/l0_slide.odp))
+- Slide ([pdf](lesson_0/l0_slide.pdf), [odp](lesson_0/l0_slide.odp))
 - WebGoat & ZAP [installation](lesson_0/webgoat_zap_installation.odt)
  
 
@@ -54,7 +54,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 3. *Cybersecurity Topic #2 - Path Traversal* [lab 30m]
     - WebGoat lesson (A1 - Injection -> Path Traversal) [30m]
 ##### Lesson 1 - Material
-- Lesson 1 - slide ([pdf](lesson_1/l1_slide.pdf), [odp]( lesson_1/l1_slide.odp))
+- Slide ([pdf](lesson_1/l1_slide.pdf), [odp]( lesson_1/l1_slide.odp))
 
 
 ### L2. 1-February-2021 (Monday) [14.15-18.15]
@@ -65,7 +65,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 2. Cofee break [10m]
 3. *[XSS Game](https://xss-game.appspot.com/)* [1h30m]
 ##### Lesson 2 - Material
-- Lesson 2 - slide ([pdf](lesson_2/l2_slide.pdf), [odp]( lesson_2/l2_slide.odp))
+- Slide ([pdf](lesson_2/l2_slide.pdf), [odp]( lesson_2/l2_slide.odp))
 
 
 ### L3. 9-February-2021 (Tuesday) [14.15-18.15]
@@ -83,7 +83,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 3. *Cybersecurity Topic #5 - Broken Authentication*
     - WebGoat exercises [1h]
 ##### Lesson 3 - Material
-- Lesson 3 - slide ([pdf](lesson_3/l3_slide.pdf), [odp]( lesson_3/l3_slide.odp))
+- Slide ([pdf](lesson_3/l3_slide.pdf), [odp]( lesson_3/l3_slide.odp))
 
 
 ### L4. 16-February-2021 (Tuesday) [14.15-18.15]
@@ -91,4 +91,4 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 1. Coffee break [10m]
 2. *Results Review & Discussion* [1h]
 ##### Lesson 4 - Material
-- Lesson 4 - slide ([pdf](lesson_4/l4_slide.pdf), [odp]( lesson_4/l4_slide.odp))
+- Slide ([pdf](lesson_4/l4_slide.pdf), [odp]( lesson_4/l4_slide.odp))
