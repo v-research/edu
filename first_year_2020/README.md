@@ -3,7 +3,7 @@
 - Title: Introduction to Web Cybersecurity
 - Lecturers: Marco Rocchetto (marco@v-research.it) & Mattia Pacchin (mattia@v-research.it)
 - Students: ITS 1nd year (@311Verona)
-- When: January 2021
+- When: January-February 2021
 - Office hours: you can always drop us an email to schedule a 1 on 1 meeting. 
 
 ## Learning Outcomes
@@ -51,8 +51,6 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
     - WebGoat lesson (A1 - Injection, path traversal excluded) [2h]
 1. Coffee break [10m] 
 2. Open Discussion [30m]
-3. *Cybersecurity Topic #2 - Path Traversal* [lab 30m]
-    - WebGoat lesson (A1 - Injection -> Path Traversal) [30m]
 ##### Lesson 1 - Material
 - Slide ([pdf](lesson_1/l1_slide.pdf), [odp]( lesson_1/l1_slide.odp))
 
@@ -80,8 +78,6 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 1. Coffee break [10m]
 2. *Cybersecurity Topic #4 - CSRF*
     - WebGoat lesson (A8:2013 Request Forgery) [1h]
-3. *Cybersecurity Topic #5 - Broken Authentication*
-    - WebGoat exercises [1h]
 ##### Lesson 3 - Material
 - Slide ([pdf](lesson_3/l3_slide.pdf), [odp]( lesson_3/l3_slide.odp))
 
