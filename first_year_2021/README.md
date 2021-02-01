@@ -100,6 +100,3 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 0. *[OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)* [2h50m]
 1. Coffee break [10m]
 2. *Results Review & Discussion* [1h]
-
-##### Lesson 4 - Resources
-- Slide ([pdf](lesson_4/l4_slide.pdf), [odp]( lesson_4/l4_slide.odp))
