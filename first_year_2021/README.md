@@ -2,7 +2,7 @@
 
 - Title: Introduction to Web Cybersecurity
 - Lecturers: Marco Rocchetto (marco@v-research.it) & Mattia Pacchin (mattia@v-research.it)
-- Students: ITS 1nd year (@311Verona)
+- Students: ITS 1st year (@311Verona)
 - When: January-February 2021
 - Office hours: you can always drop us an email to schedule a 1 on 1 meeting. 
 
