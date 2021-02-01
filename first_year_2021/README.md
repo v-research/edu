@@ -24,7 +24,7 @@ clear understanding of what a cybersecure web application should look like.
 No specific skill is required but the basic understanding of programming is presupposed. 
 Within the course, an introduction to the basic concepts of HTML, JavaScript, SQL will be provided.
 
-## Course Material
+## Course Resources
 
 ### Learning Platforms
 - [OWASP WebGoat](https://owasp.org/www-project-webgoat/) as the reference learning platform
@@ -53,7 +53,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
     - Webgoat lesson (General->HTTPBasic) [1h30m]
       - ZAP HUD Tutorial [OPTIONAL]
 
-##### Lesson 0 - Material
+##### Lesson 0 - Resources
 - Slide ([pdf](lesson_0/l0_slide.pdf), [odp](lesson_0/l0_slide.odp))
 - WebGoat & ZAP [installation](lesson_0/webgoat_zap_installation.odt)
  
@@ -65,7 +65,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 1. Coffee break [10m] 
 2. Open Discussion [30m]
 
-##### Lesson 1 - Material
+##### Lesson 1 - Resources
 - Slide ([pdf](lesson_1/l1_slide.pdf), [odp]( lesson_1/l1_slide.odp))
 
 
@@ -77,7 +77,7 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 2. Cofee break [10m]
 3. *[XSS Game](https://xss-game.appspot.com/)* [1h30m]
 
-##### Lesson 2 - Material
+##### Lesson 2 - Resources
 - Slide ([pdf](lesson_2/l2_slide.pdf), [odp]( lesson_2/l2_slide.odp))
 
 
@@ -85,16 +85,14 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 0. *Crypto Overview & Integrity Deep Dive* [1h30m]
     - Steganography, Encryption & Decryption
     - Symmetric and Asymmetric Encryption
-    - Overview of Major Cryptographic Algorithms (RSA, AES, ...)
+    - Overview of Cryptographic Algorithms (One-Time Pad and RSA)
     - Attacks on Protocol Logic (man-in-the-middle, reflection, ...)
-    - Authenticated Key Agreement
-    - Trust, authentication, non-repudiation
-    - Are quantum channels & protocols of any help?
+    - Trust and Authentication (PKI)
 1. Coffee break [10m]
 2. *Cybersecurity Topic #4 - CSRF*
     - WebGoat lesson (A8:2013 Request Forgery) [1h]
 
-##### Lesson 3 - Material
+##### Lesson 3 - Resources
 - Slide ([pdf](lesson_3/l3_slide.pdf), [odp]( lesson_3/l3_slide.odp))
 
 
@@ -103,5 +101,5 @@ Within the course, an introduction to the basic concepts of HTML, JavaScript, SQ
 1. Coffee break [10m]
 2. *Results Review & Discussion* [1h]
 
-##### Lesson 4 - Material
+##### Lesson 4 - Resources
 - Slide ([pdf](lesson_4/l4_slide.pdf), [odp]( lesson_4/l4_slide.odp))
