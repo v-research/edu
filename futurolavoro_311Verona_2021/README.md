@@ -4,7 +4,7 @@
 - Lecturers: Marco Rocchetto (marco@v-research.it)
 - Students: Futurolavoro (@311Verona)
 - When: February 2021
-- Slides: [pdf](./futurolavoro_slides.pdf)[odp](./futurolavoro_slides.odp)
+- Slides: [pdf](./futurolavoro_slides.pdf), [odp](./futurolavoro_slides.odp)
 
 ## Learning Outcomes
 This mini-course gives an overview on the concepts of **confidentiality**, **integrity**, and **authentication**; along with a short introduction to **cryptography** (both symmetric and asymmetric), **hashing**, and **encoding**. Those concepts will then be implemented to guarantee the security of data (at-rest and in-transit) of an ad-hoc web application. Finally, we will study and implement state-of-the-art password policies.
