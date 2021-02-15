@@ -26,24 +26,28 @@ This mini-course gives an overview on the concepts of **confidentiality**, **int
 	- challenge **C3: how do we use hash functions?**
 	- Symmetric and Asymmetric Encryption (and Signing)
 3. *Secure Design 2* [lab]
-	- **challenge C3: propose techniques to preserve security properties**
+	- **challenge C4: propose techniques to preserve security properties**
 4. *Security Algorithms* [theory]
 	- openssl\_encrypt
 	- openssl_public\_encrypt (RSA)
-4. *Secure Coding* [lab]
-	- implement requirements
-5. *Security Testing* [theory]
-	- hashing passwords without salting?
-	- is there a known vulnerability in the algorithm you chose? (cve.mitre.org)
-	- no password policies?
-	- decrypt with lookup tables & brute force passwords after a db leak (john the ripper)
-	- ~is there a flaw in the logic of your authentication process?~
-6. *Security Mitigations* [theory]
+5. *Secure Coding* [lab]
+	- **challenge C5: implement security requirements**
+6. *Security Testing* [theory]
+	- is there a flaw in the logic of your authentication process?
+		- CIA information at-rest (db)
+		- CIA information in transit (client <-> server)
+	- is there a flaw in the implementation (code review)?
+		- hashing passwords without salting?
+		- is there a known vulnerability in the algorithm you chose? (cve.mitre.org)
+		- no password policies?
+		- decrypt with lookup tables & brute force passwords after a db leak (e.g. john the ripper)
+		- best practices (see [Resources](#Resources))
+7. *Security Mitigations* [theory]
 	- salting, peppering, and password policies
-7. *After-school*
+8. *After-school*
 	- use an external identity service provider (Google/Facebook)
 	- Use strong authentication (2FA, telegram bot)
-	- Availabilty & Denial of Service
+	- Availability & Denial of Service
 	- implement a "I'm not a bot"
 	- Accountability & OCSP (Online Certificate Status Protocol)
 
