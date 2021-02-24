@@ -14,6 +14,11 @@ Full Thesis Proposals (2020-2021) available in [pdf](./univr/v-research_thesis_2
 
 ### Internship Proposal
 
+1. *wanna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
+2. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internship/mrhide.md)
+3. *wanna read* -- Design, Implementation, and Testing of [Athena's Library](./internship/athenslib.md)
+3. *wanna socialize* -- Design, Implementation, and Testing of [HideJack](./internship/hidejack.md)
+
 ### Courses
 - [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) **-** [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
 - [Intro to Web Cybersecurity](./first_year_2021) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 1st Year (2021)
