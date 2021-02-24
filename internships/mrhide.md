@@ -7,9 +7,9 @@ We want to have a system/software that:
 
 #### Requirements (draft)
 
-*Authentication*: only those who are trusted should see the speaker in the video 
-*Confidentiality*: the image of the speaker should not be visible/understood while in transit but only at rest
-*Integrity*: the image of the speaker should be preserved during the transferring (in transit)
+- *Authentication*: only those who are trusted should see the speaker in the video
+- *Confidentiality*: the image of the speaker should not be visible/understood while in transit but only at rest
+- *Integrity*: the image of the speaker should be preserved during the transferring (in transit)
 
 #### Potentially useful links
 
