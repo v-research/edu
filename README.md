@@ -15,10 +15,10 @@ Full Thesis Proposals (2020-2021) available in [pdf](./univr/v-research_thesis_2
 ### Internship Proposal
 
 ### Courses
-- [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) - [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
-- [Intro to Web Cybersecurity](./first_year_2021) - [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 1st Year (2021)
-- [Intro to Web Cybersecurity](./second_year_2020) - [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 2nd Year (2020)
-- [Secure Software Development Lifecycle](./univr/lecture_univr_10Nov2020.pdf) - [Sofware-Security-Course](https://www.di.univr.it/?ent=oi&aa=2020%2F2021&codiceCs=S71&codins=4S003736&cs=417&discr=&discrCd=)@[UniVR](https://www.univr.it) (2020)
+- [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) **-** [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
+- [Intro to Web Cybersecurity](./first_year_2021) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 1st Year (2021)
+- [Intro to Web Cybersecurity](./second_year_2020) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 2nd Year (2020)
+- [Secure Software Development Lifecycle](./univr/lecture_univr_10Nov2020.pdf) **-** [Sofware-Security-Course](https://www.di.univr.it/?ent=oi&aa=2020%2F2021&codiceCs=S71&codins=4S003736&cs=417&discr=&discrCd=)@[UniVR](https://www.univr.it) (2020)
 
 ### Contacts
 - Marco Rocchetto (marco@v-research.it)
