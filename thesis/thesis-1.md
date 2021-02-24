@@ -51,8 +51,8 @@ Security Process Specification" requires a cybersecurity risk assessment of
 the design and "are the only Acceptable Means of Compliance (AMC) by
 FAA & EASA for aviation cybersecurity airworthiness certification, as of
 2019" as pointed out by SAE. Standards do not describe in detail how to
-perform a cybersecurity risk assessment and only vaguely define the overall objective, which can be summarized as to provide an understanding of
-the potential cybersecurity risks.
+perform a cybersecurity risk assessment and only vaguely define the overall objective, which can be summarized as to provide an understanding of the potential cybersecurity risks.
+
 In this thesis, the student will work on the correlation between the hypothesis that errors can be used as a measure of the cybersecirity risk and
 focus on one of the following (or whatever great ideas you have):
 
