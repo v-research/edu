@@ -16,6 +16,7 @@ that system so we can empirically test the predictions (i.e. trying to hack our
 way into the supposedly secure system). After, and only after, one can become
 the "momentary [cybersecurity] master of a fraction of a dot" or desperately
 hope in a "better luck next time".
+
 It is evident that an attack (an authentication bypass) is made possible by
 a vulnerability (a sql-injection) which, in turn, is made possible by an error
 somewhere in the design or implementation of a system (or procedure, e.g., an
