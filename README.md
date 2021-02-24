@@ -15,8 +15,10 @@ Full Thesis Proposals (2020-2021) available in [pdf](./univr/v-research_thesis_2
 ### Internship Proposal
 
 Internships are focused on creating something. But this something will be a way for us to interact.
-The project will be open-source so that you can share it with the world, proudly showing what you're capable of.
-As part of the internship, you'll have the opportunity to join our research activities and meetings.
+The project will be open-source so that you can share it with the world, proudly showing what you're capable of!
+We'll guide you through the engineering process, we'll teach you how to properly design and test your system. 
+We expect you to be able to implement a desing, but if you aren't able to properly write code you can still choose "wanna believe".
+As part of the internship, you'll also have the opportunity to join our research activities and meetings.
 
 1. *wanna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
 2. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internship/mrhide.md)
