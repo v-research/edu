@@ -42,11 +42,12 @@ If you are interested in helping us "carrying the [cybersecurity] stone", we'll
 share with you our paper on a theory of error (and we'd be happy to discuss it
 with you) and collaborate to one of the following thesis.
 
-# Pff... I'm a scientist, give me a challenge! -- An attacker model beyond the Dolev-Yao one
+## An attacker model beyond the Dolev-Yao
 
 If errors can be correlated to the engineering of
 system, where is the creativity of an hacker? Can we replace or confine
 its creativity into the boundaries of the engineering of systems?
+
 In this thesis, the student will:
 * be helped in building a useless transition system with the SMT solver Z3, so that she understands the basic principles behind the use of model checkers for the identification of cybersecurity attacks in security protocols,
 * study the symbolic model of attacker for the automated identification of attacks in security protocols,
