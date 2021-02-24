@@ -22,14 +22,20 @@ somewhere in the design or implementation of a system (or procedure, e.g., an
 authentication system).
 
 *A*: So, what if we had a system (or a piece of code) that is error-free?
+
 *B*: It's impossible!
+
 *A*: Ok, but what if? Wouldn't we have a secure system?
+
 *B*: Well, ok... you theorist! Is having an impossible secure system of any use?
+
 *A*: Maybe? While it's true that a human being cannot fly, it's also true that
 there are interesting approximations such as airplanes or the ESS. So, let's
 stop with the chattering and start building a trivial ("thanks" Rice... )
 system secure by trying predicting all its errors!
+
 *B*: Wait... what's an error?
+
 Sorry, "there's no royal road to science" and while it may be easy to grasp
 the path we're following, there's a bit of math that you've got to digest before.
 If you are interested in helping us "carrying the [cybersecurity] stone", we'll
