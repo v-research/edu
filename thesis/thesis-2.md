@@ -42,7 +42,7 @@ If you are interested in helping us "carrying the [cybersecurity] stone", we'll
 share with you our paper on a theory of error (and we'd be happy to discuss it
 with you) and collaborate to one of the following thesis.
 
-# I'm an engineer -- A formal approach to the engineering of security protocols and cyber-physical systems
+## A formal approach to the engineering of security protocols and cyber-physical systems
 
 The bulk of the question is, obviously, what you want to do with your system. Can you break it down to a
 number of functions so that we can try to predict errors at a microscopic
@@ -50,6 +50,7 @@ scale? This engineering is far from trivial, and you'll get to know how
 loosely defined are the specifications of systems, but it is always rewarding living those 5 seconds where the whole engineering seems just perfect,
 working... and then inevitable falling apart, down to "how could I believe
 that it was working!"
+
 In this thesis, the student will review current approaches and languages
 for the engineering of systems and security protocol. He will then focus
 on proposing all of the following:
