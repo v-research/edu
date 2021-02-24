@@ -22,21 +22,27 @@ somewhere in the design or implementation of a system (or procedure, e.g., an
 authentication system).
 
 *A*: So, what if we had a system (or a piece of code) that is error-free?
+
 *B*: It's impossible!
+
 *A*: Ok, but what if? Wouldn't we have a secure system?
+
 *B*: Well, ok... you theorist! Is having an impossible secure system of any use?
+
 *A*: Maybe? While it's true that a human being cannot fly, it's also true that
 there are interesting approximations such as airplanes or the ESS. So, let's
 stop with the chattering and start building a trivial ("thanks" Rice... )
 system secure by trying predicting all its errors!
+
 *B*: Wait... what's an error?
+
 Sorry, "there's no royal road to science" and while it may be easy to grasp
 the path we're following, there's a bit of math that you've got to digest before.
 If you are interested in helping us "carrying the [cybersecurity] stone", we'll
 share with you our paper on a theory of error (and we'd be happy to discuss it
 with you) and collaborate to one of the following thesis.
 
-# I'm a believer -- A quantitative but non-inductive approach to cyber-security risk assessment
+## A quantitative but non-inductive approach to cyber-security risk assessment
 
 Several standards mandate a secure-by-design
 approach in which cybersecurity shall be considered at the very early
@@ -49,15 +55,18 @@ perform a cybersecurity risk assessment and only vaguely define the overall obje
 the potential cybersecurity risks.
 In this thesis, the student will work on the correlation between the hypothesis that errors can be used as a measure of the cybersecirity risk and
 focus on one of the following (or whatever great ideas you have):
- choose a CPS type that she likes (automotive? aerospace?) and
-review a relevant cybersecurity (engineering) standard.
- review current research approaches to the cybersecurity risk assessment (e.g. CORAS)
+
+* choose a CPS type that she likes (automotive? aerospace?) and review a relevant cybersecurity (engineering) standard.
+* review current research approaches to the cybersecurity risk assessment (e.g. CORAS).
+
 Want more? We already reviewed many standards and approaches and we
 created our own risk assessment prototype, but we are still lacking many
 fundamental features such as:
- a proper formalization of asset diagrams (what the business guys
+
+* a proper formalization of asset diagrams (what the business guys
 want to protect) and their correlation to the engineering of systems
 (what the tech guys have built).
- Proper calculation of a risk matrix (likelihood and impact) – do you
+
+* Proper calculation of a risk matrix (likelihood and impact) – do you
 have an educated guess on the likelihood of an error and on the
 correlations to cybersecurity attacks?
