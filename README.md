@@ -12,7 +12,7 @@ If you don't know exactly what we mean, opt for "I'm a believer".
 
 Full Thesis Proposals (2020-2021) available in [pdf](./univr/v-research_thesis_2020-2021.pdf)
 
-### Internship Proposal
+### Internship Proposals
 
 Internships are focused on creating something. But this something will be a way for us to interact.
 The project will be open-source so that you can share it with the world, proudly showing what you're capable of!
