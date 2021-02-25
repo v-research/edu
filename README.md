@@ -14,8 +14,8 @@ Full Thesis Proposals (2020-2021) available in [pdf](./thesis/v-research_thesis_
 
 ### Internship Proposals
 
-Internships are focused on engineering new secure systems, following the model-based, secure-by-design methodology. 
-We'll guide you through the engineering process, teaching you how to properly design, implement, and test a system.
+Internships are focused on engineering new secure software/hardware systems, following the model-based, secure-by-design methodology. 
+You'll follow our engineering process, through the design, implementation, and testing phases.
 As part of the internship, you'll also have the opportunity to join our research activities and meetings.
 
 1. *wonna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
