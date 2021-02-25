@@ -10,7 +10,7 @@ If you don't know exactly what we mean, opt for "I'm a believer".
 2. *I'm an engineer* -- A formal approach to the engineering of security protocols and cyber-physical systems \[[read more](./thesis/thesis-2.md)\]
 3. *Pff... I'm a scientist, give me a challenge!* -- An attacker model beyond the Dolev-Yao one \[[read more](./thesis/thesis-3.md)\]
 
-Full Thesis Proposals (2020-2021) available in [pdf](./univr/v-research_thesis_2020-2021.pdf)
+Full Thesis Proposals (2020-2021) available in [pdf](./thesis/v-research_thesis_2020-2021.pdf)
 
 ### Internship Proposals
 
