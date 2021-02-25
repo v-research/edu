@@ -21,9 +21,9 @@ We expect you to be able to implement a desing, but if you aren't able to proper
 As part of the internship, you'll also have the opportunity to join our research activities and meetings.
 
 1. *wanna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
-2. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internship/mrhide.md)
-3. *wanna read* -- Design, Implementation, and Testing of [Athena's Library](./internship/athenslib.md)
-3. *wanna socialize* -- Design, Implementation, and Testing of [HideJack](./internship/hidejack.md)
+2. *wanna read* -- Design, Implementation, and Testing of [Athena's Library](./internship/athenslib.md)
+3. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internship/mrhide.md)
+4. *wanna socialize* -- Design, Implementation, and Testing of [HideJack](./internship/hidejack.md)
 
 ### Courses
 - [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) **-** [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
