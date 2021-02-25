@@ -36,5 +36,5 @@ As part of the internship, you'll also have the opportunity to join our research
 - Mattia Pacchin (mattia@v-research.it)
 
 ### Licenses
-- code under [MIT License](./LICENSE-code)
-- documents under [CC-SA License](./LICENSE-docs)
+- code under [MIT License](./LICENSE-code.txt)
+- documents under [CC-SA License](./LICENSE-docs.txt)
