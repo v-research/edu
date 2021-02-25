@@ -18,7 +18,7 @@ Internships are focused on engineering new secure software/hardware systems, fol
 You'll follow our engineering process, through the design, implementation, and testing phases.
 As part of the internship, you'll also have the opportunity to join our research activities and meetings.
 
-1. *wanna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
+1. *wanna believe* -- Conclude the "game" [the-practical-men](https://github.com/v-research/the-practical-men) (artistic or engineering challenge)
 2. *wanna read* -- Design, Implementation, and Testing of 311-library (TBA)
 3. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internships/mrhide.md)
 4. *wanna socialize* -- Design, Implementation, and Testing of HideJack (TBA)
