@@ -14,16 +14,14 @@ Full Thesis Proposals (2020-2021) available in [pdf](./thesis/v-research_thesis_
 
 ### Internship Proposals
 
-Internships are focused on creating something. But this something will be a way for us to interact.
-The project will be open-source so that you can share it with the world, proudly showing what you're capable of!
-We'll guide you through the engineering process, we'll teach you how to properly design and test your system. 
-We expect you to be able to implement a desing, but if you aren't able to properly write code you can still choose "wanna believe".
+Internships are focused on engineering new secure systems, following the model-based, secure-by-design methodology. 
+We'll guide you through the engineering process, teaching you how to properly design, implement, and test a system.
 As part of the internship, you'll also have the opportunity to join our research activities and meetings.
 
-1. *wanna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
-2. *wanna read* -- Design, Implementation, and Testing of 311-library (TBA)
-3. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internships/mrhide.md)
-4. *wanna socialize* -- Design, Implementation, and Testing of HideJack (TBA)
+1. *wonna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
+2. *wonna read* -- Design, Implementation, and Testing of 311-library (TBA)
+3. *wonna engineer* -- Design, Implementation, and Testing of [mr.hide](./internships/mrhide.md)
+4. *wonna socialize* -- Design, Implementation, and Testing of HideJack (TBA)
 
 ### Courses
 - [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) **-** [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
