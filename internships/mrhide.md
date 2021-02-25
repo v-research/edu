@@ -1,16 +1,7 @@
-## Vaguely defined objective
+mr.hide is a privacy preserving system and it can be used to make every videoconference system privacy-oriented. More specifically,
 
-We want to have a system/software that:
 1. during a live meeting, captures the video from the webcam,
-2. modifies the video so that the image of the speaker is hidden (e.g. completely black), and
-3. generates a token for each participant such that, if shared (e.g. via email), the image of the speaker becomes not-hidden
+2. modifies the video hiding the image of the speaker (e.g. blurring it), and
+3. generates one or more tokens that allows the listeners to un-hide the image of the speaker
 
-#### Requirements (draft)
-
-- *Authentication*: only those who are trusted should see the speaker in the video
-- *Confidentiality*: the image of the speaker should not be visible/understood while in transit but only at rest
-- *Integrity*: the image of the speaker should be preserved during the transferring (in transit)
-
-#### Potentially useful links
-
-* [Linux Fake Background](https://github.com/fangfufu/Linux-Fake-Background-Webcam)
+For more details plese send an email to marco@v-research.it
