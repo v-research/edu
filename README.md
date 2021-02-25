@@ -18,10 +18,10 @@ Internships are focused on engineering new secure software/hardware systems, fol
 You'll follow our engineering process, through the design, implementation, and testing phases.
 As part of the internship, you'll also have the opportunity to join our research activities and meetings.
 
-1. *wonna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
-2. *wonna read* -- Design, Implementation, and Testing of 311-library (TBA)
-3. *wonna engineer* -- Design, Implementation, and Testing of [mr.hide](./internships/mrhide.md)
-4. *wonna socialize* -- Design, Implementation, and Testing of HideJack (TBA)
+1. *wanna believe* -- Conclude the "game" [the-practical-men](https://thepracticalmen.v-research.it) (artistic or engineering challenge)
+2. *wanna read* -- Design, Implementation, and Testing of 311-library (TBA)
+3. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internships/mrhide.md)
+4. *wanna socialize* -- Design, Implementation, and Testing of HideJack (TBA)
 
 ### Courses
 - [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) **-** [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
