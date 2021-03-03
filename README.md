@@ -22,6 +22,7 @@ As part of the internship, you'll also have the opportunity to join our research
 2. *wanna read* -- Design, Implementation, and Testing of 311-library (TBA)
 3. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internships/mrhide.md)
 4. *wanna agriculture* -- Design, Implementation, and Testing of [green_office](./internships/green_office.md)
+5. *wanna encode* -- Design, Implementation, and Testing of [sha256](./internships/sha256.md)
 
 ### Courses
 - [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) **-** [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
