@@ -1,9 +1,12 @@
-**green_office** is an automatic irrigation system which allows us to check our plants status remotely.
+## System description 
 
-More specifically, 
-1. acquires data from humidity sensors,
-2. makes irrigation system works,
-3. understands when (after how many days) the plants need water (how much water?)
-4. generates one or more tokens that allows us to connect remotely to the system to check its status
+**green_office** is an offic-size, automatic irrigation system which helps us in keeping our plants happy & healty.
+
+More specifically, the system
+1. acquires data from the sensors (e.g. humidity) to check the helth status of the plants,
+2. controls (the actuators of) the irrigation system, 
+4. allows the user to remotely (and super-securely) control the status of the system, and plants.
+
+Please, remember that plants are living things and friend of us.
 
 For more details plese send an email to mattia@v-research.it
