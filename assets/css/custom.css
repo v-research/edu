@@ -1,0 +1,127 @@
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 14px;
+    color: #d28445;
+}
+
+.no-dec {
+    text-decoration: none;
+}
+
+/* header styles */
+.logo {
+    max-width: 100%;
+}
+
+.social-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 1em auto;
+}
+
+.first-social-icon {
+    margin-left: 1em;
+}
+
+.social-icon {
+    color: #ffff;
+}
+
+.nav-div {
+    margin-left: 1em;
+}
+
+.nav-i {
+    color: #d28445;
+    margin-left: 1em;
+}
+
+/* footer styles */
+.text-div {
+    font-size: 14px;
+}
+
+.t-margin {
+    margin-top: 2em;
+}
+
+/* index styles */
+.team-people {
+    margin: 2em 0;
+}
+
+.text-margin {
+    margin: 1em 0;
+}
+
+.orange {
+    color: #d28445;
+}
+
+/* modal styles */
+.modal-bio {
+    background-color: #1b1b1b;
+}
+
+.modal-icon {
+    color: #ffff;
+    margin-left: 1em;
+}
+
+.modal-close {
+    color: #ffff;
+}
+
+/* research */
+.sec-title {
+    font-size: 20px;
+}
+
+.desc-margin {
+    margin: 0 0 1em 0;
+}
+
+.h-selector {
+    padding-right: 0px;
+    max-width: fit-content;
+}
+
+/* contacts */
+.title-margin {
+    margin-bottom: 0.5em;
+}
+
+.b-cont-margin {
+    margin-bottom: 2em;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+    .team-people {
+        margin: 2em 0;
+        text-align: center;
+    }
+
+    .desc-margin {
+        margin: 1em 0;
+    }
+
+    .res-sec {
+        text-align: center;
+    }
+
+    .m-research-title {
+        font-size: 20px !important;
+    }
+
+    .m-research-text {
+        text-align: left;
+        margin-top: 0px;
+    }
+}
