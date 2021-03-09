@@ -10,7 +10,12 @@
     # bundle install
 
 ### how to load the website
-    # 1) go to website directory
-    # 2) build site for internal developing: bundle exec jekyll serve --incremental --livereload
+    # 1. go to website directory
+    # 2. build site for internal developing: bundle exec jekyll serve --incremental --livereload
 
 ### in includes folder you can find default custom layouts for header, navbar and footer
+
+### useful links:
+    1. https://github.com/pages-themes/hacker
+    2. https://jekyllrb.com/
+    3. https://jekyllrb.com/docs/variables/
