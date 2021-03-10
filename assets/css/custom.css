@@ -102,6 +102,26 @@ h4 {
     margin-bottom: 2em;
 }
 
+.path {
+    color: #d28445;
+    margin-left: 0;
+}
+
+.custom-header {
+    background: none;
+    border-bottom: none;
+}
+
+.header-border {
+    padding-bottom: 1.5em;
+    border-bottom: 1px dashed #b5e853;
+}
+
+.footer-border {
+    padding-top: 1.5em;
+    border-top: 1px dashed #b5e853;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
