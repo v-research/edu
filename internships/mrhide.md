@@ -1,3 +1,5 @@
+## System description 
+
 **mr.hide** is a privacy preserving system and it can be used to make every videoconference system privacy-oriented.
 
 More specifically,

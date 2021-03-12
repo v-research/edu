@@ -19,16 +19,16 @@ You'll follow our engineering process, through the design, implementation, and t
 As part of the internship, you'll also have the opportunity to join our research activities and meetings.
 
 1. *wanna believe* -- Conclude the "game" [the-practical-men](https://github.com/v-research/the-practical-men) (artistic or engineering challenge)
-2. *wanna read* -- Design, Implementation, and Testing of 311-library (TBA)
-3. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internships/mrhide.md)
-4. *wanna agriculture* -- Design, Implementation, and Testing of [green_office](./internships/green_office.md)
-5. *wanna encode* -- Design, Implementation, and Testing of [sha256](./internships/sha256.md)
+2. *wanna engineer* -- Design, Implementation, and Testing of [mr.hide](./internships/mrhide.md)
+3. *wanna agriculture* -- Design, Implementation, and Testing of [green_office](./internships/green_office.md)
+4. *wanna encode* -- Design, Implementation, and Testing of [sha256](./internships/sha256.md)
+5. *wanna read* -- Design, Implementation, and Testing of 311-library (TBA)
 
 ### Courses
 - [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) **-** [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
 - [Intro to Web Cybersecurity](./first_year_2021) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 1st Year (2021)
 - [Intro to Web Cybersecurity](./second_year_2020) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 2nd Year (2020)
-- [Secure Software Development Lifecycle](./univr/lecture_univr_10Nov2020.pdf) **-** [Sofware-Security-Course](https://www.di.univr.it/?ent=oi&aa=2020%2F2021&codiceCs=S71&codins=4S003736&cs=417&discr=&discrCd=)@[UniVR](https://www.univr.it) (2020)
+- [Secure Software Development Lifecycle](./univr/lecture_univr_10Nov2020.pdf) **-** [Software-Security-Course](https://www.di.univr.it/?ent=oi&aa=2020%2F2021&codiceCs=S71&codins=4S003736&cs=417&discr=&discrCd=)@[UniVR](https://www.univr.it) (2020)
 
 ### Contacts
 - Marco Rocchetto (marco@v-research.it)

