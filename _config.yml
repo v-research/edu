@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -60,10 +59,9 @@ github: [metadata]
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-=======
+
 theme: jekyll-theme-hacker
 title: V-Research Educational
 logo: https://repository-images.githubusercontent.com/293738808/29846400-2ff4-11eb-8a2e-d595a40f785e
 show_downloads: true
 google_analytics: UA-158261467-1
->>>>>>> f1964c0fcd6078de10beb2bdbe075b39a498c4e3
