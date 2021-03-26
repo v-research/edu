@@ -1,6 +1,6 @@
 ## System description 
 
-**green_office** is an offic-size, automatic irrigation system which helps us in keeping our plants happy & healty.
+**green_office** is an office-size, automatic irrigation system which helps us in keeping our plants happy & healty.
 
 More specifically, the system
 1. acquires data from the sensors (e.g. humidity) to check the helth status of the plants,
