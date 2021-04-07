@@ -12,6 +12,8 @@ If you don't know exactly what we mean, opt for "I'm a believer".
 
 Full Thesis Proposals (2020-2021) available in [pdf](./thesis/v-research_thesis_2020-2021.pdf)
 
+### [Developed Thesis <i class="fas fa-user-graduate"></i>](./thesis.html)
+
 ### Internship Proposals
 
 Internships are focused on engineering new secure software/hardware systems, following the model-based, secure-by-design methodology. 
@@ -23,6 +25,9 @@ As part of the internship, you'll also have the opportunity to join our research
 3. *wanna agriculture* -- Design, Implementation, and Testing of [green_office](./internships/green_office.md)
 4. *wanna encode* -- Design, Implementation, and Testing of [sha256](./internships/sha256.md)
 5. *wanna read* -- Design, Implementation, and Testing of 311-library (TBA)
+
+### [Work in Progress Internships <i class="fas fa-pencil-ruler"></i>](./wpInternships.html)
+### [Developed Internships <i class="fas fa-laptop-code"></i>](./devInternships.html)
 
 ### Courses
 - [Mini-course on Secure Webapp Engineering](./futurolavoro_311Verona_2021) **-** [Futurolavoro](https://sites.google.com/view/futurolavoro/corsi-in-partenza/web-app-penetration-testing?authuser=0&fbclid=IwAR1ruLxNOAcHos-4_FPebpB96R0mZMVhnAISkohkOLM9G6T3300PcBbUfb8)@[311Verona](https://311verona.com/) (2021)
