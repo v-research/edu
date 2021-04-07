@@ -30,6 +30,7 @@ instagram_username: "https://www.instagram.com/vresearch_it/"
 medium_username: "https://knowledgezero.medium.com/"
 facebook_username: "https://www.facebook.com/vresearch.it"
 youtube_username: "https://www.youtube.com/channel/UCmkVAd_HLXoE0OoDymGG7gw"
+github_sponsor: "https://github.com/sponsors/v-research"
 
 # Build settings
 theme: jekyll-theme-hacker
