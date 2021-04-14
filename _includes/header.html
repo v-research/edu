@@ -32,11 +32,26 @@
         </a>
     </div>
 
-    <div class="container header-border">
-        <img src="../images/bullet.png"> pwd <br>
+    <div class="container header-border small-header">
+        <img src="../images/bullet.png"> ls
+        <a class="expander" data-toggle="collapse" href="#nav" role="button" aria-expanded="false">
+            <i class="fas fa-plus social-icon" data-toggle="collapse" data-target="#nav"></i>
+        </a>
+        <div class="collapse" id="nav">
+            <div class="nav-div">
+                <a href="./index.html" class="nav-i">Home</a> <br>
+                <a href="./thesis.html" class="nav-i">Thesis</a> <br>
+                <a href="./internships.html" class="nav-i">Internships</a> <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container header-border big-header">
+        <img src="../images/bullet.png"> ls <br>
         <div class="nav-div">
-            <a href="../index.html" class="nav-i">edu /</a>
-            <a href="" class="path">{{ page.path }}</a>
+            <a href="../index.html" class="nav-i">Home</a>
+            <a href="../thesis.html" class="nav-i">Thesis</a>
+            <a href="../internships.html" class="nav-i">Internships</a>
         </div>
     </div>
 

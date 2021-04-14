@@ -1,5 +1,16 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     background: #03002e;
+}
+
+header {
+    margin-bottom: 1em;
 }
 
 h3 {
@@ -31,7 +42,7 @@ h4 {
 }
 
 .social-icon {
-    color: #ffff;
+    color: #ffffff;
 }
 
 .nav-div {
@@ -72,12 +83,12 @@ h4 {
 }
 
 .modal-icon {
-    color: #ffff;
+    color: #ffffff;
     margin-left: 1em;
 }
 
 .modal-close {
-    color: #ffff;
+    color: #ffffff;
 }
 
 /* research */
@@ -123,10 +134,17 @@ h4 {
     border-top: 1px dashed #b5e853;
 }
 
+.team-sec-border {
+    margin-bottom: 0px;
+}
+
+.super-bottom-margin {
+    margin-bottom: 4em;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+and (min-width : 320px) {
 /* Styles */
     .team-people {
         margin: 2em 0;
@@ -153,13 +171,77 @@ and (max-device-width : 480px) {
     .profile-name-margin {
         margin-top: 1em;
     }
+
+    .eng-text-m {
+        display: block;
+    }
+
+    .eng-text-d {
+        display: none;
+    }
+
+    .eng-graph-m {
+        display: block;
+    }
+
+    .eng-graph-d {
+        display: none;
+    }
+
+    .small-header {
+        display: block;
+    }
+    
+    .big-header {
+        display: none;
+    }
+
+    .nav-div {
+        margin-left: 2em;
+    }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
+/* Tablet ----------- */
+@media only screen
+and (min-width: 768px) {
+    /* styles */
+    .team-people {
+        margin: 2em 0;
+        text-align: left;
+    }
+
+    .eng-text-m {
+        display: none;
+    }
+
+    .eng-text-d {
+        display: block;
+    }
+
+    .eng-graph-m {
+        display: none;
+    }
+
+    .eng-graph-d {
+        display: block;
+        text-align: center;
+    }
+
+    .small-header {
+        display: none;
+    }
+
+    .big-header {
+        display: block;
+    }
+
+    .nav-div {
+        margin-left: 1em;
+    }
+}
+
+/* Desktop ----------- */
 @media only screen 
 and (min-width : 1281px) {
     /* styles */
-    .about-modal {
-        min-width: 900px;
-    }
 }
