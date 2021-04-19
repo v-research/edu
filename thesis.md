@@ -3,26 +3,32 @@ layout: default
 ---
 
 <div class="row super-bottom-margin">
-<h3>Thesis Proposals</h3>
+    <h3 class="text-center w-100">Thesis Proposals</h3>
+    <p>
+        In the following we list three thesis which should be interpreted more as areas where the student will start her journey, rather than a "point" that the student should follow. In other words, we expect you to build and propose your own views on the subjects, to critically analyze your steps and... ours too. If you don't know exactly what we mean, opt for "I'm a believer".
+    </p>
+    <ul>
+        <li>
+            <i>I'm a believer</i> -- A quantitative but non-inductive approach to cyber-security risk assessment
+            <a href="./thesis/thesis-1.html">read more</a>
+        </li>
+        <li>
+            <i>I'm an engineer</i> -- A formal approach to the engineering of security protocols and cyber-physical systems
+            <a href="./thesis/thesis-2.html">read more</a>
+        </li>
+        <li>
+            <i>Pff... I'm a scientist, give me a challenge!</i> -- An attacker model beyond the Dolev-Yao one
+            <a href="./thesis/thesis-3.html">read more</a>
+        </li>
+    </ul>
+    <p>
+        Full Thesis Proposals (2020-2021) available in <a href="./thesis/v-research_thesis_2020-2021.pdf">pdf</a>
+    </p>
+</div>
 
-In the following we list three thesis which should be interpreted more as areas
-where the student will start her journey, rather than a "point" that the
-student should follow. In other words, we expect you to build and propose your
-own views on the subjects, to critically analyze your steps and... ours too.
-If you don't know exactly what we mean, opt for "I'm a believer".
+<h3 class="text-center w-100 team-sec-border"> Students <i class="fas fa-user-graduate"></i> </h3>
 
-<ul>
-<li><b>I'm a believer</b> -- A quantitative but non-inductive approach to cyber-security risk assessment \[[read more](./thesis/thesis-1.md)\]</li>
-<li><b>I'm an engineer</b> -- A formal approach to the engineering of security protocols and cyber-physical systems \[[read more](./thesis/thesis-2.md)\]</li>
-<li><b>Pff... I'm a scientist, give me a challenge!</b> -- An attacker model beyond the Dolev-Yao one \[[read more](./thesis/thesis-3.md)\]</li>
-</ul>
-
-Full Thesis Proposals (2020-2021) available in [pdf](./thesis/v-research_thesis_2020-2021.pdf)
-</div> 
-
-<div class="row team-people">
-<h3> Students <i class="fas fa-user-graduate"></i> </h3>
-
+<div class="row team-people m-top-z">
     <!-- Alessandro Busatto -->
     <div class="row team-people">
         <div class="col-12 col-sm-3">
