@@ -14,5 +14,95 @@ As part of the internship, you'll also have the opportunity to join our research
 4. *wanna encode* -- Design, Implementation, and Testing of [sha256](./internships/sha256.md)
 5. *wanna read* -- Design, Implementation, and Testing of 311-library (TBA)
 
-### [Work in Progress Internships <i class="fas fa-pencil-ruler"></i>](./wpInternships.html)
-### [Developed Internships <i class="fas fa-laptop-code"></i>](./devInternships.html)
+### Internship Students <i class="fas fa-laptop-code"></i>
+
+<!-- Alessia Gennari -->
+<div class="row team-people">
+    <div class="col-12 col-sm-3">
+        <img src="images/">
+    </div>
+    <div class="col-12 col-sm-9 profile-name-margin">
+        <h3>
+            <a href="" target="blank" class="orange">
+                Alessia Gennari - 2021<br>wanna encode
+            </a>
+        </h3>
+        <p class="text-margin">
+            Text here
+        </p>
+        <a href="" target="blank">
+            <i class="fab fa-linkedin fa-lg social-icon"></i>
+        </a>
+        <a href="" target="blank">
+            <i class="fab fa-github fa-lg social-icon"></i>
+        </a>
+        <a href="" target="blank">
+            <i class="fab fa-facebook-f fa-lg social-icon"></i>
+        </a>
+        <a href="mailto: " target="blank">
+            <i class="fas fa-envelope fa-lg social-icon"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Mattia Pacchin -->
+<div class="row team-people">
+    <div class="col-12 col-sm-3">
+        <img src="images/">
+    </div>
+    <div class="col-12 col-sm-9 profile-name-margin">
+        <h3>
+            <a href="" target="blank" class="orange">
+                Mattia Pacchin - 2021<br>wanna agriculture
+            </a>
+        </h3>
+        <p class="text-margin">
+            Text here
+        </p>
+        <a href="" target="blank">
+            <i class="fab fa-linkedin fa-lg social-icon"></i>
+        </a>
+        <a href="" target="blank">
+            <i class="fab fa-github fa-lg social-icon"></i>
+        </a>
+        <a href="" target="blank">
+            <i class="fab fa-facebook-f fa-lg social-icon"></i>
+        </a>
+        <a href="mailto: " target="blank">
+            <i class="fas fa-envelope fa-lg social-icon"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Michele Pasetto -->
+<div class="row team-people">
+    <div class="col-12 col-sm-3">
+        <img src="images/">
+    </div>
+    <div class="col-12 col-sm-9 profile-name-margin">
+        <h3>
+            <a href="" target="blank" class="orange">
+                Michele Pasetto - 2021<br>wanna engineer
+            </a>
+        </h3>
+        <p class="text-margin">
+            Text here
+        </p>
+        <a href="" target="blank">
+            <i class="fab fa-linkedin fa-lg social-icon"></i>
+        </a>
+        <a href="" target="blank">
+            <i class="fab fa-github fa-lg social-icon"></i>
+        </a>
+        <a href="" target="blank">
+            <i class="fab fa-facebook-f fa-lg social-icon"></i>
+        </a>
+        <a href="mailto: " target="blank">
+            <i class="fas fa-envelope fa-lg social-icon"></i>
+        </a>
+    </div>
+</div>
+
+
+
+<!--### Developed Internships <i class="fas fa-laptop-code"></i>-->

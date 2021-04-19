@@ -18,48 +18,34 @@ Full Thesis Proposals (2020-2021) available in [pdf](./thesis/v-research_thesis_
 
 ### Developed Thesis <i class="fas fa-user-graduate"></i>
 
-<!-- Marco -->
+<!-- Alessandro Busatto -->
 <div class="row team-people">
     <div class="col-12 col-sm-3">
         <img src="images/">
     </div>
     <div class="col-12 col-sm-9 profile-name-margin">
-        <h3 class="orange">
-            Alessandro Busatto - 2021 <br> Verifica automatica e formale di protocolli di sicurezza descritti attraverso modelli UML
+        <h3>
+            <a href="https://github.com/v-research/edu_internal/tree/alessandro" target="blank" class="orange">
+                Alessandro Busatto - 2021 <br> Verifica automatica e formale di protocolli di sicurezza descritti attraverso modelli UML
+            </a>
         </h3>
         <p class="text-margin">
-            I love my family, reading, theoretical works, scientific quests, formal methods, cybersecurity, and philosophy. I truly hate wasting my time sleeping. <br>
+            Text here
         </p>
-        <a href="https://github.com/v-research/edu_internal/tree/alessandro" target="blank">
-            Read more
+        <a href="https://www.linkedin.com/in/busattoale/" target="blank">
+            <i class="fab fa-linkedin fa-lg social-icon"></i>
+        </a>
+        <a href="https://github.com/busattoale" target="blank">
+            <i class="fab fa-github fa-lg social-icon"></i>
+        </a>
+        <a href="https://twitter.com/busattoale96" target="blank">
+            <i class="fab fa-twitter fa-lg social-icon"></i>
+        </a>
+        <a href="https://www.facebook.com/BusattoAle/" target="blank">
+            <i class="fab fa-facebook-f fa-lg social-icon"></i>
+        </a>
+        <a href="mailto: busatto.alessandro96@gmail.com" target="blank">
+            <i class="fas fa-envelope fa-lg social-icon"></i>
         </a>
     </div>
 </div>
-
-<a href="" target="blank">
-    <i class="fas fa-user fa-lg social-icon"></i>
-</a>
-<a href="" target="blank">
-    <i class="fab fa-linkedin fa-lg social-icon"></i>
-</a>
-<a href="" target="blank">
-    <i class="fab fa-github fa-lg social-icon"></i>
-</a>
-<a href="" target="blank">
-    <i class="fab fa-twitter fa-lg social-icon"></i>
-</a>
-<a href="" target="blank">
-    <i class="fab fa-facebook-f fa-lg social-icon"></i>
-</a>
-<a href="" target="blank">
-    <i class="fas fa-envelope fa-lg social-icon"></i>
-</a>
-<a href="" target="blank">
-    <i class="fas fa-stamp fa-lg social-icon"></i>
-</a>
-<a href="" target="blank">
-    <i class="fas fa-book fa-lg social-icon"></i>
-</a>
-<a href="" target="blank">
-    <i class="fas fa-graduation-cap fa-lg social-icon"></i>
-</a>
