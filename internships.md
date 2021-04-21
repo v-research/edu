@@ -18,7 +18,7 @@ layout: default
             <i>wanna agriculture</i> -- Design, Implementation, and Testing of <a href="./internships/green_office.html">green_office</a>
         </li>
         <li>
-            <i>wanna encode</i> -- Design, Implementation, and Testing of <a href="./internships/sha256">sha256</a>
+            <i>wanna encode</i> -- Design, Implementation, and Testing of <a href="./internships/sha256.html">sha256</a>
         </li>
         <li>
             <i>wanna read</i> -- Design, Implementation, and Testing of 311-library (TBA)
@@ -31,24 +31,21 @@ layout: default
 <!-- Alessia Gennari -->
 <div class="row team-people">
     <div class="col-12 col-sm-3">
-        <img src="images/">
+        <img src="images/alessia.png">
     </div>
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
             Alessia Gennari - 2021<br>
-            <a href="" target="blank">wanna encode</a>
+            <a href="./internships/sha256.html" target="blank">wanna encode</a>
         </h3>
-        <a href="" target="blank">
-            <i class="fab fa-linkedin fa-lg social-icon"></i>
-        </a>
-        <a href="" target="blank">
+        <a href="https://github.com/aliasalia" target="blank">
             <i class="fab fa-github fa-lg social-icon"></i>
         </a>
-        <a href="" target="blank">
-            <i class="fab fa-facebook-f fa-lg social-icon"></i>
+        <a href="https://www.linkedin.com/in/alessia-gennari-4977341b5/" target="blank">
+            <i class="fab fa-linkedin fa-lg social-icon"></i>
         </a>
-        <a href="mailto: " target="blank">
-            <i class="fas fa-envelope fa-lg social-icon"></i>
+        <a href="https://www.instagram.com/alessiagennari_/" target="blank">
+            <i class="fab fa-instagram fa-lg social-icon"></i>
         </a>
     </div>
 </div>
@@ -61,7 +58,7 @@ layout: default
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
             Stefan Manole - 2021<br>
-            <a href="https://github.com/v-research/olympia-project" target="blank">olympia project</a>
+            <!--<a href="https://github.com/v-research/olympia-project" target="blank">-->olympia project<!--</a>-->
         </h3>
         <a href="" target="blank">
             <i class="fab fa-linkedin fa-lg social-icon"></i>
@@ -86,7 +83,7 @@ layout: default
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
             Mattia Pacchin - 2021<br>
-            <a href="" target="blank">wanna agriculture</a>
+            <a href="./internships/green_office.html" target="blank">wanna agriculture</a>
         </h3>
         <a href="https://github.com/PacMat99" target="blank">
             <i class="fab fa-github fa-lg social-icon"></i>
