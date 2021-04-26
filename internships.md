@@ -53,24 +53,15 @@ layout: default
 <!-- Stefan Manole -->
 <div class="row team-people">
     <div class="col-12 col-sm-3">
-        <img src="images/">
+        <img src="images/stefan.png">
     </div>
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
             Stefan Manole - 2021<br>
             <!--<a href="https://github.com/v-research/olympia-project">-->olympia project<!--</a>-->
         </h3>
-        <a href="" target="blank">
-            <i class="fab fa-linkedin fa-lg social-icon"></i>
-        </a>
-        <a href="" target="blank">
-            <i class="fab fa-github fa-lg social-icon"></i>
-        </a>
-        <a href="" target="blank">
+        <a href="https://www.facebook.com/Olympia-Project-103479998553893" target="blank">
             <i class="fab fa-facebook-f fa-lg social-icon"></i>
-        </a>
-        <a href="mailto: " target="blank">
-            <i class="fas fa-envelope fa-lg social-icon"></i>
         </a>
     </div>
 </div>
