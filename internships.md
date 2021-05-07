@@ -5,11 +5,14 @@ layout: default
 <div class="row super-bottom-margin">
     <h3 class="text-center w-100">Internship Proposals</h3>
     <p>
-        Internships are focused on engineering new secure software/hardware systems, following the model-based, secure-by-design methodology. You'll follow our engineering process, through the design, implementation, and testing phases. As part of the internship, you'll also have the opportunity to join our research activities and meetings.
+        Internships are focused on engineering new secure software/hardware systems, following the model-based, secure-by-design methodology. You'll (partially) follow our <a href="images/methodology-activity-UML.png" target="_parent">simplified engineering process</a>, through the design, implementation, and testing phases. As part of the internship, you'll also have the opportunity to join our research activities and meetings, to have a coffee with us discussing philosophico-poetical aspects of life, <a href="research.html">because</a>!
+    </p>
+    <p>
+	Here we list some representative examples, but you can always propose your own project!
     </p>
     <ul>
         <li>
-            <i>wanna believe</i> -- Conclude the "game" <a href="https://github.com/v-research/the-practical-men" target="blank">the-practical-men</a> (artistic or engineering challenge)
+            <i>wanna believe</i> -- Conclude the "game" <a href="https://www.thepracticalmen.com" target="blank">the-practical-men</a> (artistic or engineering challenge)
         </li>
         <li>
             <i>wanna engineer</i> -- Design, Implementation, and Testing of <a href="./internships/mrhide.html">mr.hide</a>
@@ -58,7 +61,7 @@ layout: default
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
             Stefan Manole - 2021<br>
-            <!--<a href="https://github.com/v-research/olympia-project">-->olympia project<!--</a>-->
+            <a href="https://github.com/v-research/olympia-project">olympia project</a>
         </h3>
         <a href="https://www.facebook.com/Olympia-Project-103479998553893" target="blank">
             <i class="fab fa-facebook-f fa-lg social-icon"></i>
