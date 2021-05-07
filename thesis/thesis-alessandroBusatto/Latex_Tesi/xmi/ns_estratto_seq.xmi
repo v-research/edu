@@ -1,0 +1,52 @@
+  <packagedElement 
+  	xmi:type="uml:Class" 
+  	xmi:id="_WmudZWlZEeunebkXFN4K9w" 
+  	name="FunctionalBlock"
+  />
+  <packagedElement 
+  	xmi:type="uml:Class" 
+  	xmi:id="_WmudZ2lZEeunebkXFN4K9w" 
+  	name="InputPort"
+  />
+  <packagedElement 
+  	xmi:type="uml:Class" 
+  	xmi:id="_WmudaGlZEeunebkXFN4K9w" 
+  	name="OutputPort"
+  />
+  
+  <packagedElement 
+    xmi:type="uml:Lifeline"  
+    xmi:id="_WmudeWlZEeunebkXFN4K9w" 
+    name="NetworkIPort" 
+    type="_WmudZ2lZEeunebkXFN4K9w" 
+    aggregation="composite"
+  />
+  <packagedElement xmi:type="uml:Lifeline"  
+  	xmi:id="_WmudemlZEeunebkXFN4K9w" 
+  	name="decryption" 
+  	type="_WmudZWlZEeunebkXFN4K9w" 
+  	aggregation="composite"
+  />
+  <packagedElement 
+  	xmi:type="uml:Lifeline"  
+  	xmi:id="_Wmude2lZEeunebkXFN4K9w" 
+  	name="NetworkOPort" 
+  	type="_WmudaGlZEeunebkXFN4K9w" 
+  	aggregation="composite"
+  />
+      
+  <packagedElement 
+  	xmi:type="uml:InformationFlow" 
+  	xmi:id="_WmudkWlZEeunebkXFN4K9w" 
+  	name="{a.nonce, b.name, SymKey(a,b), {a.name,SymKey(a,b)}_SharedKey(b,s)}_SharedKey(a,s)" 
+  	informationSource="_WmudeWlZEeunebkXFN4K9w" 
+  	informationTarget="_WmudemlZEeunebkXFN4K9w"
+  />
+  <packagedElement 
+  	xmi:type="uml:InformationFlow" 
+  	xmi:id="_WmudkmlZEeunebkXFN4K9w" 
+  	name="{a.name,SymKey(a,b)}_SharedKey(b,s)" 
+  	informationSource="_WmudemlZEeunebkXFN4K9w" 
+  	informationTarget="_Wmude2lZEeunebkXFN4K9w"
+  />
+    

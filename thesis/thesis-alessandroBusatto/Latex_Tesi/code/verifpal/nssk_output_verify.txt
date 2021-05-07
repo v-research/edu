@@ -1,0 +1,32 @@
+confidentiality? k_ir
+  k_ir (k_ir) is obtained by Attacker. 
+  
+confidentiality? n_r_minus_one
+  n_r_minus_one (HASH(AEAD_DEC(SPLIT(AEAD_DEC(k_is, AEAD_ENC(k_is, CONCAT(n_i, k_ir, r_name, AEAD_ENC(k_rs, CONCAT(k_ir, i_name), nil)), nil), nil)), AEAD_ENC(SPLIT(AEAD_DEC(k_rs, SPLIT(AEAD_DEC(k_is, AEAD_ENC(k_is, CONCAT(n_i, k_ir, r_name, AEAD_ENC(k_rs, CONCAT(k_ir, i_name), nil)), nil), nil)), nil)), n_r, nil), nil))) is obtained by Attacker. 
+  
+authentication?  -> : e_n_r_minus_one
+ When: 
+     i_name $\rightarrow$ nil $\leftarrow$ mutated by Attacker (originally i_name) 
+     r_name $\rightarrow$ nil $\leftarrow$ mutated by Attacker (originally r_name) 
+     n_i $\rightarrow$ nil $\leftarrow$ mutated by Attacker (originally n_i) 
+     k_ir $\rightarrow$ nil $\leftarrow$ mutated by Attacker (originally k_ir) 
+     e_recipient $\rightarrow$ AEAD_ENC(k_rs, CONCAT(k_ir, nil), nil) 
+     e_initiator $\rightarrow$ i_name $\leftarrow$ mutated by Attacker (originally AEAD_ENC(k_is, CONCAT(n_i, k_ir, r_name, e_recipient), nil)) 
+     e_initiator_dec $\rightarrow$ AEAD_DEC(k_is, i_name, nil) 
+     n_i_response $\rightarrow$ SPLIT(AEAD_DEC(k_is, i_name, nil)) 
+     k_ir_initiator $\rightarrow$ SPLIT(AEAD_DEC(k_is, i_name, nil)) 
+     r_name_initiator $\rightarrow$ SPLIT(AEAD_DEC(k_is, i_name, nil)) 
+     e_recipient_initiator $\rightarrow$ n_i $\leftarrow$ mutated by Attacker (originally SPLIT(e_initiator_dec)) 
+     unnamed_0 $\rightarrow$ ASSERT(n_i, SPLIT(AEAD_DEC(k_is, i_name, nil))) 
+     unnamed_1 $\rightarrow$ ASSERT(r_name, SPLIT(AEAD_DEC(k_is, i_name, nil))) 
+     e_recipient_dec $\rightarrow$ AEAD_DEC(k_rs, n_i, nil) 
+     k_ir_recipient $\rightarrow$ SPLIT(AEAD_DEC(k_rs, n_i, nil)) 
+     i_name_recipient $\rightarrow$ SPLIT(AEAD_DEC(k_rs, n_i, nil)) 
+     e_n_r $\rightarrow$ AEAD_ENC(SPLIT(AEAD_DEC(k_rs, n_i, nil)), n_r, nil) 
+     n_r_initiator $\rightarrow$ AEAD_DEC(SPLIT(AEAD_DEC(k_is, i_name, nil)), AEAD_ENC(SPLIT(AEAD_DEC(k_rs, n_i, nil)), n_r, nil), nil) 
+     n_r_minus_one $\rightarrow$ HASH(AEAD_DEC(SPLIT(AEAD_DEC(k_is, i_name, nil)), AEAD_ENC(SPLIT(AEAD_DEC(k_rs, n_i, nil)), n_r, nil), nil)) 
+     e_n_r_minus_one $\rightarrow$ AEAD_ENC(SPLIT(AEAD_DEC(k_rs, n_i, nil)), n_r, nil) $\leftarrow$ mutated by Attacker (originally AEAD_ENC(k_ir_initiator, n_r_minus_one, nil)) 
+     n_r_minus_one_recipient $\rightarrow$ n_r $\leftarrow$ obtained by Attacker 
+     unnamed_2 $\rightarrow$ ASSERT(n_r, HASH(n_r)) 
+     e_n_r_minus_one (AEAD_ENC(SPLIT(AEAD_DEC(k_rs, n_i, nil)), n_r, nil)), sent by Attacker and not by Initiator, is successfully used in AEAD_DEC(SPLIT(AEAD_DEC(k_rs, n_i, nil)), AEAD_ENC(SPLIT(AEAD_DEC(k_rs, n_i, nil)), n_r, nil), nil) within Recipient's state. 
+  

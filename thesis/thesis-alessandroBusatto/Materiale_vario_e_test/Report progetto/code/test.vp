@@ -1,0 +1,13 @@
+attacker[active]
+ 
+principal Initiator[
+	knows private m
+]
+
+principal Recipient[]
+ 
+Initiator -> Recipient : m
+ 
+queries[
+	confidentiality? m
+]

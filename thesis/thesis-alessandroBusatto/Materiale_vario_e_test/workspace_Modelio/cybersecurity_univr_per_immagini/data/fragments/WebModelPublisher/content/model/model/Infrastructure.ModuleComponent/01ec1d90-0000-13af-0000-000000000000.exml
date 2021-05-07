@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="WebModelPublisher" version="4">
+  <OBJECT>
+    <ID name="WebModelPublisher" mc="Infrastructure.ModuleComponent" uid="01ec1d90-0000-13af-0000-000000000000"/>
+    <ATTRIBUTES>
+      <ATT name="LicenseKey">0</ATT>
+      <ATT name="MajVersion">4</ATT>
+      <ATT name="MinVersion">10</ATT>
+      <ATT name="MinMinVersion"><![CDATA[1]]></ATT>
+      <ATT name="MinBinVersionCompatibility"></ATT>
+      <ATT name="JavaClassName"><![CDATA[com.modelio.module.webmodelpublisher.impl.WebModelPublisherModule]]></ATT>
+      <ATT name="Name"><![CDATA[WebModelPublisher]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,38 @@
+attacker[active]
+
+ principal A[
+    knows private ar_hrd, ar_pro, ar_hln, type_req, ar_sha
+    generates ip
+    info_protocol_a = CONCAT(ar_hrd, ar_pro, ar_hln, type_req)
+    info_address_a = CONCAT(ar_sha, nil, nil, ip)
+    probe = CONCAT(info_protocol_a,info_address_a)
+]
+
+A -> B :  probe
+
+principal B[
+    knows public ip_used, sha_used
+    knows private type_reply
+    in_prot_a, in_add_a=SPLIT(probe)
+    ar_hrd_a, ar_pro_a, ar_hln_a, type_req_a = SPLIT(in_prot_a)
+    ar_sha_a, _, _, ar_tpa_a = SPLIT(in_add_a)
+    info_protocol_b=CONCAT(ar_hrd_a, ar_pro_a, ar_hln_a, type_reply)
+    info_address_b = CONCAT(ar_sha_a, ip_used, sha_used, ip_used)
+    reply = CONCAT(info_protocol_b,info_address_b)
+]
+
+B -> A : reply
+
+principal A[
+    _, info_reply=SPLIT(reply)
+    _,_,ar_tha_reply,_=SPLIT(info_reply)
+    _=ASSERT(ar_sha,ar_tha_reply)
+]
+
+
+queries[
+   confidentiality? probe
+   confidentiality? reply
+   authentication? A -> B: probe
+   authentication? B -> A: reply
+]

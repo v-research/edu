@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="RootDataModel" version="4">
+  <OBJECT>
+    <ID name="RootDataModel" mc="Infrastructure.Stereotype" uid="c25c83ae-559e-11de-b5f2-0014224f9977"/>
+    <PID name="PersistentProfile" mc="Infrastructure.Profile" uid="b584e36a-51a9-11de-9aed-0014224f9977"/>
+    <ATTRIBUTES>
+      <ATT name="Image"><![CDATA[res/PersistentProfile/RootDataModel16.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/PersistentProfile/RootDataModel16.png]]></ATT>
+      <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="LabelKey"><![CDATA[%stereotype.RootDataModel.label]]></ATT>
+      <ATT name="BaseClassName"><![CDATA[Standard.Package]]></ATT>
+      <ATT name="Name"><![CDATA[RootDataModel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

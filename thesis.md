@@ -35,11 +35,9 @@ layout: default
             <img src="images/alessandro-busatto.png">
         </div>
         <div class="col-12 col-sm-9 profile-name-margin">
-            <h3> Alessandro Busatto - 2021 <br> 
-                <a href="https://github.com/v-research/edu_internal/tree/alessandro" target="blank">
-                    Verifica automatica e formale di protocolli di sicurezza descritti attraverso modelli UML
-                </a>
-            </h3>
+            <h3> Alessandro Busatto - 2021 </h3>
+                <p>Thesis (ITA only): Verifica automatica e formale di protocolli di sicurezza descritti attraverso modelli UML
+                [<a href="thesis/thesis-alessandroBusatto/Latex_Tesi/main/main.pdf" target="blank">pdf</a>, <a href="https://github.com/v-research/edu/tree/master_private/thesis/thesis-alessandroBusatto/">resources</a>]</p>
             <a href="https://www.linkedin.com/in/busattoale/" target="blank">
                 <i class="fab fa-linkedin fa-lg social-icon"></i>
             </a>

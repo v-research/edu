@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<ram-component manifest-version="2.0.02" name="SIDefinitions" version="3" release="8" clevel="1" modelioVersion="3.8.00" provider="SysML Architect module">
+  <description><![CDATA[<p>Model Library for Quantity Kinds and Units (SysML 1.2)</p>
+]]></description>
+  <dependencies></dependencies>
+  <contributors>
+    <contributor name="ModelerModule" version="9.0.04"/>
+    <contributor name="SysMLArchitect" version="3.8.00"/>
+  </contributors>
+  <metamodels>
+    <metamodel name="Infrastructure" version="2.1.02"/>
+    <metamodel name="Standard" version="2.3.00"/>
+  </metamodels>
+  <roots>
+    <root metaclass="Standard.Project" name="SIDefinitions" uuid="dc38fa0a-a70f-4d42-af4d-217787b3ecc8"/>
+  </roots>
+</ram-component>

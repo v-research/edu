@@ -1,0 +1,47 @@
+\input{header.tex}
+
+%fix commands
+\newcommand{\fixnote}[2]{\textbf{\color{red}{FIX}}\footnote{{\bf #1:} #2}}
+\newcommand{\fix}[2]{{\color{red}{\bf tofix:} #2}}
+% \renewcommand{\fixnote}[2]{}
+% \renewcommand{\fix}[2]{}
+
+\begin{document}
+
+\input{frontespizio.tex}
+\clearpage
+\null
+\thispagestyle{empty}
+\clearpage
+\input{../TEX/ringraziamenti.tex}
+
+\tableofcontents
+\listoffigures
+\thispagestyle{empty}
+
+\clearpage
+
+\setcounter{page}{1}
+
+\input{../TEX/intro.tex}
+\input{../TEX/UML.tex}
+\input{../TEX/DY.tex}
+\input{../TEX/statoarte.tex}
+\input{../TEX/tool.tex}
+\input{../TEX/conversione.tex}
+\input{../TEX/usecase.tex}
+\input{../TEX/conclusione.tex}
+\newpage
+\appendix
+\input{../TEX/appendice_ns.tex}
+\newpage
+\input{../TEX/appendice_arp.tex}
+\newpage
+\input{../TEX/appendice_rsa.tex}
+
+
+\newpage
+\printbibliography
+
+
+\end{document}

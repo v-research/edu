@@ -1,0 +1,120 @@
+\subsubsection*{Modellazione con ProVerif}
+
+La modellazione di un protocollo in un file da dare in input a ProVerif può essere suddivisa in tre parti:
+%Il linguaggio di input per scrivere un modello di un protocollo in ProVerif è Applied Pi Calculus (un estensione tipata di pi calculus).\\
+%La modellazione può essere divisa in tre parti:
+\begin{enumerate}
+    \item dichiarazione formale del comportamento delle primitive crittografiche
+    \item definizione di macroprocessi che consentono l'utilizzo di sotto-processi per semplificare lo sviluppo
+    \item codifica del protocollo stesso come processo principale utilizzando le macro
+\end{enumerate}
+
+\subsubsection*{Dichiarazioni}
+I processi sono composti da un insieme finito di tipi, nomi liberi e costruttori (funzioni simboliche) che
+sono associati ad un insieme finito di decostruttori.\\ 
+Il linguaggio è fortemente tipato e l'utente può definire dei nuovi tipi in questo modo: 
+\begin{lstlisting}[language=app]
+    type t . 
+\end{lstlisting}
+Tutti i nomi liberi devono essere dichiarati usando la sintassi: 
+\begin{lstlisting}[language=app]
+    free n : t .
+\end{lstlisting} 
+dove n è un nome e t il tipo.\\
+La sintassi per dichiarare un canale è: 
+\begin{lstlisting}[language=app]
+    free c:channel.   
+\end{lstlisting}
+Tutte i nomi dichiarati con free sono conosciuti dall'attaccante, per fare in modo che non siano conosciuti dall'attaccante vanno dichiarati come privati utilizzando questa sintassi: 
+\begin{lstlisting}[language=app]
+    free n : t [ private ]. 
+\end{lstlisting}
+I costruttori (funzioni simboliche) sono usati per costruire termini di modellazione di primitive, usati dalla crittografia dei
+protocolli, per esempio: funzioni di hash one-way, cifratura e firme digitali.\\
+I costruttori si definiscono con:
+\begin{lstlisting}[language=app, mathescape]
+    fun $f(t_1,\dots, t_n )$ : t . 
+\end{lstlisting} 
+dove $f$ è un costruttore di arietà $n$, t è il tipo dell'oggetto di output e $t_1,\dots, t_n $ sono i tipi degli argomenti di input.\\
+Anche i costruttori sono conosciuti dall'attaccante a meno della dichiarazione utilizzando [private].\\
+I decostruttori vegono utilizzati per manipolare i termini formati dai costruttori e catturano le relazioni tra le primitive crittografiche, si modellano usando regole di riscrittura della forma:
+\begin{lstlisting}[language=app, mathescape, breaklines= true]
+    reduc forall $x_{1,1} : t_{1,1},\dots, x_{1,n_1}  : t_{1,n_1} ; 
+    g(M_{1,1} , \dots , M_{1,k}) = M_{1,0} ;$
+\end{lstlisting} 
+dove $g$ è un decostruttore di arietà $k$, i termini $M_{1,1} , \dots , M_{1,k}, M_{1,0}$ sono costruiti dall'applicazione del costruttore alle variabili $x_{1,1},\dots, x:{1,n_1}$ di tipo $t_{1,1},\dots,t_{1,n_1}$ rispettivamente ed il tipo dell'output è $M_{1,0}$.\\
+Analogamente ai costruttori, i decostruttori possono essere dichiarati privati con l'aggiunta di [private].\\
+Vediamo come i costruttori e decostruttori vengono utilizzati per la definizione manuale delle primitive crittografiche:
+%A differenza di un'altra estensione chiamata spi calculus \cite{AG97}, nella quale le primitive di sicurezza come encryption e decryption sono delle primitive già definite, Applied Pi Calculus consente di definire manualmente le primitive di sicurezza andando ad utilizzare costruttori e decostruttori in questo modo:
+%enc(x, pk(k)) = y
+%dec(enc(x, pk(k)), k) = x
+\begin{lstlisting}[language=app]
+    type key .
+    fun senc(bitstring, key) : bitstring.
+    reduc forall m: bitstring, k : key; 
+        sdec(senc(m,k),k) = m.
+\end{lstlisting}
+
+\subsubsection*{Macro Processi}
+Per semplificare lo sviluppo i sotto-processi vengono dichiarati utilizzando macro della forma: let $R(x_1:t_1,\dots,x_n:t_n) = P$., dove $R$ è il nome della macro, $P$ è il sotto-processo che si vuole definire e $x_1,\dots,x_n$ sono le variabili libere di $P$ di tipo $t_1,\dots,t_n$
+
+\subsubsection*{Processi}
+
+\begin{table}[h!]
+    \begin{tabular}{ll}
+        $M,N ::=$ & $termini$\\
+        \quad$a, b, c, \dots , k, \dots , m, n, \dots , s$ & $nomi$\\
+        \quad$x, y, z$ & $variabili$\\
+        \quad$h(M_1, \dots , M_k)$ & $applicazione \: di \: costruttore/decostruttore$\\
+        \quad $M=N$ & $uguaglianza tra termini$\\
+        \quad $M<>N$ & $disuglianza tra termini$\\
+        \quad $M\&\&N$ & $congiunzione$\\
+        \quad $M||M$ & $disgiunzione$\\
+        \quad not$M$ & $negazione$\\    
+    \end{tabular}
+    \caption{Grammatica di base}
+    \label{tab:gb}
+\end{table}
+
+\begin{table}[h!]
+    \begin{tabular}{ll}
+        
+        $P, Q::=$ & $processi$\\
+        \quad$0$ & $processo \: vuoto$\\
+        \quad$P|Q$ & $composizione \: parallela$\\
+        \quad$!P$ & $replicazione$\\
+        \quad new $n:t;P$ & $limitazione \: del \: nome$\\
+        \quad$if \: M = N \: then \: P \: else \: Q$ & $condizione$\\
+        \quad in$(M,x:t);P$ & $messaggio \: in \: input$\\
+        \quad out$(M,N);P$ & $messaggio \: in \: output$\\
+        \quad let $x=M \: in \: P \: else  \: Q$ & $valutazione \: del \: termine$\\
+        \quad $R(M_1,\dots,M_k)$ & $utilizzo \: delle \: macro$\\       
+    \end{tabular}
+    \caption{Grammatica dei processi}
+    \label{tab:gp}
+\end{table}
+
+\noindent Nella Tabella \ref*{tab:gb} è descritta la grammatica di base dove i termini $M,N$ consistono in nomi $a, b, c, k, m, n, s$, variabili $x,y,z$, tuple ($M_1,\dots, M_l$) dove l è l'arietà della tupla, funzioni simboliche (costruttori/decostruttori) indicati con $h(M_1, \dots , M_k)$ dove k è l'arietà di h e gli argomenti $M_1,...,M_k$ sono del tipo richisto.\\
+Le altre funzioni utilizzano la notazione infissa e lavorano con l'algebra booleana.\\
+Nella Tabella \ref*{tab:gp} è descritta la grammatica dei processi dove il processo vuoto 0 non fa nulla, $P|Q$ è la composizione parallela di $P$ e $Q$; la replicazione $!P$ si comporta come un numero infinito di copie di $P$ in esecuzione in parallelo.\\ 
+new $n:t;P$ lega il nome $n$ del tipo $t$ a $P$.\\
+Il costrutto condizionale $if \: M = N \: then \: P \: else \: Q$ è standard e $M=N$ rappresenta l'uguaglianza, non l'identità.\\
+Il processo in$(M,x:t);P$ indica che il processo $P$ è in attesa di un messaggio $x$ di tipo $t$ dal canale $M$ e poi prosegue la sua esecuzione.\\
+Il processo out$(M,N);P$ indica che il processo $P$ è pronto per inviare $N$ nel canale $M$ e proseguire con la sua esecuzione.\\
+Per evitare amibiguità durante l'esecuzione dei processi è consigliato utilizzare le parentesi per ordinarli.\\
+
+\subsubsection*{Proprietà di sicurezza}
+Per verificare la segretezza di un termine $M$ in un modello è sufficiente inserire la seguente query prima del processo principale:
+\begin{lstlisting}[language=app]
+    query attacker(M) .
+\end{lstlisting} 
+dove M è un nome di solito dichiarato privato, se così non fosse l'attaccante ne sarebbe banalmente a conoscenza.\\
+Per verificare la proprietà di autenticazione è necessario annotare i processi con degli eventi in alcuni stati importanti, che non influiscono sul comportamento del protocollo.\\
+Gli eventi verranno utilizzati per chiedere al tool se un determinato evento ha avuto luogo prima di un altro.\\
+La sintassi per una richiesta di autenticazione è la seguente:
+\begin{lstlisting}[language=app, mathescape]
+    query $x_1:t_1 , \dots , x_n:t_n;$ 
+    event $(e_1(M_1 ,\dots, M_j)) == >$ event $(e_0(N_1,\dots,N_k))$ .
+\end{lstlisting} 
+Ipotizzando che l'evento $e_0$ sia l'accettazione di un determinato client da parte di un server e l'evento $e_1$ sia l'invio di un messaggio dal client al server, con questo tipo di query ci chiediamo se il messaggio destinato al server è effettivamente stato inviato dal client corretto, nel caso in cui l'evento $e_0$ si sia effettivamente verificato prima dell'evento $e_1$, possiamo dire con certezza che il client è autenticato.\\
+

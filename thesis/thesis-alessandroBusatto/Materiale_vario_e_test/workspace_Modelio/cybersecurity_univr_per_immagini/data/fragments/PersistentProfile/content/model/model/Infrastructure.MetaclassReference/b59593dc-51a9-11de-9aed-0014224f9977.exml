@@ -1,0 +1,353 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="" version="4">
+  <OBJECT>
+    <ID name="" mc="Infrastructure.MetaclassReference" uid="b59593dc-51a9-11de-9aed-0014224f9977"/>
+    <PID name="PersistentProfile" mc="Infrastructure.Profile" uid="b584e36a-51a9-11de-9aed-0014224f9977"/>
+    <ATTRIBUTES>
+      <ATT name="ReferencedClassName"><![CDATA[Standard.AssociationEnd]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DefinedTagType">
+        <OBJECT>
+          <ID name="persisten.role.cascade" mc="Infrastructure.TagType" uid="ddcd8fa1-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.cascade.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.cascade]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.update" mc="Infrastructure.TagType" uid="ddcff1b9-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.update.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.update]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.insert" mc="Infrastructure.TagType" uid="ddcff1be-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.insert.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.insert]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.access" mc="Infrastructure.TagType" uid="ddd253d3-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.access.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.access]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.unique" mc="Infrastructure.TagType" uid="ddd253d8-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.unique.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.unique]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.optimistic-lock" mc="Infrastructure.TagType" uid="ddd71806-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.optimistic-lock.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.optimistic-lock]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.lazy" mc="Infrastructure.TagType" uid="ddd7180b-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.lazy.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.lazy]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.not-found" mc="Infrastructure.TagType" uid="ddd97a1d-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.not-found.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.not-found]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.entity-name" mc="Infrastructure.TagType" uid="ddd97a22-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.entity-name.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.entity-name]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.formula" mc="Infrastructure.TagType" uid="ddd97a27-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.formula.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.formula]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.node" mc="Infrastructure.TagType" uid="dddbdc37-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.node.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.node]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.embed-xml" mc="Infrastructure.TagType" uid="dddbdc3c-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.embed-xml.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.embed-xml]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.index" mc="Infrastructure.TagType" uid="ddde3e4f-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.index.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.index]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.unique_key" mc="Infrastructure.TagType" uid="ddde3e54-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.unique_key.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.unique_key]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.foreign-key" mc="Infrastructure.TagType" uid="ddde3e59-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.foreign-key.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.foreign-key]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.class" mc="Infrastructure.TagType" uid="dde0a069-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.class.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.class]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.persistentName" mc="Infrastructure.TagType" uid="dde0a06e-598c-11de-9ccf-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[2]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.persistentName.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.persistentName]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.type" mc="Infrastructure.TagType" uid="0706eb33-59bb-11de-9f28-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.type.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.type]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.outerjoin" mc="Infrastructure.TagType" uid="3bccd837-5cc5-11de-8dc9-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.outerjoin.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.outerjoin]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.hasforeignkey" mc="Infrastructure.TagType" uid="885797d8-5ff2-11de-a72e-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.hasforeignkey.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.hasforeignkey]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.typemap.indexcolumn" mc="Infrastructure.TagType" uid="dfc5340f-622c-11de-ad1a-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.typemap.indexcolumn.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.typemap.indexcolumn]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.typelist.index" mc="Infrastructure.TagType" uid="dfc79669-622c-11de-ad1a-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.typelist.index.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.typelist.index]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.typemap.indextype" mc="Infrastructure.TagType" uid="dfc7966e-622c-11de-ad1a-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.typemap.indextype.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.typemap.indextype]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.typemap.elementtype" mc="Infrastructure.TagType" uid="dfc9f8c4-622c-11de-ad1a-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.typemap.elementtype.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.typemap.elementtype]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.typemap.elementcolumn" mc="Infrastructure.TagType" uid="dfc9f8c9-622c-11de-ad1a-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.typemap.elementcolumn.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.typemap.elementcolumn]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="persisten.role.collection.sort" mc="Infrastructure.TagType" uid="dfcc5b1f-622c-11de-ad1a-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.persisten.role.collection.sort.label]]></ATT>
+            <ATT name="Name"><![CDATA[persisten.role.collection.sort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="PersistentProfile" version="4">
+  <OBJECT>
+    <ID name="PersistentProfile" mc="Infrastructure.Profile" uid="b584e36a-51a9-11de-9aed-0014224f9977"/>
+    <PID name="PersistentProfile" mc="Infrastructure.ModuleComponent" uid="f83e4fa4-ad92-11de-80db-0014224f9977"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[PersistentProfile]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DefinedStereotype">
+        <COMPID name="DataModel" mc="Infrastructure.Stereotype" uid="b58745c2-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="Entity" mc="Infrastructure.Stereotype" uid="b58c0a76-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="PersistentAttribute" mc="Infrastructure.Stereotype" uid="b590cf2a-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="Role" mc="Infrastructure.Stereotype" uid="b59593de-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="Relationship" mc="Infrastructure.Stereotype" uid="b59a5892-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="Identifier" mc="Infrastructure.Stereotype" uid="b5a17f9f-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="Identifier" mc="Infrastructure.Stereotype" uid="d073deda-8fe1-4ec8-97f0-894b2fd29885"/>
+        <COMPID name="PersistentProperty" mc="Infrastructure.Stereotype" uid="b5a64453-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="PersistentDiagram" mc="Infrastructure.Stereotype" uid="b5ab0908-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="RootDataModel" mc="Infrastructure.Stereotype" uid="c25c83ae-559e-11de-b5f2-0014224f9977"/>
+        <COMPID name="ClassHierarchy" mc="Infrastructure.Stereotype" uid="0da115c5-6261-11de-ba43-0014224f9977"/>
+        <COMPID name="SQLConstraint" mc="Infrastructure.Stereotype" uid="14fdee2f-7dd6-11df-9cce-0014224f9977"/>
+        <COMPID name="Tracability" mc="Infrastructure.Stereotype" uid="e3de7eb5-838c-11df-aa4e-0014224f9977"/>
+      </COMP>
+      <COMP relation="OwnedReference">
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="b58745c0-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="b58c0a74-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="b590cf28-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="b59593dc-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="b59a5890-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="b5ab0906-51a9-11de-9aed-0014224f9977"/>
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="46acc5d9-55d9-11de-8450-0014224f9977"/>
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="0da115c3-6261-11de-ba43-0014224f9977"/>
+        <COMPID name="" mc="Infrastructure.MetaclassReference" uid="7c3b3e09-843c-11df-aa4e-0014224f9977"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

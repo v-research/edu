@@ -1,0 +1,8 @@
+authentication?  -> : e2
+ When: 
+     gb $\rightarrow$ G^nil $\leftarrow$ mutated by Attacker (originally G^b) 
+     e1 $\rightarrow$ PKE_ENC(G^nil, m_a) 
+     m_b $\rightarrow$ PKE_DEC(b, PKE_ENC(G^nil, m_a)) 
+     e2 $\rightarrow$ PKE_ENC(G^b, m_a) $\leftarrow$ mutated by Attacker (originally PKE_ENC(ga, m2_b)) 
+     m2_a $\rightarrow$ PKE_DEC(a, PKE_ENC(G^b, m_a)) 
+     e2 (PKE_ENC(G^b, m_a)), sent by Attacker and not by Bob, is successfully used in PKE_DEC(a, PKE_ENC(G^b, m_a)) within Alice's state. 

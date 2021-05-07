@@ -1,0 +1,30 @@
+type skey.
+type pkey.
+type host.
+
+fun pk(skey): pkey.
+fun aenc(bitstring , pkey): bitstring .
+
+reduc forall m: bitstring , k: skey ; adec(aenc(m, pk(k)) ,k) = m.
+
+free c : channel.
+
+free s : bitstring [private].
+
+free A, B : host.
+
+query attacker(s).
+
+let clientA=
+  in (c, pkB:pkey);
+  out(c, aenc(s,pkB)).
+
+
+let clientB=
+  new skB:skey;
+  out(c, pk(skB));
+  in(c, m:bitstring);
+  let z=adec(m,skB) in 0.
+
+process
+  clientA|clientB

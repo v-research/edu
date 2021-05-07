@@ -1,0 +1,28 @@
+type ipv4.
+type MAC.
+
+free c : channel.
+
+fun concat(bitstring, bitstring, bitstring, bitstring, MAC, ipv4, MAC, ipv4):bitstring.
+
+reduc forall x0: bitstring, x1: bitstring,x2: bitstring,x3: bitstring,x4:MAC, x5:ipv4, x6:MAC, x7:ipv4;
+deconcat(concat(x0, x1,x2,x3,x4, x5, x6, x7))=(x0, x1,x2,x3,x4, x5, x6, x7).
+
+free as_tpa:ipv4 [private].
+
+query attacker(as_tpa).
+
+let A =
+  new as_hrd:bitstring;
+  new as_pro:bitstring;
+  new as_pln:bitstring;
+  new request:bitstring;
+  new as_sha:MAC;
+  new as_spa:ipv4;
+  new as_tha:MAC;
+  out(c,concat(as_hrd,as_pro, as_pln, request, as_sha, as_spa, as_tha, as_tpa)).
+
+let B = in (c, m:bitstring).
+
+process
+  !A|!B

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SysMLUseCaseDiagram" version="4">
+  <OBJECT>
+    <ID name="SysMLUseCaseDiagram" mc="Infrastructure.Stereotype" uid="1a667602-d7d7-11e0-9a40-0027103f347c"/>
+    <PID name="sysml.diagrams" mc="Infrastructure.Profile" uid="00bc42ac-0000-1013-0000-000000000000"/>
+    <ATTRIBUTES>
+      <ATT name="Image"><![CDATA[res/icons/sysmlusecasediagram.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/icons/sysmlusecasediagram.png]]></ATT>
+      <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="LabelKey"><![CDATA[%stereotype.SysMLUseCaseDiagram.label]]></ATT>
+      <ATT name="BaseClassName"><![CDATA[Standard.UseCaseDiagram]]></ATT>
+      <ATT name="Name"><![CDATA[SysMLUseCaseDiagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
