@@ -1,8 +1,0 @@
-Blocks:
-{'_6KYCwV_CEeuUS4KSsiMLRg': {'name': 'generateTestMessage', 'type': FunctionalBlock},
-'_6KYCwl_CEeuUS4KSsiMLRg': {'name': 'OutPort', 'type': OutputPort}}
-
-Flows:
-{1: {'information': 'message',
-   'source': '_6KYCwV_CEeuUS4KSsiMLRg',
-   'target': '_6KYCwl_CEeuUS4KSsiMLRg'}}

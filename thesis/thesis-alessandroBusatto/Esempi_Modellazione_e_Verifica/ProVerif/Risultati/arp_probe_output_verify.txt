@@ -1,3 +1,0 @@
-Verification summary:
-
-Query not attacker(as_tpa[]) is false.

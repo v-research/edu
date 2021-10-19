@@ -1,4 +1,0 @@
-protocol ExampleProtocol(I,R) {
-  role I { };
-  role R { };
-};
