@@ -1,0 +1,54 @@
+attacker[active]
+ 
+principal Initiator[
+	knows public zero
+	knows public one
+	knows public h0
+	knows private ispriv
+	generates iepriv
+	ispub = G^ispriv
+	iepub = G^iepriv
+]
+ 
+principal Responder[
+	knows public zero
+	knows public one
+	knows public h0
+	knows private rspriv
+	rspub = G^rspriv
+]
+ 
+Responder -> Initiator: rspub
+ 
+principal Initiator[
+	knows private p1
+	ies = rspub^iepriv
+	iss = rspub^ispriv
+	ih1 = HASH(h0, rspub)
+	ih2 = HASH(ih1, ih1)
+	ih3 = HASH(ih2, iepub)
+	ih4 = HASH(ih3, ies)
+	ih5 = HASH(ih4, zero)
+	ik1 = HASH(ih4, one)
+	e1 = ENC(ik1, ispub)
+	ih6 = HASH(ih5, e1)
+	ih7 = HASH(ih6, zero)
+	it1 = HASH(ih6, one)
+	ih8 = HASH(ih7, iss)
+	ih9 = HASH(ih8, zero)
+	k2 = HASH(ih8, one)
+	e2 = ENC(k2, p1)
+	ih10 = HASH(ih9, e2)
+	ih11 = HASH(ih10, zero)
+	it2 = HASH(ih10, one)
+]
+ 
+Initiator -> Responder: iepub, e1, e2, it1, it2
+ 
+queries[
+	confidentiality? ispub
+	confidentiality? p1
+	unlinkability? e1, e2
+	freshness? e1
+	freshness? e2
+]

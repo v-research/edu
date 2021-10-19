@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SQLConstraint" version="4">
+  <OBJECT>
+    <ID name="SQLConstraint" mc="Infrastructure.Stereotype" uid="14fdee2f-7dd6-11df-9cce-0014224f9977"/>
+    <PID name="PersistentProfile" mc="Infrastructure.Profile" uid="b584e36a-51a9-11de-9aed-0014224f9977"/>
+    <ATTRIBUTES>
+      <ATT name="Image"></ATT>
+      <ATT name="Icon"></ATT>
+      <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="LabelKey"><![CDATA[%stereotype.SQLConstraint.label]]></ATT>
+      <ATT name="BaseClassName"><![CDATA[Standard.Constraint]]></ATT>
+      <ATT name="Name"><![CDATA[SQLConstraint]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DefinedTagType">
+        <OBJECT>
+          <ID name="SQLConstraint.isUnique" mc="Infrastructure.TagType" uid="1756b3f3-7dd6-11df-9cce-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.SQLConstraint.isUnique.label]]></ATT>
+            <ATT name="Name"><![CDATA[SQLConstraint.isUnique]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="SQLConstraint.isNotNull" mc="Infrastructure.TagType" uid="2a1ce213-7dd6-11df-9cce-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.SQLConstraint.isNotNull.label]]></ATT>
+            <ATT name="Name"><![CDATA[SQLConstraint.isNotNull]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="SQLConstraint.Type" mc="Infrastructure.TagType" uid="0ac5efa6-828d-11df-8820-0014224f9977"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.SQLConstraint.Type.label]]></ATT>
+            <ATT name="Name"><![CDATA[SQLConstraint.Type]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,21 @@
+  <packagedElement 
+   xmi:type="uml:Class" 
+   xmi:id="_WmudZWlZEeunebkXFN4K9w" 
+   name="FunctionalBlock"
+  />
+  
+  <packagedElement xmi:type="uml:Lifeline"  
+   xmi:id="_WmudemlZEeunebkXFN4K9w" 
+   name="decryption" 
+   type="_WmudZWlZEeunebkXFN4K9w" 
+   aggregation="composite"
+  />
+  
+  <packagedElement 
+   xmi:type="uml:InformationFlow" 
+   xmi:id="_WmudkWlZEeunebkXFN4K9w" 
+   name="$\{N_a, K_{ab}, B, \{K_{ab}, A\}_{K_{bs}}\}_{K_{as}}$" 
+   informationSource="_WmudeWlZEeunebkXFN4K9w" 
+   informationTarget="_WmudemlZEeunebkXFN4K9w"
+  />
+    

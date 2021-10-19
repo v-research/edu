@@ -1,0 +1,26 @@
+#Sun Feb 07 12:57:03 CET 2021
+org.modelio.app.module.propertytab.SysMLArchitect\ v3.10.00\ GModule\ @null\ runtime\ module_SysMLPropertyPage.org.modelio.full.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.app.diagram.editor.OpenedDiagrams0='ARP Reply Object diagram' {03635dc9-3837-46f1-89cb-41a0691fe0f0} Standard.ObjectDiagram
+org.modelio.app.module.propertytab.SysMLArchitect\ v3.10.00\ GModule\ @null\ runtime\ module_SysMLPropertyPage.org.modelio.development.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.module.propertytab.PersistentProfile\ v3.9.00\ GModule\ @file\:///home/x/.modelio/4.0/modules/PersistentProfile_3.9.00/PersistentProfile_3.9.00.jmdac\ runtime\ module_PersistentPropertyPage.org.modelio.development.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.app.module.propertytab.SysMLArchitect\ v3.10.00\ GModule\ @null\ runtime\ module_SysMLPropertyPage.org.modelio.app.ui.model.perspective.parentId=org.modelio.app.bottom.parts
+org.modelio.module.propertytab.SysMLArchitect\ v3.9.00\ GModule\ @file\:///home/x/.modelio/4.0/modules/SysMLArchitect_3.9.00/SysMLArchitect_3.9.00.jmdac\ runtime\ module_SysMLPropertyPage.org.modelio.app.ui.model.perspective.parentId=org.modelio.app.bottom.parts
+org.modelio.module.propertytab.SysMLArchitect\ v3.9.00\ GModule\ @file\:///home/x/.modelio/4.0/modules/SysMLArchitect_3.9.00/SysMLArchitect_3.9.00.jmdac\ runtime\ module_SysMLPropertyPage.org.modelio.diagram.perspective.parentId=app.ui.ext_com.partstack.right
+org.modelio.app.module.propertytab.PersistentProfile\ v3.10.00\ GModule\ @null\ runtime\ module_PersistentPropertyPage.org.modelio.full.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.module.propertytab.PersistentProfile\ v3.9.00\ GModule\ @file\:///home/x/.modelio/4.0/modules/PersistentProfile_3.9.00/PersistentProfile_3.9.00.jmdac\ runtime\ module_PersistentPropertyPage.org.modelio.app.ui.model.perspective.parentId=org.modelio.app.bottom.parts
+org.modelio.app.module.propertytab.PersistentProfile\ v3.10.00\ GModule\ @null\ runtime\ module_PersistentPropertyPage.org.modelio.diagram.perspective.parentId=app.ui.ext_com.partstack.right
+org.modelio.module.propertytab.SysMLArchitect\ v3.9.00\ GModule\ @file\:///home/x/.modelio/4.0/modules/SysMLArchitect_3.9.00/SysMLArchitect_3.9.00.jmdac\ runtime\ module_SysMLPropertyPage.org.modelio.development.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.module.propertytab.SysMLArchitect\ v3.9.00\ GModule\ @file\:///home/x/.modelio/4.0/modules/SysMLArchitect_3.9.00/SysMLArchitect_3.9.00.jmdac\ runtime\ module_SysMLPropertyPage.org.modelio.full.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.diagram.editor.OpenedDiagrams7='Third_MessageGeneration Object Diagram' {278eeaeb-9a32-44be-a41e-9a665b7c71a5} Standard.ObjectDiagram
+org.modelio.diagram.editor.OpenedDiagrams6='Second_MessageGeneration Object Diagram' {3e78f51f-0420-4a16-87a8-cec95db9d5ac} Standard.ObjectDiagram
+org.modelio.module.propertytab.PersistentProfile\ v3.9.00\ GModule\ @file\:///home/x/.modelio/4.0/modules/PersistentProfile_3.9.00/PersistentProfile_3.9.00.jmdac\ runtime\ module_PersistentPropertyPage.org.modelio.diagram.perspective.parentId=app.ui.ext_com.partstack.right
+org.modelio.diagram.editor.OpenedDiagrams5='sensor Object diagram' {6d0f4f57-1359-422f-8f99-039fcac9bc5f} Standard.ObjectDiagram
+org.modelio.diagram.editor.OpenedDiagrams4='tank Object diagram' {26d45c16-5ddb-417e-9dbe-741bee02b0d8} Standard.ObjectDiagram
+org.modelio.diagram.editor.OpenedDiagrams3='UC1-CPS Deployment diagram' {304b0597-e162-44aa-acba-95d35cb0a3d2} Standard.DeploymentDiagram
+org.modelio.diagram.editor.OpenedDiagrams2='First_MessageGeneration Object Diagram' {69a8eab4-a885-4613-8d13-0dc9c23a6498} Standard.ObjectDiagram
+org.modelio.diagram.editor.OpenedDiagrams1='Device FunArch Object Diagram' {59df102c-11fe-44c1-a1cf-33779d6f1eff} Standard.ObjectDiagram
+org.modelio.diagram.editor.OpenedDiagrams0='Device PhyArch Deployment diagram' {66aeabdb-bd53-4d6b-a875-8f32b76e7a57} Standard.DeploymentDiagram
+org.modelio.app.module.propertytab.PersistentProfile\ v3.10.00\ GModule\ @null\ runtime\ module_PersistentPropertyPage.org.modelio.development.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.app.module.propertytab.SysMLArchitect\ v3.10.00\ GModule\ @null\ runtime\ module_SysMLPropertyPage.org.modelio.diagram.perspective.parentId=app.ui.ext_com.partstack.right
+org.modelio.module.propertytab.PersistentProfile\ v3.9.00\ GModule\ @file\:///home/x/.modelio/4.0/modules/PersistentProfile_3.9.00/PersistentProfile_3.9.00.jmdac\ runtime\ module_PersistentPropertyPage.org.modelio.full.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.app.module.propertytab.PersistentProfile\ v3.10.00\ GModule\ @null\ runtime\ module_PersistentPropertyPage.org.modelio.app.ui.model.perspective.parentId=org.modelio.app.bottom.parts

@@ -1,0 +1,57 @@
+type key .
+fun senc(bitstring, key) : bitstring .
+reduc forall m: bitstring, k : key; sdec(senc(m,k),k) = m.
+
+
+
+type skey .
+type pkey .
+fun pk (skey) : pkey .
+fun aenc (bitstring, pkey) : bitstring .
+reduc forall m: bitstring, sk : skey; adec(aenc(m, pk (sk)), sk) = m.
+
+
+type sskey .
+type spkey .
+fun spk ( sskey ) : spkey .
+fun sign ( bitstring , sskey ) : bitstring .
+reduc forall m: bitstring , ssk : sskey ; getmess (sign (m, ssk)) = m.
+reduc forall m: bitstring , ssk : sskey ; checksign (sign(m, ssk) , spk(ssk)) = m.
+
+
+free c : channel .
+free s : bitstring [ private ] .
+query attacker ( s ) .
+event acceptsClient(key) .
+event acceptsServer(key, pkey) .
+event termClient(key,pkey) .
+event termServer (key) .
+
+query x : key , y : pkey ; event (termClient ( x , y))==>event (acceptsServer ( x , y ) ) .
+query x : key ; inj-event (termServer(x))==>inj-event(acceptsClient(x)) .
+
+let clientA(pkA : pkey , skA : skey , pkB : spkey ) =
+  out ( c , pkA ) ;
+  in ( c , x : bitstring ) ;
+  let y = adec ( x , skA ) in
+  let (=pkA,=pkB , k : key ) = checksign(y , pkB ) in
+  event acceptsClient( k ) ;
+  out (c , senc (s ,k ) ) ;
+  event termClient ( k , pkA ) .
+
+let  serverB ( pkB : spkey , skB : sskey , pkA : pkey ) =
+  in ( c , pkX : pkey ) ;
+  new k : key ;
+  event acceptsServer ( k , pkX ) ;
+  out ( c , aenc (sign( ( pkX , pkB , k ) , skB ) , pkX ) ) ;
+  in ( c , x : bitstring ) ;
+  let z = sdec ( x , k ) in
+  if pkX = pkA then event termServer ( k ) .
+
+
+process
+new skA : skey ;
+new skB : sskey ;
+let pkA = pk ( skA ) in out ( c , pkA ) ;
+let pkB = spk ( skB ) in out ( c , pkB ) ;
+( ( ! clientA(pkA , skA , pkB ) ) | ( !serverB ( pkB , skB , pkA ) ) )

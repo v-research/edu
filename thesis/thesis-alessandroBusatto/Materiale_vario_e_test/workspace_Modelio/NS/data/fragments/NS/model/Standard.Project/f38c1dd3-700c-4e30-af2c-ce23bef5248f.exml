@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="NS" version="4">
+  <OBJECT>
+    <ID name="NS" mc="Standard.Project" uid="f38c1dd3-700c-4e30-af2c-ce23bef5248f"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[NS]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="ns" mc="Standard.Package" uid="9e880ecf-a3b8-4869-80ab-df0ffbd8da04"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="NS" mc="Infrastructure.DiagramSet" uid="d2f6991b-8e56-4ada-946a-e9acded891bc"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="PersistentAttribute" version="4">
+  <OBJECT>
+    <ID name="PersistentAttribute" mc="Infrastructure.Stereotype" uid="b590cf2a-51a9-11de-9aed-0014224f9977"/>
+    <PID name="PersistentProfile" mc="Infrastructure.Profile" uid="b584e36a-51a9-11de-9aed-0014224f9977"/>
+    <ATTRIBUTES>
+      <ATT name="Image"><![CDATA[res/PersistentProfile/PersistentAttribute16.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/PersistentProfile/PersistentAttribute16.png]]></ATT>
+      <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="LabelKey"><![CDATA[%stereotype.PersistentAttribute.label]]></ATT>
+      <ATT name="BaseClassName"><![CDATA[Standard.Attribute]]></ATT>
+      <ATT name="Name"><![CDATA[PersistentAttribute]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Parent">
+        <ID name="PersistentProperty" mc="Infrastructure.Stereotype" uid="b5a64453-51a9-11de-9aed-0014224f9977"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><uml:Model xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmi:id="_WmudYGlZEeunebkXFN4K9w" name="ns">
+  <eAnnotations xmi:id="_WmudYWlZEeunebkXFN4K9w" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_WmudYmlZEeunebkXFN4K9w" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_WmudY2lZEeunebkXFN4K9w" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WmudZGlZEeunebkXFN4K9w" name="Agent"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WmudZWlZEeunebkXFN4K9w" name="FunctionalBlock"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WmudZmlZEeunebkXFN4K9w" name="Port"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WmudZ2lZEeunebkXFN4K9w" name="InputPort"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WmudaGlZEeunebkXFN4K9w" name="OutputPort"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WmudaWlZEeunebkXFN4K9w" name="Aggregate"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_WmudamlZEeunebkXFN4K9w" name="TEST_NS">
+    <packagedElement xmi:type="uml:Node" xmi:id="_Wmuda2lZEeunebkXFN4K9w" name="Controller">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_WmudbGlZEeunebkXFN4K9w" name="NetworkOPort" type="_WmudaGlZEeunebkXFN4K9w"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_WmudbWlZEeunebkXFN4K9w" name="NetworkIPort" type="_WmudZ2lZEeunebkXFN4K9w"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_WmudbmlZEeunebkXFN4K9w" name="UserOPort" type="_WmudaGlZEeunebkXFN4K9w"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Wmudb2lZEeunebkXFN4K9w" name="UserIPort" type="_WmudZ2lZEeunebkXFN4K9w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudcGlZEeunebkXFN4K9w" name="ServerInput" type="_WmudZ2lZEeunebkXFN4K9w" aggregation="composite">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_WmudcWlZEeunebkXFN4K9w">
+          <body>&lt;Enter note text here&gt;</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudcmlZEeunebkXFN4K9w" name="GenerateSymKey(i,r)" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Wmudc2lZEeunebkXFN4K9w" name="GetSharedKey" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmuddGlZEeunebkXFN4K9w" name="concatenate" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmuddWlZEeunebkXFN4K9w" name="encryption" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmuddmlZEeunebkXFN4K9w" name="concatenate" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Wmudd2lZEeunebkXFN4K9w" name="encryption" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudeGlZEeunebkXFN4K9w" name="ServerOutputPort" type="_WmudaGlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudeWlZEeunebkXFN4K9w" name="NetworkIPort" type="_WmudZ2lZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudemlZEeunebkXFN4K9w" name="decryption" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Wmude2lZEeunebkXFN4K9w" name="NetworkOPort" type="_WmudaGlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudfGlZEeunebkXFN4K9w" name="NetworkIPort" type="_WmudZ2lZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudfWlZEeunebkXFN4K9w" name="decryption" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudfmlZEeunebkXFN4K9w" name="generateNonce" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Wmudf2lZEeunebkXFN4K9w" name="encryptionWithSymKey" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudgGlZEeunebkXFN4K9w" name="NetworkOPort" type="_WmudaGlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudgWlZEeunebkXFN4K9w" name="NetworkIPort" type="_WmudZ2lZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudgmlZEeunebkXFN4K9w" name="decryptionWithSymKey" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Wmudg2lZEeunebkXFN4K9w" name="decrementNonce" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudhGlZEeunebkXFN4K9w" name="encryptionWithSymKey" type="_WmudZWlZEeunebkXFN4K9w" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WmudhWlZEeunebkXFN4K9w" name="NetworkOPort" type="_WmudaGlZEeunebkXFN4K9w" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudhmlZEeunebkXFN4K9w" name="&lt;i.name,r.name&gt;" informationSource="_WmudcGlZEeunebkXFN4K9w" informationTarget="_Wmudc2lZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Wmudh2lZEeunebkXFN4K9w" name="&lt;i.name&gt;" informationSource="_WmudcGlZEeunebkXFN4K9w" informationTarget="_WmuddGlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudiGlZEeunebkXFN4K9w" name="SymKey(i,r)" informationSource="_WmudcmlZEeunebkXFN4K9w" informationTarget="_WmuddGlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudiWlZEeunebkXFN4K9w" name="SharedKey(s,r)" informationSource="_Wmudc2lZEeunebkXFN4K9w" informationTarget="_WmuddWlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudimlZEeunebkXFN4K9w" name="&lt;i.name; SymKey(i,r)&gt;" informationSource="_WmuddGlZEeunebkXFN4K9w" informationTarget="_WmuddWlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Wmudi2lZEeunebkXFN4K9w" name="SymKey(i,r)" informationSource="_WmudcmlZEeunebkXFN4K9w" informationTarget="_WmuddmlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudjGlZEeunebkXFN4K9w" name="{i.name; SymKey(i,r)}_SharedKey(r,s)" informationSource="_WmuddWlZEeunebkXFN4K9w" informationTarget="_WmuddmlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudjWlZEeunebkXFN4K9w" name="&lt;r.name, i.nonce&gt;" informationSource="_WmudcGlZEeunebkXFN4K9w" informationTarget="_WmuddmlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudjmlZEeunebkXFN4K9w" name="&lt;i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}&gt;" informationSource="_WmuddmlZEeunebkXFN4K9w" informationTarget="_Wmudd2lZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Wmudj2lZEeunebkXFN4K9w" name="SharedKey(i,s)" informationSource="_Wmudc2lZEeunebkXFN4K9w" informationTarget="_Wmudd2lZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudkGlZEeunebkXFN4K9w" name="{i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}}_ShareKey(i,s)" informationSource="_Wmudd2lZEeunebkXFN4K9w" informationTarget="_WmudeGlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudkWlZEeunebkXFN4K9w" name="&lt;{i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}_SharedKey(i,s)&gt;" informationSource="_WmudeWlZEeunebkXFN4K9w" informationTarget="_WmudemlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudkmlZEeunebkXFN4K9w" name="&lt;{i.name,SymKey(i,r)}_SharedKey(rs)&gt;" informationSource="_WmudemlZEeunebkXFN4K9w" informationTarget="_Wmude2lZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Wmudk2lZEeunebkXFN4K9w" name="&lt;{i.name,SymKey(i,r)}_SharedKey(rs)&gt;" informationSource="_WmudfGlZEeunebkXFN4K9w" informationTarget="_WmudfWlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudlGlZEeunebkXFN4K9w" name="&lt;r.nonce&gt;" informationSource="_WmudfmlZEeunebkXFN4K9w" informationTarget="_Wmudf2lZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudlWlZEeunebkXFN4K9w" name="&lt;ShareKey(i,s)&gt;" informationSource="_WmudfWlZEeunebkXFN4K9w" informationTarget="_Wmudf2lZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudlmlZEeunebkXFN4K9w" name="&lt;{r.nonce}_SymKey(i,r)&gt;" informationSource="_Wmudf2lZEeunebkXFN4K9w" informationTarget="_WmudgGlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Wmudl2lZEeunebkXFN4K9w" name="&lt;{r.nonce}_SymKey(i,r)&gt;" informationSource="_WmudgWlZEeunebkXFN4K9w" informationTarget="_WmudgmlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudmGlZEeunebkXFN4K9w" name="&lt;r.nonce&gt;" informationSource="_WmudgmlZEeunebkXFN4K9w" informationTarget="_Wmudg2lZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudmWlZEeunebkXFN4K9w" name="&lt;r.nonce-1&gt;" informationSource="_Wmudg2lZEeunebkXFN4K9w" informationTarget="_WmudhGlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudmmlZEeunebkXFN4K9w" name="&lt;{r.nonce-1}_SymKey(i,r)}" informationSource="_WmudhGlZEeunebkXFN4K9w" informationTarget="_WmudhWlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Wmudm2lZEeunebkXFN4K9w" name="UserInput" classifier="_WmudZ2lZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_WmudnGlZEeunebkXFN4K9w" name="GenerateNonce" classifier="_WmudZWlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_WmudnWlZEeunebkXFN4K9w" name="Concatenate" classifier="_WmudZWlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_WmudnmlZEeunebkXFN4K9w" name="NetworkOutput" classifier="_WmudaGlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Wmudn2lZEeunebkXFN4K9w" name="i.name, r.name" informationSource="_Wmudm2lZEeunebkXFN4K9w" informationTarget="_WmudnWlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudoGlZEeunebkXFN4K9w" name="I.nonce" informationSource="_WmudnGlZEeunebkXFN4K9w" informationTarget="_WmudnWlZEeunebkXFN4K9w"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WmudoWlZEeunebkXFN4K9w" name="i.name, r.name, i.nonce" informationSource="_WmudnWlZEeunebkXFN4K9w" informationTarget="_WmudnmlZEeunebkXFN4K9w"/>
+  </packagedElement>
+</uml:Model>

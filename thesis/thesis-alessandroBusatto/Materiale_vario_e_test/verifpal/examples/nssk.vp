@@ -1,0 +1,88 @@
+attacker[active]
+
+principal Server[
+    //chiave condivisa server-initiator
+    knows private si
+    //chiave condivisa server-recipient
+    knows private sr
+]
+
+principal Initiator[
+    //chiave simmetrica Server-Initiator
+    knows private si
+    //identità initator
+    knows public i_name
+    //identità recipient
+    knows public r_name
+    //genero il nonce
+    generates ni
+    //creo il pacchetto per il server criptato con la chiave simmetrica
+    e1 = ENC(si,CONCAT(i_name,r_name,ni))
+]
+
+Initiator -> Server : e1
+
+principal Server[
+    //decifra il pacchetto dell'initiator con la chiave simmetrica
+    m1 = DEC(si, e1)
+    //separo le informazioni del pacchetto
+    in_name,re_name,ni_1 = SPLIT(m1)
+    //genero la chiave condivisa tra initiator e recipient
+    generates k_ir
+    //preparo il pacchetto da inoltrare al recipient e lo inserisco nel pacchetto per l'initiator
+    m2=CONCAT(ni_1, k_ir, r_name, ENC(sr,CONCAT(k_ir,in_name)))
+    //cifro il pacchetto con la chiave condivisa tra initiator e server
+    e2 = ENC(si,m2)
+]
+
+Server -> Initiator : e2
+
+principal Initiator[
+    m3 = DEC(si, e2)
+    ni_check, key_ir, r_name_check, e4 = SPLIT(m3)
+    _ = ASSERT(ni_check,ni)?
+    _ = ASSERT(r_name, r_name_check)? 
+]
+
+
+Initiator -> Recipient : e4
+
+principal Recipient[
+    knows private sr
+    generates nb
+    m5 = DEC(sr,e4)
+    key_ri, i_name_check = SPLIT(m5)
+    e5 = ENC(key_ri, nb)
+]
+
+Recipient -> Initiator : e5
+
+principal Initiator[
+    m6 = DEC(key_ir,e5)
+    //come si fa il -1 del nonce? NON SI PUò FARE
+    e7 = ENC(key_ir, m6)
+]
+
+Initiator -> Recipient : e7
+
+principal Recipient[
+    m8=DEC(key_ri, e7)
+    _ = ASSERT(nb,m8)?
+]
+
+
+
+
+queries[
+    authentication? Initiator -> Server: e1
+    // confidentiality? m1
+    // confidentiality? m2
+    // confidentiality? m3
+    // confidentiality? m4
+    // confidentiality? m5
+    // confidentiality? m6
+    // confidentiality? m7
+    // confidentiality? m8
+
+]
+

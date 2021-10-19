@@ -1,0 +1,7 @@
+#Wed Feb 03 14:01:20 CET 2021
+org.modelio.app.diagram.editor.OpenedDiagrams5='ThirdMessage' {e17b1c05-ab8d-4274-ac72-8550b7a43848} Standard.ObjectDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams4='SecondMessage' {46fdb6ed-dde5-4a8e-a35e-4e2ac45589ae} Standard.ObjectDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams3='Second_Message(fromServer)' {0e5df862-04c1-48e7-902f-471c98e092af} Standard.ObjectDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams2='First_message(toServer) Object diagram' {d29ac71f-3e8d-4197-8c3c-5592b84f63db} Standard.ObjectDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams1='FirstMessage' {bc493751-b150-4b27-9b00-62a3a59f9934} Standard.ObjectDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams0='FirstMessage' {67bb7e0f-356f-4822-aaf6-67f5b664b527} Standard.SequenceDiagram

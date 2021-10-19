@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ns" version="4">
+  <OBJECT>
+    <ID name="ns" mc="Standard.Package" uid="9e880ecf-a3b8-4869-80ab-df0ffbd8da04"/>
+    <PID name="NS" mc="Standard.Project" uid="f38c1dd3-700c-4e30-af2c-ce23bef5248f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ns]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Agent" mc="Standard.Class" uid="adbc27cc-ea3a-43a5-a4ec-4ee0be55344b"/>
+        <COMPID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+        <COMPID name="Port" mc="Standard.Class" uid="9784f810-b363-4821-bc0f-f80bcd5178d2"/>
+        <COMPID name="InputPort" mc="Standard.Class" uid="d8d76e2b-fff9-4efe-8407-f64698f7e358"/>
+        <COMPID name="OutputPort" mc="Standard.Class" uid="5d96395c-f1d6-478e-9a8d-0010bc92883d"/>
+        <COMPID name="Aggregate" mc="Standard.Class" uid="9244bc59-f318-4e0b-b521-3cf93988d6ad"/>
+        <COMPID name="TEST NS" mc="Standard.Package" uid="cb2d761e-583f-4862-a87e-8507515047ae"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

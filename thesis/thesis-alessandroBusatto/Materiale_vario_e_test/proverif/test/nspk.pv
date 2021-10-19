@@ -1,0 +1,72 @@
+free c : channel.
+
+(*公钥生成*)
+type pkey.
+type skey.
+
+fun pk(skey): pkey.
+fun aenc(bitstring, pkey): bitstring.
+reduc forall x: bitstring, y:skey; adec(aenc(x, pk(y)), y)= x.
+
+(*签名*)
+type spkey.
+type sskey.
+
+fun spk(sskey): spkey.
+fun sign(bitstring, sskey): bitstring.
+reduc forall x: bitstring, y: sskey; getmess(sign(x, y))= x.
+reduc forall x: bitstring, y: sskey; checksign(sign(x, y), spk(y))= x.
+
+(*共享密钥*)
+fun senc(bitstring, bitstring): bitstring.
+reduc forall x: bitstring, y: bitstring; sdec(senc(x, y), y)= x.
+(*认证查询*)
+event beginBparam(pkey).
+event endBparam(pkey).
+event beginAparam(pkey).
+event endAparam(pkey).
+
+query x: pkey; inj-event(endBparam(x)) ==> inj-event(beginBparam(x)).
+query x: pkey; inj-event(endAparam(x)) ==> inj-event(beginAparam(x)).
+
+(*保密查询*)
+free secretANa, secretANb, secretBNa, secretBNb :bitstring [private].
+
+query attacker(secretANa);
+	  attacker(secretANb);
+	  attacker(secretBNa);
+	  attacker(secretBNb).
+
+(*Alice进程*)
+let processA(pkB: pkey, skA: skey)=
+	in(c, pkX : pkey);
+	event beginBparam(pkX);
+	new Na: bitstring;
+	out(c, aenc((Na, pk(skA)), pkX));
+	in(c, m: bitstring);
+	let (=Na, NX: bitstring)= adec(m, skA) in
+	out(c, aenc(NX, pkX));
+	if pkX = pkB then
+	event endAparam(pk(skA));
+	out(c, senc(secretANa, Na));
+	out(c, senc(secretANb, NX)).
+
+(*Bob进程*)
+let processB(pkA: pkey, skB: skey)=
+	in(c, m: bitstring);
+	let (NY: bitstring,pkY: pkey) = adec(m,skB) in
+	event beginAparam(pkY);
+	new Nb: bitstring;
+	out(c, aenc((NY, Nb),pkY));
+	in(c, m3: bitstring);
+	if Nb= adec(m3, skB) then
+	if pkY = pkA then
+	event endBparam(pk(skB));
+	out(c, senc(secretBNa, NY));
+	out(c, senc(secretBNb, Nb)).
+
+(*主函数*)
+process
+	new skA: skey; let pkA= pk(skA) in out(c, pkA);
+	new skB: skey; let pkB= pk(skB) in out(c, pkB);
+	((!processA(pkB, skA)) | (!processB(pkA, skB)))

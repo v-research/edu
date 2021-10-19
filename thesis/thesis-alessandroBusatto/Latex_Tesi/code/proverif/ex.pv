@@ -1,0 +1,14 @@
+free c : channel.
+
+free message : bitstring [private].
+
+query attacker((*Enter what you want to attack*)).
+
+let clientA=
+  out (c, message).
+
+let clientB=
+  in(c, message:bitstring).
+
+process
+  clientA|clientB

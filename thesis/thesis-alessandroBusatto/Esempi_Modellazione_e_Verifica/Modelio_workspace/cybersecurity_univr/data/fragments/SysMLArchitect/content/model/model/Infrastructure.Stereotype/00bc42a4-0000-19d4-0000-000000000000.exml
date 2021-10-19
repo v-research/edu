@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ConnectorProperty" version="4">
+  <OBJECT>
+    <ID name="ConnectorProperty" mc="Infrastructure.Stereotype" uid="00bc42a4-0000-19d4-0000-000000000000"/>
+    <PID name="sysml" mc="Infrastructure.Profile" uid="00bc42a4-0000-1968-0000-000000000000"/>
+    <ATTRIBUTES>
+      <ATT name="Image"><![CDATA[res/icons/connectorproperty.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/icons/connectorproperty.png]]></ATT>
+      <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="LabelKey"><![CDATA[%stereotype.ConnectorProperty.label]]></ATT>
+      <ATT name="BaseClassName"><![CDATA[Standard.BindableInstance]]></ATT>
+      <ATT name="Name"><![CDATA[ConnectorProperty]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DefinedTagType">
+        <OBJECT>
+          <ID name="ConnectorProperty_connector" mc="Infrastructure.TagType" uid="d49db246-fd49-11df-aca6-0027103f347c"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">true</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.ConnectorProperty_connector.label]]></ATT>
+            <ATT name="Name"><![CDATA[ConnectorProperty_connector]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

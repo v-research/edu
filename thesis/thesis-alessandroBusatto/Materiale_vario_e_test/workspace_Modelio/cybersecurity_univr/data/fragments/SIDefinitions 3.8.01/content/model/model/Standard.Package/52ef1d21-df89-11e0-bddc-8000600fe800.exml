@@ -1,0 +1,545 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SI Base Units" version="4">
+  <OBJECT>
+    <ID name="SI Base Units" mc="Standard.Package" uid="52ef1d21-df89-11e0-bddc-8000600fe800"/>
+    <PID name="SIDefinitions" mc="Standard.Package" uid="6861c4b2-66b3-4e85-88d7-55f75d031b60"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SI Base Units]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Declared">
+        <OBJECT>
+          <ID name="AmountOfSubstance" mc="Standard.Instance" uid="7e3dd841-df89-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[AmountOfSubstance]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="QuantityKind" mc="Infrastructure.Stereotype" uid="d0c2eab1-c19f-11df-b3ac-001302895b2b"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="ElectricCurrent" mc="Standard.Instance" uid="6109a601-df89-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[ElectricCurrent]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="QuantityKind" mc="Infrastructure.Stereotype" uid="d0c2eab1-c19f-11df-b3ac-001302895b2b"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Length" mc="Standard.Instance" uid="5d2e8eb1-df89-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Length]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="QuantityKind" mc="Infrastructure.Stereotype" uid="d0c2eab1-c19f-11df-b3ac-001302895b2b"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="LuminousIntensity" mc="Standard.Instance" uid="d27af051-df89-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[LuminousIntensity]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="QuantityKind" mc="Infrastructure.Stereotype" uid="d0c2eab1-c19f-11df-b3ac-001302895b2b"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Mass" mc="Standard.Instance" uid="60356611-df89-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Mass]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="QuantityKind" mc="Infrastructure.Stereotype" uid="d0c2eab1-c19f-11df-b3ac-001302895b2b"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="ThermodynamicTemperature" mc="Standard.Instance" uid="615f1901-df89-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[ThermodynamicTemperature]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="QuantityKind" mc="Infrastructure.Stereotype" uid="d0c2eab1-c19f-11df-b3ac-001302895b2b"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Time" mc="Standard.Instance" uid="60aba781-df89-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Time]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="QuantityKind" mc="Infrastructure.Stereotype" uid="d0c2eab1-c19f-11df-b3ac-001302895b2b"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Ampere" mc="Standard.Instance" uid="cffba0b2-df8c-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Ampere]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="Unit" mc="Infrastructure.Stereotype" uid="00bc42a4-0000-19fa-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="Dependency" mc="Infrastructure.Dependency" uid="215547e1-df8d-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Dependency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="ElectricCurrent" mc="Standard.Instance" uid="6109a601-df89-11e0-bddc-8000600fe800"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="UnitQuantityKind" mc="Infrastructure.Stereotype" uid="e002f3a2-c234-11df-83b7-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="TaggedValue" mc="Infrastructure.TaggedValue" uid="cffba0b1-df8c-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[TaggedValue]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="57d0d641-df97-11e0-bddc-8000600fe800"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[ElectricCurrent]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="Unit_quantityKind" mc="Infrastructure.TagType" uid="af86465b-c19c-11df-a585-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Candela" mc="Standard.Instance" uid="d1564eb2-df8c-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Candela]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="Unit" mc="Infrastructure.Stereotype" uid="00bc42a4-0000-19fa-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="Dependency" mc="Infrastructure.Dependency" uid="e7b626d1-df8c-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Dependency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="LuminousIntensity" mc="Standard.Instance" uid="d27af051-df89-11e0-bddc-8000600fe800"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="UnitQuantityKind" mc="Infrastructure.Stereotype" uid="e002f3a2-c234-11df-83b7-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="TaggedValue" mc="Infrastructure.TaggedValue" uid="d1564eb1-df8c-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[TaggedValue]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="57d0fd52-df97-11e0-bddc-8000600fe800"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[LuminousIntensity]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="Unit_quantityKind" mc="Infrastructure.TagType" uid="af86465b-c19c-11df-a585-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Kelvin" mc="Standard.Instance" uid="d0684532-df8c-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Kelvin]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="Unit" mc="Infrastructure.Stereotype" uid="00bc42a4-0000-19fa-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="Dependency" mc="Infrastructure.Dependency" uid="2d424261-df8d-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Dependency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="ThermodynamicTemperature" mc="Standard.Instance" uid="615f1901-df89-11e0-bddc-8000600fe800"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="UnitQuantityKind" mc="Infrastructure.Stereotype" uid="e002f3a2-c234-11df-83b7-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="TaggedValue" mc="Infrastructure.TaggedValue" uid="d0684531-df8c-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[TaggedValue]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="57d0d642-df97-11e0-bddc-8000600fe800"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[ThermodynamicTemperature]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="Unit_quantityKind" mc="Infrastructure.TagType" uid="af86465b-c19c-11df-a585-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Kilogram" mc="Standard.Instance" uid="ce8135b2-df8c-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Kilogram]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="Unit" mc="Infrastructure.Stereotype" uid="00bc42a4-0000-19fa-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="Dependency" mc="Infrastructure.Dependency" uid="f04c2e21-df8c-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Dependency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="Mass" mc="Standard.Instance" uid="60356611-df89-11e0-bddc-8000600fe800"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="UnitQuantityKind" mc="Infrastructure.Stereotype" uid="e002f3a2-c234-11df-83b7-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="TaggedValue" mc="Infrastructure.TaggedValue" uid="ce8135b1-df8c-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[TaggedValue]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="57d0af31-df97-11e0-bddc-8000600fe800"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[Mass]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="Unit_quantityKind" mc="Infrastructure.TagType" uid="af86465b-c19c-11df-a585-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Meter" mc="Standard.Instance" uid="e12a1811-df89-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Meter]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="Unit" mc="Infrastructure.Stereotype" uid="00bc42a4-0000-19fa-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="Dependency" mc="Infrastructure.Dependency" uid="2ef56861-df8a-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Dependency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="Length" mc="Standard.Instance" uid="5d2e8eb1-df89-11e0-bddc-8000600fe800"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="UnitQuantityKind" mc="Infrastructure.Stereotype" uid="e002f3a2-c234-11df-83b7-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="TaggedValue" mc="Infrastructure.TaggedValue" uid="2ef51a41-df8a-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[TaggedValue]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="57ceb361-df97-11e0-bddc-8000600fe800"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[Length]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="Unit_quantityKind" mc="Infrastructure.TagType" uid="af86465b-c19c-11df-a585-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Mole" mc="Standard.Instance" uid="d0d89332-df8c-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Mole]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="Unit" mc="Infrastructure.Stereotype" uid="00bc42a4-0000-19fa-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="Dependency" mc="Infrastructure.Dependency" uid="3e873031-df8d-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Dependency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="AmountOfSubstance" mc="Standard.Instance" uid="7e3dd841-df89-11e0-bddc-8000600fe800"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="UnitQuantityKind" mc="Infrastructure.Stereotype" uid="e002f3a2-c234-11df-83b7-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="TaggedValue" mc="Infrastructure.TaggedValue" uid="d0d89331-df8c-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[TaggedValue]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="57d0fd51-df97-11e0-bddc-8000600fe800"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[AmountOfSubstance]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="Unit_quantityKind" mc="Infrastructure.TagType" uid="af86465b-c19c-11df-a585-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Second" mc="Standard.Instance" uid="cf7f44c2-df8c-11e0-bddc-8000600fe800"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Second]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="Unit" mc="Infrastructure.Stereotype" uid="00bc42a4-0000-19fa-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="Dependency" mc="Infrastructure.Dependency" uid="0403a291-df8d-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Dependency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="Time" mc="Standard.Instance" uid="60aba781-df89-11e0-bddc-8000600fe800"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="UnitQuantityKind" mc="Infrastructure.Stereotype" uid="e002f3a2-c234-11df-83b7-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="TaggedValue" mc="Infrastructure.TaggedValue" uid="cf7f44c1-df8c-11e0-bddc-8000600fe800"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[TaggedValue]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="57d0af32-df97-11e0-bddc-8000600fe800"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[Time]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="Unit_quantityKind" mc="Infrastructure.TagType" uid="af86465b-c19c-11df-a585-001302895b2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

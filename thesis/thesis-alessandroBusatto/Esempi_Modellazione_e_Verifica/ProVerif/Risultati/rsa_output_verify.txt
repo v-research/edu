@@ -1,0 +1,3 @@
+Verification summary:
+
+Query not attacker(s[]) is false.

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Local Network" version="4">
+  <OBJECT>
+    <ID name="Local Network" mc="Standard.Node" uid="9ad0eee8-e741-4383-bc32-175e36822d5f"/>
+    <PID name="arp" mc="Standard.Package" uid="eaefdf90-dc01-42ab-8578-2af102012bef"/>
+    <ATTRIBUTES>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Local Network]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ABFTheory" version="4">
+  <OBJECT>
+    <ID name="ABFTheory" mc="Standard.Package" uid="88bb0aeb-e4cf-44c8-ab9b-0ba13b9ba70e"/>
+    <PID name="Engineering" mc="Standard.Package" uid="a3e21256-2252-4f24-a1b9-79aeef855636"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ABFTheory]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Belief" mc="Standard.Class" uid="612f6d88-928a-4635-9b58-36d4dfdebc80"/>
+        <COMPID name="Assertion" mc="Standard.Class" uid="7d193e9e-f9d5-4637-a155-b3865cf55bba"/>
+        <COMPID name="Fact" mc="Standard.Class" uid="6389a71b-8fd7-41b1-9594-c5ca1de66d69"/>
+        <COMPID name="Base" mc="Standard.Class" uid="c47b35b5-ade2-419b-bf88-7dd50434af57"/>
+        <COMPID name="Region" mc="Standard.Class" uid="a55f40e7-261e-4bd2-87db-da1a0f295524"/>
+        <COMPID name="BeliefRegion" mc="Standard.Class" uid="104898a5-510a-4429-ae5b-bdc362804fed"/>
+        <COMPID name="FactRegion" mc="Standard.Class" uid="ca47b915-7c39-4e11-9a2a-e2087e710ac6"/>
+        <COMPID name="AssertionRegion" mc="Standard.Class" uid="0e0491ec-7165-4b83-bbbe-28ed3f43df24"/>
+        <COMPID name="Set" mc="Standard.Class" uid="fea59df9-9a6a-465a-b5ad-1e713fb00e59"/>
+        <COMPID name="List" mc="Standard.Class" uid="677fedb9-345e-43d9-8be7-c81bbc14b59a"/>
+        <COMPID name="ListOfRegions" mc="Standard.Class" uid="7c9e5865-1802-4929-9b26-3f9a9d35693b"/>
+        <COMPID name="EmptyRegion" mc="Standard.Class" uid="21c5460a-979f-4012-8ff8-538a0947e0e0"/>
+        <COMPID name="BeliefRegionList" mc="Standard.Class" uid="104f58e0-83f6-42cb-9c55-3e5f779d62cb"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="ABFTheory Class diagram" mc="Standard.ClassDiagram" uid="1e553027-56b7-4e7e-a936-bf0f7e6022a3"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

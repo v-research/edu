@@ -1,0 +1,39 @@
+\subsection{VerifPal}
+Tra i vari tool basati sul modello simbolico in grado di effettuare l'analisi formale dei protocolli di sicurezza, attualmente, il più utilizzato è ProVerif, purtroppo questo tool richiede all'utilizzatore di conoscere la sintassi del linguaggio Applied Pi Calculus, la quale è poco intuitiva, di conoscere il funzionamento delle clausole Horn create implicitamente dal tool e delle clausole Horn che devono essere esplicitate per modellare in maniera corretta lo scenario in cui verificare il protocollo.\\
+Per questi motivi è stato sviluppato un nuovo tool chiamato VerifPal.\\
+L'obiettivo di VerifPal è quello di descrivere protocolli con un linguaggio molto simile a come i protocolli potrebbero essere descritti in una conversazione informale.\\
+Per fare ciò, pur basandosi internamente su costruzione e decostruzione di termini astratti simili a ProVerif, fa si che l'utente debba solo definire gli agenti partecipanti al protocollo che hanno stati indipendenti, conoscono determinati valori ed eseguono operazioni con le primitive crittografiche.\\
+Le primitive crittografiche sono già definite e devono essere solo richiamate, in questo modo si evita che l'utente possa implementarle in maniera errata.\\
+VerifPal \`e nato con lo scopo di creare un tool utilizzabile nell'ingegneria, per questo si presta ad essere utilizzato per il raggiungimento dell'obiettivo principale di questo documento, ovvero quello di utilizzare la modellazione UML per avvicinare la verifica di protocolli all'ingegneria di sistemi.  
+
+\subsection*{Modellazione con VerifPal}
+Quando si scrive il codice per la verifica formale di protocolli da analizzare con il tool VerifPal, la prima cosa da fare è scegliere se l'attaccante è di tipo attivo o di tipo passivo.\\
+L'attaccante di tipo attivo viene comunemente chiamato attaccante di tipo Dolev-Yao (Sezione \ref{sec:dy}), mentre l'attaccante di tipo passivo è semplicemente un ascoltatore in grado di vedere i pacchetti che transitano sulla rete.\\
+La seconda cosa da fare è inizializzare gli agenti che partecipano al protocollo, chiamati \texttt{principal}\footnote{questo tipo di font verrà applicato a tutte le keyword utilizzate da VerifPal}, all'interno della definizione dei principal possono essere definite delle costanti.\\ 
+Queste costanti possono essere conoscenze pregresse del principal, per fare questo vengono inizializzate con la parola chiave \texttt{knows}, oppure possono essere delle costanti con dei valori generati al momento, in questo caso si utilizza la parola chiave \texttt{generates}.\\
+Inoltre, le costanti possono essere definite pubbliche o private, nel caso in cui la costante sia definita pubblica anche l'attaccante ne è a conoscenza.\\
+Per quanto detto sopra, per evitare errori da parte dell'utente, le variabili hanno uno scope globale, di conseguenza non possono esistere due costanti con lo stesso nome, a meno che non vengano definite come \texttt{private} e non possono essere riassegnate ad altri valori.\\
+Una volta inizializzati i principal si passa alla modellazione del protocollo vero e proprio, con lo scambio dei messaggi e le varie operazioni fatte dai principal.\\
+Per inviare un messaggio basta semplicemente indicare mittente, destinatario e contenuto del messaggio in questo modo: 
+\begin{lstlisting}[mathescape]
+    A$\rightarrow$B: m 
+\end{lstlisting}
+ Inoltre è possibile forzare il fatto che l'attaccante attivo non possa modificare il messaggio m semplicemente inserendolo tra $[$ $]$, l'utilizzo di questa tecnica di guardia è sconsigliato, in quanto potrebbe alterare il risultato della verifica, se non utilizzata correttamente.\\
+Come detto sopra VerifPal ci viene incontro definendo le seguenti primitive (le quali corrispondono anche alle primitive del modello Dolev-Yao): 
+\begin{itemize}
+    \item \textbf{\texttt{CONCAT}}(a,b...) : c $\rightarrow$ concatena due o più valori in uno
+    \item \textbf{\texttt{SPLIT}}(\textbf{\texttt{CONCAT}}(a,b...)) : a,b. $\rightarrow$ separa una concatenazione negli elementi che la compongono
+    \item \textbf{\texttt{ENC}}(key,paintext) : ciphertext $\rightarrow$ codifica nella crittografia a chiave simmetrica
+    \item \textbf{\texttt{DEC}}(key, \textbf{\texttt{ENC}}(key,paintext)): plaintext $\rightarrow$ decodifica nella crittografia a chiave simmetrica
+    \item \textbf{\texttt{PKE\_ENC}}($G^{key}$, plaintext) : ciphertext $\rightarrow$ codifica nella crittografia a chiave asimmetrica
+    \item \textbf{\texttt{PKE\_DEC}}(key, \textbf{\texttt{PKE\_ENC}}($G^{key}$, plaintext)) : plaintext $\rightarrow$ decodifica nella crittografia a chiave asimmetrica
+    \item \textbf{\texttt{SIGN}}(key, message) : signature $\rightarrow$ firma un messaggio
+    \item \textbf{\texttt{SIGNVERIF}}($G^{key}$, message, \textbf{\texttt{SIGN}}(key, message)) : message $\rightarrow$ verifica della firma
+\end{itemize}
+
+\noindent Oltre a queste primitive VerifPal fornisce altre primitive utili per effettuare l'hash dei messaggi.\\
+Il modello del protocollo si conclude con un blocco chiamato \texttt{queries}, dove sono contenute le domande alle quali vorremmo che VerifPal ci desse le risposte come risultato dell'analisi del modello.\\
+Nel blocco di queries possiamo fare delle domande su confidenzialità, autenticazione, freshness dei messaggi utilizzando rispettivamente i comandi \texttt{confidentiality?}, \texttt{authentication?} e \texttt{freshness?}.\\
+Inoltre nel caso in cui si volesse modellare uno scenario in cui l'attaccante riesce ad ottenere una costante dichiarata come privata in qualche modo, basta utilizzare la parola chiave \texttt{leaks} seguita dal nome della variabile.\\
+Qui è proposto lo stesso scenario modellato nella Sezione \ref{lst:hw} con ProVerif:
+\lstinputlisting[language=vp]{../code/test.vp}

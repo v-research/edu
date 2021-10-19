@@ -1,0 +1,55 @@
+confidentiality? probe
+ probe (CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip))) is obtained by Attacker. 
+  
+confidentiality? reply
+ reply (CONCAT(CONCAT(SPLIT(SPLIT(CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip)))), SPLIT(SPLIT(CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip)))), SPLIT(SPLIT(CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip)))), type_reply), CONCAT(SPLIT(SPLIT(CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip)))), ip_used, sha_used, ip_used))) is obtained by Attacker. 
+  
+authentication?  -> : probe
+ When: 
+    probe $\rightarrow$   ip_used $\leftarrow$ mutated by Attacker (originally CONCAT(info_protocol_a, info_address_a)) 
+    in_prot_a $\rightarrow$   SPLIT(ip_used) 
+    in_add_a $\rightarrow$   SPLIT(ip_used) 
+    ar_hrd_a $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    ar_pro_a $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    ar_hln_a $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    type_req_a $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    ar_sha_a $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    unnamed_0 $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    unnamed_1 $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    ar_tpa_a $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    info_protocol_b $\rightarrow$   CONCAT(SPLIT(SPLIT(ip_used)), SPLIT(SPLIT(ip_used)), SPLIT(SPLIT(ip_used)), type_reply) 
+    info_address_b $\rightarrow$   CONCAT(SPLIT(SPLIT(ip_used)), ip_used, sha_used, ip_used) 
+    reply $\rightarrow$   CONCAT(CONCAT(SPLIT(SPLIT(ip_used)), SPLIT(SPLIT(ip_used)), SPLIT(SPLIT(ip_used)), type_reply), CONCAT(SPLIT(SPLIT(ip_used)), ip_used, sha_used, ip_used)) 
+    unnamed_2 $\rightarrow$   CONCAT(SPLIT(SPLIT(ip_used)), SPLIT(SPLIT(ip_used)), SPLIT(SPLIT(ip_used)), type_reply) 
+    info_reply $\rightarrow$   CONCAT(SPLIT(SPLIT(ip_used)), ip_used, sha_used, ip_used) 
+    unnamed_3 $\rightarrow$   SPLIT(SPLIT(ip_used)) 
+    unnamed_4 $\rightarrow$   ip_used 
+    ar_tha_reply $\rightarrow$   sha_used 
+    unnamed_5 $\rightarrow$   ip_used 
+    unnamed_6 $\rightarrow$   ASSERT(ar_sha, sha_used) 
+    probe (ip_used), sent by Attacker and not by A, is successfully used in CONCAT(SPLIT(SPLIT(ip_used)), SPLIT(SPLIT(ip_used)), SPLIT(SPLIT(ip_used)), type_reply) within B's state. 
+  
+authentication?  -> : reply
+ When: 
+    probe $\rightarrow$   CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip)) 
+    in_prot_a $\rightarrow$   CONCAT(ar_hrd, ar_pro, ar_hln, type_req) $\leftarrow$ obtained by Attacker 
+    in_add_a $\rightarrow$   CONCAT(ar_sha, nil, nil, ip) 
+    ar_hrd_a $\rightarrow$   ar_hrd 
+    ar_pro_a $\rightarrow$   ar_pro 
+    ar_hln_a $\rightarrow$   ar_hln 
+    type_req_a $\rightarrow$   type_req 
+    ar_sha_a $\rightarrow$   ar_sha 
+    unnamed_0 $\rightarrow$   nil 
+    unnamed_1 $\rightarrow$   nil 
+    ar_tpa_a $\rightarrow$   ip 
+    info_protocol_b $\rightarrow$   CONCAT(ar_hrd, ar_pro, ar_hln, type_reply) 
+    info_address_b $\rightarrow$   CONCAT(ar_sha, ip_used, sha_used, ip_used) 
+    reply $\rightarrow$   CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip)) $\leftarrow$ mutated by Attacker (originally CONCAT(info_protocol_b, info_address_b)) 
+    unnamed_2 $\rightarrow$   CONCAT(ar_hrd, ar_pro, ar_hln, type_req) $\leftarrow$ obtained by Attacker 
+    info_reply $\rightarrow$   CONCAT(ar_sha, nil, nil, ip) 
+    unnamed_3 $\rightarrow$   ar_sha 
+    unnamed_4 $\rightarrow$   nil 
+    ar_tha_reply $\rightarrow$   nil 
+    unnamed_5 $\rightarrow$   ip 
+    unnamed_6 $\rightarrow$   ASSERT(ar_sha, nil) 
+    reply (CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip))), sent by Attacker and not by B, is successfully used in SPLIT(CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip))) within A's state. 

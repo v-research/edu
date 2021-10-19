@@ -1,0 +1,41 @@
+confidentiality? probe
+ probe (CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip))) is obtained by Attacker. 
+  
+confidentiality? annunce
+ annunce (CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, ip, nil, ip))) is obtained by Attacker. 
+  
+authentication?  -> : probe
+ When: 
+    probe $\rightarrow$   CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, ip, nil, ip)) $\leftarrow$ mutated by Attacker (originally CONCAT(info_protocol_a, info_address_a)) 
+    info_pro_probe $\rightarrow$   CONCAT(ar_hrd, ar_pro, ar_hln, type_req) $\leftarrow$ obtained by Attacker 
+    info_add_probe $\rightarrow$   CONCAT(ar_sha, ip, nil, ip) 
+    ar_sha_probe $\rightarrow$   ar_sha 
+    ar_spa_probe $\rightarrow$   ip 
+    ar_tha_probe $\rightarrow$   nil 
+    ar_tpa_probe $\rightarrow$   ip 
+    annunce $\rightarrow$   ar_hln $\leftarrow$ mutated by Attacker (originally CONCAT(info_protocol_a, info_address_a2)) 
+    unnamed_0 $\rightarrow$   SPLIT(ar_hln) 
+    info_annunce $\rightarrow$   SPLIT(ar_hln) 
+    ar_sha_annunce $\rightarrow$   SPLIT(SPLIT(ar_hln)) 
+    ar_spa_annunce $\rightarrow$   SPLIT(SPLIT(ar_hln)) 
+    unnamed_1 $\rightarrow$   SPLIT(SPLIT(ar_hln)) 
+    unnamed_2 $\rightarrow$   SPLIT(SPLIT(ar_hln)) 
+    probe (CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, ip, nil, ip))), sent by Attacker and not by A, is successfully used in SPLIT(CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, ip, nil, ip))) within B's state. 
+  
+authentication?  -> : annunce
+ When: 
+    probe $\rightarrow$   CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip)) 
+    info_pro_probe $\rightarrow$   CONCAT(ar_hrd, ar_pro, ar_hln, type_req) $\leftarrow$ obtained by Attacker 
+    info_add_probe $\rightarrow$   CONCAT(ar_sha, nil, nil, ip) 
+    ar_sha_probe $\rightarrow$   ar_sha 
+    ar_spa_probe $\rightarrow$   nil 
+    ar_tha_probe $\rightarrow$   nil 
+    ar_tpa_probe $\rightarrow$   ip 
+    annunce $\rightarrow$   CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip)) $\leftarrow$ mutated by Attacker (originally CONCAT(info_protocol_a, info_address_a2)) 
+    unnamed_0 $\rightarrow$   CONCAT(ar_hrd, ar_pro, ar_hln, type_req) $\leftarrow$ obtained by Attacker 
+    info_annunce $\rightarrow$   CONCAT(ar_sha, nil, nil, ip) 
+    ar_sha_annunce $\rightarrow$   ar_sha 
+    ar_spa_annunce $\rightarrow$   nil 
+    unnamed_1 $\rightarrow$   nil 
+    unnamed_2 $\rightarrow$   ip 
+    annunce (CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip))), sent by Attacker and not by A, is successfully used in SPLIT(CONCAT(CONCAT(ar_hrd, ar_pro, ar_hln, type_req), CONCAT(ar_sha, nil, nil, ip))) within B's state. 

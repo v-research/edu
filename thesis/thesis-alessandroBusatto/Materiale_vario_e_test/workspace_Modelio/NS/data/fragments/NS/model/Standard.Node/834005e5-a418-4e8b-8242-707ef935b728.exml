@@ -1,0 +1,859 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Controller" version="4">
+  <OBJECT>
+    <ID name="Controller" mc="Standard.Node" uid="834005e5-a418-4e8b-8242-707ef935b728"/>
+    <PID name="TEST NS" mc="Standard.Package" uid="cb2d761e-583f-4862-a87e-8507515047ae"/>
+    <ATTRIBUTES>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Controller]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="InternalStructure">
+        <OBJECT>
+          <ID name="NetworkOPort" mc="Standard.Port" uid="c6d91375-719a-4aeb-8323-4889d6a01ecf"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[NetworkOPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="OutputPort" mc="Standard.Class" uid="5d96395c-f1d6-478e-9a8d-0010bc92883d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="NetworkIPort" mc="Standard.Port" uid="fbea3aec-ddd2-4afe-9044-bde302dc56c6"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[NetworkIPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="InputPort" mc="Standard.Class" uid="d8d76e2b-fff9-4efe-8407-f64698f7e358"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="UserOPort" mc="Standard.Port" uid="90cf91bf-34e4-4066-8a50-5d998701daa1"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[UserOPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="OutputPort" mc="Standard.Class" uid="5d96395c-f1d6-478e-9a8d-0010bc92883d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="UserIPort" mc="Standard.Port" uid="30719d51-cf11-40a6-b0fd-7d0a11c0138d"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[UserIPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="InputPort" mc="Standard.Class" uid="d8d76e2b-fff9-4efe-8407-f64698f7e358"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="ServerInput" mc="Standard.BindableInstance" uid="f3e8d17f-688f-4e37-a5e6-ca9e5660b4ea"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[ServerInput]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="InputPort" mc="Standard.Class" uid="d8d76e2b-fff9-4efe-8407-f64698f7e358"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="19410d79-956d-432c-aac3-4e93a5d21cba"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="GenerateSymKey(i,r)" mc="Standard.BindableInstance" uid="077311fc-57a3-4a3b-8d3d-afe1719d9159"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[GenerateSymKey(i,r)]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="GetSharedKey" mc="Standard.BindableInstance" uid="cce9dab7-b913-40d4-814f-8d9c4dffee8b"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[GetSharedKey]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="concatenate" mc="Standard.BindableInstance" uid="db84c422-050a-453e-8d1c-e3cd96c878fd"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[concatenate]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="encryption" mc="Standard.BindableInstance" uid="5a61f8f2-ac6f-4683-ae89-625820927e7c"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[encryption]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="concatenate" mc="Standard.BindableInstance" uid="7f5c8a4e-2606-4122-b844-6be18e3e4794"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[concatenate]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="encryption" mc="Standard.BindableInstance" uid="5cfe4cf7-2a91-4960-978e-d3452335df28"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[encryption]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="ServerOutputPort" mc="Standard.BindableInstance" uid="8cb204e7-3109-498b-a7c0-1534ade7a872"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[ServerOutputPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="OutputPort" mc="Standard.Class" uid="5d96395c-f1d6-478e-9a8d-0010bc92883d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="NetworkIPort" mc="Standard.BindableInstance" uid="385e9528-8622-41ed-bb31-9b87edb69d29"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[NetworkIPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="InputPort" mc="Standard.Class" uid="d8d76e2b-fff9-4efe-8407-f64698f7e358"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="decryption" mc="Standard.BindableInstance" uid="e67def1d-5967-4b0f-a8e2-57811b5dc5ee"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[decryption]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="NetworkOPort" mc="Standard.BindableInstance" uid="4d1c9175-e70e-4243-8f58-557357a8b6c5"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[NetworkOPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="OutputPort" mc="Standard.Class" uid="5d96395c-f1d6-478e-9a8d-0010bc92883d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="NetworkIPort" mc="Standard.BindableInstance" uid="112fcbd0-3131-4d71-b8f7-b5f09c075a32"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[NetworkIPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="InputPort" mc="Standard.Class" uid="d8d76e2b-fff9-4efe-8407-f64698f7e358"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="decryption" mc="Standard.BindableInstance" uid="e8f59a9f-84ec-4d3e-80b7-059341446261"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[decryption]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="generateNonce" mc="Standard.BindableInstance" uid="ca0b29d9-a90d-40f2-b257-356ae2e47517"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[generateNonce]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="encryptionWithSymKey" mc="Standard.BindableInstance" uid="d6f2bd80-0243-4677-965c-bab8fb49992f"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[encryptionWithSymKey]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="NetworkOPort" mc="Standard.BindableInstance" uid="9ef595c4-1021-4876-a3f1-1970ad03cb34"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[NetworkOPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="OutputPort" mc="Standard.Class" uid="5d96395c-f1d6-478e-9a8d-0010bc92883d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="NetworkIPort" mc="Standard.BindableInstance" uid="687919a7-cc40-4029-b4a1-b5d67f3f82dc"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[NetworkIPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="InputPort" mc="Standard.Class" uid="d8d76e2b-fff9-4efe-8407-f64698f7e358"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="decryptionWithSymKey" mc="Standard.BindableInstance" uid="5878ad41-5585-4cd5-bdee-b156243822ad"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[decryptionWithSymKey]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="decrementNonce" mc="Standard.BindableInstance" uid="1eddc658-9dde-48a9-9b87-e120e8c3f6f9"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[decrementNonce]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="encryptionWithSymKey" mc="Standard.BindableInstance" uid="c6df81d8-bfc9-406b-850e-5578b58c69e8"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[encryptionWithSymKey]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="FunctionalBlock" mc="Standard.Class" uid="cfec12fe-a3b2-4b53-baed-4f7d5e59daf7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="NetworkOPort" mc="Standard.BindableInstance" uid="a4576df0-b737-4684-8f6c-eb950affa768"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[NetworkOPort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Base">
+              <ID name="OutputPort" mc="Standard.Class" uid="5d96395c-f1d6-478e-9a8d-0010bc92883d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedInformationFlow">
+        <OBJECT>
+          <ID name="&lt;i.name,r.name&gt;" mc="Standard.InformationFlow" uid="f4de3da6-d90e-4601-930b-e5712b707d69"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<i.name,r.name>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="ServerInput" mc="Standard.BindableInstance" uid="f3e8d17f-688f-4e37-a5e6-ca9e5660b4ea"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="GetSharedKey" mc="Standard.BindableInstance" uid="cce9dab7-b913-40d4-814f-8d9c4dffee8b"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;i.name&gt;" mc="Standard.InformationFlow" uid="d5ecc325-4fe9-48a5-bee2-e1580945aa0a"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<i.name>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="ServerInput" mc="Standard.BindableInstance" uid="f3e8d17f-688f-4e37-a5e6-ca9e5660b4ea"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="concatenate" mc="Standard.BindableInstance" uid="db84c422-050a-453e-8d1c-e3cd96c878fd"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="SymKey(i,r)" mc="Standard.InformationFlow" uid="88626052-a7e5-4cf3-8f7d-86f967aca03e"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[SymKey(i,r)]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="GenerateSymKey(i,r)" mc="Standard.BindableInstance" uid="077311fc-57a3-4a3b-8d3d-afe1719d9159"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="concatenate" mc="Standard.BindableInstance" uid="db84c422-050a-453e-8d1c-e3cd96c878fd"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="SharedKey(s,r)" mc="Standard.InformationFlow" uid="bc2f1260-4c57-4734-ae19-5c601e5d34b6"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[SharedKey(s,r)]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="GetSharedKey" mc="Standard.BindableInstance" uid="cce9dab7-b913-40d4-814f-8d9c4dffee8b"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="encryption" mc="Standard.BindableInstance" uid="5a61f8f2-ac6f-4683-ae89-625820927e7c"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;i.name; SymKey(i,r)&gt;" mc="Standard.InformationFlow" uid="404823aa-e9cd-4eac-af8d-254c03a1a541"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<i.name; SymKey(i,r)>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="concatenate" mc="Standard.BindableInstance" uid="db84c422-050a-453e-8d1c-e3cd96c878fd"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="encryption" mc="Standard.BindableInstance" uid="5a61f8f2-ac6f-4683-ae89-625820927e7c"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="SymKey(i,r)" mc="Standard.InformationFlow" uid="c9386cb4-8661-4d02-afe1-2b560ae6f55e"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[SymKey(i,r)]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="GenerateSymKey(i,r)" mc="Standard.BindableInstance" uid="077311fc-57a3-4a3b-8d3d-afe1719d9159"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="concatenate" mc="Standard.BindableInstance" uid="7f5c8a4e-2606-4122-b844-6be18e3e4794"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="{i.name; SymKey(i,r)}_SharedKey(r,s)" mc="Standard.InformationFlow" uid="fd6f4523-b40b-4aac-bd5d-05927152fcbb"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[{i.name; SymKey(i,r)}_SharedKey(r,s)]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="encryption" mc="Standard.BindableInstance" uid="5a61f8f2-ac6f-4683-ae89-625820927e7c"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="concatenate" mc="Standard.BindableInstance" uid="7f5c8a4e-2606-4122-b844-6be18e3e4794"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;r.name, i.nonce&gt;" mc="Standard.InformationFlow" uid="5548c36d-64b0-4035-b3fe-1deef3f1f3ed"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<r.name, i.nonce>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="ServerInput" mc="Standard.BindableInstance" uid="f3e8d17f-688f-4e37-a5e6-ca9e5660b4ea"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="concatenate" mc="Standard.BindableInstance" uid="7f5c8a4e-2606-4122-b844-6be18e3e4794"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}&gt;" mc="Standard.InformationFlow" uid="7c8bfbad-905b-4766-afc5-21fade3a0dc3"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="concatenate" mc="Standard.BindableInstance" uid="7f5c8a4e-2606-4122-b844-6be18e3e4794"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="encryption" mc="Standard.BindableInstance" uid="5cfe4cf7-2a91-4960-978e-d3452335df28"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="SharedKey(i,s)" mc="Standard.InformationFlow" uid="3ff51e78-a7f0-4b92-a00f-d56f21ed0284"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[SharedKey(i,s)]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="GetSharedKey" mc="Standard.BindableInstance" uid="cce9dab7-b913-40d4-814f-8d9c4dffee8b"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="encryption" mc="Standard.BindableInstance" uid="5cfe4cf7-2a91-4960-978e-d3452335df28"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="{i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}}_ShareKey(i,s)" mc="Standard.InformationFlow" uid="accab828-2902-4604-b6bf-fcebdb637524"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[{i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}}_ShareKey(i,s)]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="encryption" mc="Standard.BindableInstance" uid="5cfe4cf7-2a91-4960-978e-d3452335df28"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="ServerOutputPort" mc="Standard.BindableInstance" uid="8cb204e7-3109-498b-a7c0-1534ade7a872"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;{i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}_SharedKey(i,s)&gt;" mc="Standard.InformationFlow" uid="6d940809-0a57-48fb-8e88-019820b7845c"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<{i.nonce, r,name, SymKey(i,r), {i.name,SymKey(i,r)}_SharedKey(rs)}_SharedKey(i,s)>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="NetworkIPort" mc="Standard.BindableInstance" uid="385e9528-8622-41ed-bb31-9b87edb69d29"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="decryption" mc="Standard.BindableInstance" uid="e67def1d-5967-4b0f-a8e2-57811b5dc5ee"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;{i.name,SymKey(i,r)}_SharedKey(rs)&gt;" mc="Standard.InformationFlow" uid="54b22ac7-a560-43a2-9421-107e1ec440b5"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<{i.name,SymKey(i,r)}_SharedKey(rs)>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="decryption" mc="Standard.BindableInstance" uid="e67def1d-5967-4b0f-a8e2-57811b5dc5ee"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="NetworkOPort" mc="Standard.BindableInstance" uid="4d1c9175-e70e-4243-8f58-557357a8b6c5"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;{i.name,SymKey(i,r)}_SharedKey(rs)&gt;" mc="Standard.InformationFlow" uid="6fb82cb3-5840-45ca-8c5a-75507114da73"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<{i.name,SymKey(i,r)}_SharedKey(rs)>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="NetworkIPort" mc="Standard.BindableInstance" uid="112fcbd0-3131-4d71-b8f7-b5f09c075a32"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="decryption" mc="Standard.BindableInstance" uid="e8f59a9f-84ec-4d3e-80b7-059341446261"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;r.nonce&gt;" mc="Standard.InformationFlow" uid="b1369bcf-6c3e-47a8-a126-8da43f5ad712"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<r.nonce>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="generateNonce" mc="Standard.BindableInstance" uid="ca0b29d9-a90d-40f2-b257-356ae2e47517"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="encryptionWithSymKey" mc="Standard.BindableInstance" uid="d6f2bd80-0243-4677-965c-bab8fb49992f"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;ShareKey(i,s)&gt;" mc="Standard.InformationFlow" uid="cfce0762-014f-4e74-becd-f680882929d8"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<ShareKey(i,s)>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="decryption" mc="Standard.BindableInstance" uid="e8f59a9f-84ec-4d3e-80b7-059341446261"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="encryptionWithSymKey" mc="Standard.BindableInstance" uid="d6f2bd80-0243-4677-965c-bab8fb49992f"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;{r.nonce}_SymKey(i,r)&gt;" mc="Standard.InformationFlow" uid="00ee1a10-bae1-4d42-a84b-b954fbf75a8f"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<{r.nonce}_SymKey(i,r)>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="encryptionWithSymKey" mc="Standard.BindableInstance" uid="d6f2bd80-0243-4677-965c-bab8fb49992f"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="NetworkOPort" mc="Standard.BindableInstance" uid="9ef595c4-1021-4876-a3f1-1970ad03cb34"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;{r.nonce}_SymKey(i,r)&gt;" mc="Standard.InformationFlow" uid="1da4ed83-cc48-4c29-8f2f-f95d53640092"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<{r.nonce}_SymKey(i,r)>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="NetworkIPort" mc="Standard.BindableInstance" uid="687919a7-cc40-4029-b4a1-b5d67f3f82dc"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="decryptionWithSymKey" mc="Standard.BindableInstance" uid="5878ad41-5585-4cd5-bdee-b156243822ad"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;r.nonce&gt;" mc="Standard.InformationFlow" uid="de4417c4-045b-40a2-a331-19ee9970c8a4"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<r.nonce>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="decryptionWithSymKey" mc="Standard.BindableInstance" uid="5878ad41-5585-4cd5-bdee-b156243822ad"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="decrementNonce" mc="Standard.BindableInstance" uid="1eddc658-9dde-48a9-9b87-e120e8c3f6f9"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;r.nonce-1&gt;" mc="Standard.InformationFlow" uid="996b6139-0470-45f9-a8dd-7828f8d9f87d"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<r.nonce-1>]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="decrementNonce" mc="Standard.BindableInstance" uid="1eddc658-9dde-48a9-9b87-e120e8c3f6f9"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="encryptionWithSymKey" mc="Standard.BindableInstance" uid="c6df81d8-bfc9-406b-850e-5578b58c69e8"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="&lt;{r.nonce-1}_SymKey(i,r)}" mc="Standard.InformationFlow" uid="4a4ea911-a57a-4020-9582-d3132ec9410b"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[<{r.nonce-1}_SymKey(i,r)}]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="encryptionWithSymKey" mc="Standard.BindableInstance" uid="c6df81d8-bfc9-406b-850e-5578b58c69e8"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="NetworkOPort" mc="Standard.BindableInstance" uid="a4576df0-b737-4684-8f6c-eb950affa768"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="First_message(toServer) Object diagram" mc="Standard.ObjectDiagram" uid="d29ac71f-3e8d-4197-8c3c-5592b84f63db"/>
+        <COMPID name="Second_Message(fromServer)" mc="Standard.ObjectDiagram" uid="0e5df862-04c1-48e7-902f-471c98e092af"/>
+        <COMPID name="FirstMessage" mc="Standard.ObjectDiagram" uid="bc493751-b150-4b27-9b00-62a3a59f9934"/>
+        <COMPID name="SecondMessage" mc="Standard.ObjectDiagram" uid="46fdb6ed-dde5-4a8e-a35e-4e2ac45589ae"/>
+        <COMPID name="ThirdMessage" mc="Standard.ObjectDiagram" uid="e17b1c05-ab8d-4274-ac72-8550b7a43848"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
