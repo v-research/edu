@@ -77,4 +77,3 @@ This course provides an overview on the problems and challenges related to the b
 ##### Lesson 4 - Resources
 - Exercises ([pdf](material/last_exercises.pdf))
 - isolaDeserta.c ([c](material/draft/isolaDeserta.c))
-- verniciature.c ([c](material/draft/verniciature.c))
