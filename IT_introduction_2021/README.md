@@ -71,7 +71,6 @@ This course provides an overview on the problems and challenges related to the b
 ### L4. 27-October-2021 (Wednesday) [14.00-18.00]
 1. *Exercises* [4h]
 	- isolaDeserta.c
-	- verniciature.c
 2. Coffee break [10m]
 
 ##### Lesson 4 - Resources
