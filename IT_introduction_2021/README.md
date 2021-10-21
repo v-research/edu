@@ -31,6 +31,8 @@ This course provides an overview on the problems and challenges related to the b
 ##### Lesson 0 - Resources
 - Slide ([pdf](material/introduction.pdf))
 - Exercises ([pdf](material/first_exercises.pdf))
+- Guida terminale ([md](material/info.md))
+- firstprog.c ([c](material/firstprog.c))
 
 ### L1. 22-October-2021 (Friday) [14.00-18.00]
 1. *ASM intro* [30m]
