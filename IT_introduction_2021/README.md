@@ -31,7 +31,7 @@ This course provides an overview on the problems and challenges related to the b
 ##### Lesson 0 - Resources
 - Slide ([pdf](material/introduction.pdf))
 - Exercises ([pdf](material/first_exercises.pdf))
-- Ubuntu terminal instruction ([pdf](./material/terminal_instruction.pdf))
+- Ubuntu terminal instruction ([pdf](material/terminal_instruction.pdf))
 - C notes ([pdf](material/Appunti_teoria_C.pdf))
 - firstprog.c ([c](material/firstprog.c))
 
