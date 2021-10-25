@@ -2,10 +2,13 @@
 
 int main() {
 	int i;
-
-	for (i=0; i<10; i++) { 		// loop 10 times
-		puts("Hello world!\n"); // put the string to the output
+	int input;
+	
+	scanf("%d", &input);
+	for(i=0; i < 10; i++) {
+		//puts("Hello, world!\n");
+		printf("Hello, world!\n");
 	}
-
-	return 0; 					// tell OS the program exited without error
+	printf("Input: %d\n", input);
+	return 0;
 }
