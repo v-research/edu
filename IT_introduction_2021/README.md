@@ -69,7 +69,7 @@ This course provides an overview on the problems and challenges related to the b
 	- garbage
 2. Coffee break [10m]
 3. *Exercises* [1h]
-	- Esercizi con la memoria
+	- Some more exercises ([pdf](material/other_exercises.pdf))
 
 ### L4. 27-October-2021 (Wednesday) [14.00-18.00]
 1. *Exercises* [4h]
