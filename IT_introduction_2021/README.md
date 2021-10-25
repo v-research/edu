@@ -59,6 +59,7 @@ This course provides an overview on the problems and challenges related to the b
 	- Command line
 	- Variable scoping
 2. Coffee break [10m]
+	- super secret club ex. ([file.c](material/supersecretclub.c))
 
 ### L3. 26-October-2021 (Tuesday) [14.00-18.00]
 1. *Memory in C* [3h]
