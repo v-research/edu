@@ -33,7 +33,7 @@ This course provides an overview on the problems and challenges related to the b
 - Exercises ([pdf](material/first_exercises.pdf))
 - Ubuntu terminal instruction ([pdf](material/terminal_instruction.pdf))
 - C notes ([pdf](material/Appunti_teoria_C.pdf))
-- firstprog.c ([c](material/firstprog.c))
+- firstprog.c ([c](material/draft/firstprog.c))
 
 ### L1. 22-October-2021 (Friday) [14.00-18.00]
 1. *ASM intro* [30m]
