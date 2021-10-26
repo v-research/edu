@@ -65,7 +65,7 @@ jon Erickson, Hacking: The Art of Exploitation (2nd edition)... it is a great bo
 1. *C basics* [4h]
 	- String
 	- Array
-	- Typos
+	- Types
 	- Pointers
 	- Format strings
 	- Command line
