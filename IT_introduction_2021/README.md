@@ -71,7 +71,15 @@ jon Erickson, Hacking: The Art of Exploitation (2nd edition)... it is a great bo
 	- Command line
 	- Variable scoping
 2. Coffee break [10m]
-	- Basic exercises ([folder](material/basic_exercises))
+	- Basic exercises 
+		- ([es1.c](material/basic_exercises/es1.c))
+		- ([es2.c](material/basic_exercises/es2.c))
+		- ([es3.c](material/basic_exercises/es3.c))
+		- ([es4.c](material/basic_exercises/es4.c))
+		- ([es5.c](material/basic_exercises/es5.c))
+		- ([es6.c](material/basic_exercises/es6.c))
+		- ([numeroPrimo.c](material/basic_exercises/numeroPrimo.c))
+		- ([randint.c](material/basic_exercises/randint.c))
 	- Some more exercises ([pdf](material/other_exercises.pdf))
 
 ### L4. 27-October-2021 (Wednesday) [14.00-18.00]
