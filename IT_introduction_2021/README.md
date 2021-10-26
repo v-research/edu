@@ -54,7 +54,7 @@ This course provides an overview on the problems and challenges related to the f
 ### L2. 26-October-2021 (Tuesday) [14.00-18.00]
 0. [README](material/ex1_solutions.txt): instructions on how to inspect code with gdb
 1. Ex. 1: use gdb to inspect code ([ex1.c](material/raw_var.c))
-2. Ex. 2: use gdb to inspect code with ASCII ([ex2.c](material/raw_hello.c]))
+2. Ex. 2: use gdb to inspect code with ASCII ([ex2.c](material/raw_hello.c))
 3. DYI: Can you inspect the code in ([firstprog.c](material/draft/firstprog.c))
 2. Coffee break [10m]
 3. *Exercises* [1h]
