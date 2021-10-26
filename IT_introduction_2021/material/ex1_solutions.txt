@@ -1,0 +1,44 @@
+Ex 1.
+
+int main(){
+  int a=11;
+}
+
+
+0. gcc -g var.c // gcc is a program that compiles the C code in the file var.c, i.e. transforming the human-readable C code into machine code. This machine code, which is essentially a rather long bitstring, is stored into a file (default a.out). The argument -g tells the gcc program to make the machine code "easier" to debug (see next line)
+
+1. gdb a.out // gdb is a debugger. A debugger is a program that we can use to inspect a compiled program (i.e. a program's machine code)
+
+3. (gdb) list // shows the source code (i.e. the program's original C code).
+
+4. break main // add a breakpoint to the main, i.e. gdb will execute the source code up to the line where the main begins (but without executing it)
+
+5. run // runs the code up to the breakpoint 
+
+6. disassemble main // get the assembly code of the main function, i.e. a human-readable version of the machine code. There is a 1-1 mapping between assembly and machine code, i.e. assembly_instruction=101011010
+
+7. computer = memory + CPU, and CPU = operations + registers. Registers are memories that can be used by the CPU, which is the hardware element of the computer which deals with all the operations necessary to execute machine code.
+
+7. we can now check where is the rip pointing to with `i r $rip` (or info registers) to get where in the assembly we are (i.e. rip register keeps track of the next instruction to be executed and you can compare it with the memory address of the disassembled main)
+
+8. the cpu will exec only arithmetic operations (sub sum ...) or mov/jmp/cmp/push/pop
+
+9. x/i HEX(rip) to get the next instruction (see help x) because the register contains a number (x/t HEX for binary or x/d HEX for decimal -- remember that you should also tell to the x instruction the size of the elements in memory, e.g. if you have a string which is 10 letters long and you want to see the letters saved into the memory you can write x/10xb where the se'b' tells gdb to divide the information into bytes).
+
+10. push rbp and mov rsp,rbp are necessary to tell the computer where it was reading its memory before starting reading our main function
+
+11. push rbp -> pushes the value of rbp into the memory (stack), so we can use rbp (which is a register) to store another value (sometimes the intel notation is clearer than the att one, e.g. `set disassembly-flavor intel`)
+
+12. mov rsp value into rbp because rsp points to a portion of memory we can use to save values of vars
+
+13. by examining rsp we can see what we'll execute after our program concludes
+
+14. then we save the value of a (11) into the memory pointed by rsp (and we go backwards)
+
+15. by examining rbp we get the hex, we subtract 0x4 [1] and we get the memory address of the register where the 11 will be executed
+
+16. nexti and we x/b the hex value of the register, moving from 0 to 11
+
+[1]. knowing that set disassembly-flavor intel makes the asm more readable and lea rdi,[rip+0xeac] moves a value in a register rdi, where is the hello sting? (x/10d may be of help together with man ascii)
+
+17. Now we try with hello to understand that hello is saved as a number and that a procedure is stored to write A to the monitor when 65 is read
