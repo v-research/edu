@@ -10,7 +10,7 @@ int main(int argv, char *args[]){
   n[0]='N';
   strcpy(buf,args[1]);
 
-  if(*n=='Y')
+  if(n[0]=='Y')
     puts("join our club!");
   else
     puts("you shall not pass");
