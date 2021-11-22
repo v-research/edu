@@ -8,7 +8,7 @@ layout: default
         Internships are focused on engineering new secure software/hardware systems, following the model-based, secure-by-design methodology. You'll (partially) follow our <a href="images/methodology-activity-UML.png" target="_parent">simplified engineering process</a>, through the design, implementation, and testing phases. As part of the internship, you'll also have the opportunity to join our research activities and meetings, to have a coffee with us discussing philosophico-poetical aspects of life, <a href="research.html">because</a>!
     </p>
     <p>
-	Here we list some representative examples, but you can always propose your own project!
+		Here we list some representative examples, but you can always propose your own project!
     </p>
     <ul>
         <li>
@@ -38,7 +38,7 @@ layout: default
     </div>
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
-            Alessia Gennari - 2021<br>
+            Alessia Gennari - 2021 - WIP<br>
             <a href="./internships/sha256.html">wanna encode</a>
         </h3>
         <a href="https://github.com/aliasalia" target="blank">
@@ -60,7 +60,7 @@ layout: default
     </div>
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
-            Stefan Manole - 2021<br>
+            Stefan Manole - 2021 - WIP<br>
             <a href="https://github.com/v-research/olympia-project">olympia project</a>
         </h3>
         <a href="https://www.facebook.com/Olympia-Project-103479998553893" target="blank">
@@ -76,7 +76,7 @@ layout: default
     </div>
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
-            Mattia Pacchin - 2021<br>
+            Mattia Pacchin - 2021 - DEVELOPED<br>
             <a href="./internships/green_office.html">wanna agriculture</a>
         </h3>
         <a href="https://github.com/PacMat99" target="blank">
@@ -110,7 +110,7 @@ layout: default
     </div>
     <div class="col-12 col-sm-9 profile-name-margin">
         <h3>
-            Michele Pasetto - 2021<br>
+            Michele Pasetto - 2021 - WIP<br>
             <a href="./internships/mrhide.html">wanna engineer</a>
         </h3>
         <a href="https://github.com/michipase" target="blank">
@@ -126,3 +126,7 @@ layout: default
 </div>
 
 <!--### Developed Internships <i class="fas fa-laptop-code"></i>-->
+
+<script>
+    $(".internships").addClass("nav-text-color");
+</script>

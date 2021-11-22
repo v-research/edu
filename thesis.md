@@ -56,3 +56,7 @@ layout: default
         </div>
     </div>
 </div> 
+
+<script>
+    $(".thesis").addClass("nav-text-color");
+</script>
