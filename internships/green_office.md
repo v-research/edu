@@ -35,7 +35,7 @@ So the challenge: we had an advanced automated irrigation system we wanted to de
 We jumped at the chance and we proposed to Fabschool to collaborate and make a more advanced version of the irrigation system with the boys!
 
 ## Secure System Engineering Process
-Coming soon
+Coming soon, in the meanwhile you can give a look at our research! :)
 
 ## Final notes
 
