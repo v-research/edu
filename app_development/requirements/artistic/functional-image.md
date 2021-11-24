@@ -1,1 +1,0 @@
-a meaningful digital image
