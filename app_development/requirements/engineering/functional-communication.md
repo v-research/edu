@@ -1,0 +1,1 @@
+two entities exchanging information
