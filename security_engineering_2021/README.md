@@ -32,7 +32,7 @@ From the RFC 1392, an **hacker** is
 - GitHub SSH key generation guide ([link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent))
 - GitHub basic commands ([pdf](material/github_commands.pdf))
 - UML official guide ([link](https://www.uml-diagrams.org/))
-- UML small guide ([coming soon]())
+- UML small guide ([pdf](material/UML_theory.pdf))
 
 ### L1. 03-December-2021 (Friday) [9.00-13.00]
 1. *Work* [4h]
