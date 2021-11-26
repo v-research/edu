@@ -21,8 +21,7 @@ From the RFC 1392, an **hacker** is
 * *Engineer*, he knows how to make it work. He makes an use case analysis, then a deployment, activity and class diagram and finally he describes the implementation.
 * *Programmer*, the one who translates the design into practice. First of all, he has to setup a development environment which easily allows his team to collaborate in an efficient way, so he codes together with his team.
 
-## GitHub repo for the course:
-https://github.com/v-research/securityengineering
+### GitHub repo for the course [here](https://github.com/v-research/securityengineering)
 
 ## Lessons
 ### L0. 26-November-2021 (Friday) [9.00-13.00]
