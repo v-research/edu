@@ -28,7 +28,9 @@ From the RFC 1392, an **hacker** is
 1. *Course overview* [1h30m]
 2. *Intro to GitHub & installation* [30m]
 3. *Coffee break* [15m]
-4. *Work* [1h45m]
+4. *Brainstorming sessions* [1h45m]
+    4.1 Scientists only
+    4.2 Engineers only
 
 ##### Lesson 0 - Resources
 - GitHub SSH key generation guide ([link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent))
@@ -37,7 +39,16 @@ From the RFC 1392, an **hacker** is
 - UML small guide ([pdf](material/UML_theory.pdf))
 
 ### L1. 03-December-2021 (Friday) [9.00-13.00]
-1. *Work* [4h]
+1. Present GitHub Discussions, Issues, and Badges -- the GitHub repo
+2. *Brainstorming sessions* [2h15m]
+    2.1 Programmers only
+3. *Scientists presentation of the work done during the last week* [30m]
+4. *Engineers presentation of the work done during the last week* [30m]
+5. *Programmers presentation of the work done during the last week* [30m]
+6. *Coffee break* [15m]
+7. *Brainstorming sessions* [2h15m]
+    7.1 Scientists only
+    7.2 Engineers only
 
 ### L2. 17-December-2021 (Friday) [9.00-13.00]
 1. *Work* [4h]
