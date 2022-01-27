@@ -69,13 +69,16 @@ From the RFC 1392, an **hacker** is
 3. Programmers room -> presentation of bitwise xor in C language
 
 ### L4. 04-February-2022 (Friday) [9.00-13.00]
-1. *Work* [4h]
+Project design and development
 
 ### L5. 11-February-2022 (Friday) [9.00-13.00]
-1. *Work* [4h]
+Project design and development
 
 ### L6. 18-February-2022 (Friday) [9.00-13.00]
-1. *Work* [4h]
+1. passive and active eavesdropping
+2. injection attacks
+3. security testing
 
 ### L7. 25-February-2022 (Friday) [9.00-13.00]
-1. *Work* [4h]
+1. security testing
+2. wrap-up
