@@ -67,6 +67,8 @@ From the RFC 1392, an **hacker** is
 1. Scientis room -> presentation: Diffie Hellman and RSA
 2. Engineers room -> presentation: UML sequence diagrams (Modelio) of a secure communication.
 3. Programmers room -> presentation of bitwise xor in C language
+4. Scientists + Engineers rooms -> requirement (informal) presentation
+5. Engineers + Programmers room -> design (informal) presentation
 
 ### L4. 04-February-2022 (Friday) [9.00-13.00]
 Project design and development
@@ -75,10 +77,11 @@ Project design and development
 Project design and development
 
 ### L6. 18-February-2022 (Friday) [9.00-13.00]
-1. passive and active eavesdropping
-2. injection attacks
-3. security testing
+1. Projects presentations (each team)
+1. Passive and active eavesdropping (Risk Assessment)
+2. Injection attacks
+3. Security testing
 
 ### L7. 25-February-2022 (Friday) [9.00-13.00]
-1. security testing
-2. wrap-up
+1. Security testing
+2. Wrap-up
