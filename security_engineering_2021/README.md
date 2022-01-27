@@ -57,28 +57,25 @@ From the RFC 1392, an **hacker** is
     - Scientists
     - Engineers
 
-### L2. 17-December-2021 (Friday) [9.00-13.00]
+### L2. 21-January-2022 (Friday) [9.00-13.00]
+1. Breakout room -> review work done per each team
+2. Scientist room -> presentation: bitwise XOR for encryption, decryption and OTP
+3. Engineers room -> presentation of the UML design (in Modelio) of Deployment, Class, Activity diagram of a solution to the challenge
+4. Programmers room -> technology review and presentation of a BASH script for the TCP-based (using netcat - `nc`) authentication process
+
+### L3. 28-January-2022 (Friday) [9.00-13.00]
+1. Scientis room -> presentation: Diffie Hellman and RSA
+2. Engineers room -> presentation: UML sequence diagrams (Modelio) of a secure communication.
+3. Programmers room -> presentation of bitwise xor in C language
+
+### L4. 04-February-2022 (Friday) [9.00-13.00]
 1. *Work* [4h]
 
-### L3. 14-January-2022 (Friday) [9.00-13.00]
+### L5. 11-February-2022 (Friday) [9.00-13.00]
 1. *Work* [4h]
 
-### L4. 21-January-2022 (Friday) [9.00-13.00]
+### L6. 18-February-2022 (Friday) [9.00-13.00]
 1. *Work* [4h]
 
-### L5. 28-January-2022 (Friday) [9.00-13.00]
+### L7. 25-February-2022 (Friday) [9.00-13.00]
 1. *Work* [4h]
-
-### L6. 04-February-2022 (Friday) [9.00-13.00]
-1. *Work* [4h]
-
-### L7. 11-February-2022 (Friday) [9.00-13.00]
-1. *Work* [4h]
-
-### L8. 18-February-2022 (Friday) [9.00-13.00]
-1. *Work* [4h]
-
-### L9. 25-February-2022 (Friday) [9.00-13.00]
-1. *Work* [4h]
-
-#### Important: some lessons in 2022 may be deleted.
