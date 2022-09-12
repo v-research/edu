@@ -7,7 +7,7 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 * [Lesson 3 - Authentication in Depth](#lesson-3---authentication-in-depth)
 * [Lesson 4 - With Great Power Comes Great Responsibility](#lesson-4---with-great-power-comes-great-responsibility)
 * [Lesson 5 - Summary, Review, & Experiments](#lesson-5---summary-and-reviews-and-experiments)
-* [Lesson 6 - Cryptography](#lesson-6--cryptography)
+* [Lesson 6 - Cryptography](#lesson-6---cryptography)
 
 
 ## Lesson 1 - Intro
