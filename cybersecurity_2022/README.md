@@ -155,7 +155,7 @@ Any hack requires an intimate understanding of a technology so, let's get to kno
 - `psql -U postgres` won't ask you any password now, because it trusts that you are connecting securely... or it doesn't actually care about security.
 - `psql -U postgres -h 127.0.0.1` still asks you the password because you are trusted only if you connect via unix sockets
 
-For more fun, please have a look at the [PostgresSQL documentation](ihttps://www.postgresql.org/docs/12/auth-pg-hba-conf.html) (I link you a random page, but you can click your way to the table of content).
+For more fun, please have a look at the [PostgresSQL documentation](https://www.postgresql.org/docs/12/auth-pg-hba-conf.html) (I link you a random page, but you can click your way to the table of content).
 
 ### Authentication: "I'm not the A of the CIA-triad"
 We used two important terms in this lesson: *trust* and *authentication*.
