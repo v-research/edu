@@ -53,8 +53,8 @@ before moving forwards to the next lessons. You can find all the answers [here](
 ### Go on!
 In this course we are going to: 
 
-2. Build a *login systems* because we learn by doing and the aforementioned concepts needs to be clearly understood -- Ok, it should be the second point but properties are boring, coding is fun!
-1. explore some cybersecurity properties and concepts such as: authentication, identity[, and](./oxford-comma.jpeg) trust -- Yep, boring... necessary and boring.
+1. Build a *login systems* because we learn by doing and the aforementioned concepts needs to be clearly understood -- Ok, it should be the second point but properties are boring, coding is fun!
+2. explore some cybersecurity properties and concepts such as: authentication, identity[, and](./oxford-comma.jpeg) trust -- Yep, boring... necessary and boring.
 3. Test some attacks (logical flaws) on the systems we are going to build. XSS [CAPEC](https://capec.mitre.org/data/definitions/63.html)[CWE](https://cwe.mitre.org/data/definitions/79.html), SQL-injection [CAPEC](https://capec.mitre.org/data/definitions/66.html)[CWE](https://cwe.mitre.org/data/definitions/89.html), and CSRF [CAPEC](https://capec.mitre.org/data/definitions/62.html)[CWE](https://cwe.mitre.org/data/definitions/352.html) will be the first. 
 4. Build a [PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure) (Public Key Infrastructure) so that we are never going to be afraid of generating certificates!
 
