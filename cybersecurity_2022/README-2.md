@@ -2,9 +2,9 @@
 This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on GitHub; a beautiful place where we learn together cybersecurity and what faith will bring us. In this README I write my notes of the course but much of the content is, for brevity, a link to external resources. If you have any suggestion to improve this text or the course, please open an [issue](https://github.com/v-research/pascal/issues/new/choose).
 
 **Table of Content**
-* [Lesson 1 - Dust It Off](#lesson-1---dust-it-off-and-go-on)
+* [Lesson 1 - Dust It Off and Move on](#lesson-1---dust-it-off-and-move-on)
 
-## Lesson 1 - Dust it Off and Go on 
+## Lesson 1 - Dust it Off and Move on 
 When you start from the beginning, you are supposed to move forward, but let's make a step back instead!
 We'll [dust it off](https://www.youtube.com/watch?v=LSiooa1Kym0) and recap the
 main concepts of the [previous course](./README.md) in a short while.
