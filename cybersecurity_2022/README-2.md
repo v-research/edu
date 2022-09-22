@@ -8,8 +8,7 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 When you start from the beginning, you are supposed to move forward, but let's make a step back instead!
 We'll [dust it off](https://www.youtube.com/watch?v=LSiooa1Kym0) and recap the
 main concepts of the [previous course](./README.md) in a short while.
-
-There's a common misconception to discuss first, people believe they can and
+There's a common misconception to discuss first. People believe they can and
 need to learn how to *do* things as quickly as possible, as painlessly as
 possible, as fast and superficially as possible so that they can move forward
 and [choose life, a job, a career](https://www.youtube.com/watch?v=SaP7qmsQbSI)
