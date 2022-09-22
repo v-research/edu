@@ -14,13 +14,13 @@ People believe they can and
 need to learn how to *do* things as quickly as possible, as painlessly as
 possible, as fast and superficially as possible so that they can move forward
 and [choose life, a job, a career](https://www.youtube.com/watch?v=SaP7qmsQbSI)
-(IT version [here](https://www.youtube.com/watch?v=HJXIWhC6xOk).
+(IT version [here](https://www.youtube.com/watch?v=HJXIWhC6xOk)).
 The truth is that only **hackers** live a life. Only "a person who delights in having an intimate understanding"
 clearly sees the beauty or the virtue of what is around him.
 
-1. Well, of course an **hacker** "delights in having an intimate understanding understanding of the internal workings of a system, computers and computer networks in particular [and] the term is often misused in a pejorative context, where cracker would be the correct term" [RFC-1392](https://tools.ietf.org/html/rfc1392) but we can generalize the definition for now.
+Well, of course an **hacker** "delights in having an intimate understanding understanding of the internal workings of a system, computers and computer networks in particular [and] the term is often misused in a pejorative context, where cracker would be the correct term" [RFC-1392](https://tools.ietf.org/html/rfc1392), but we can generalize the definition for now.
 
-You may wonder why. Why can't we let life pass by and look at it through time as if it were something outside us, which does not concern us?
+You may wonder why. Why can't we let life pass by and be happy? Why can't we look at life as an afterthought as if it were something outside us, that does not concern us.
 Nietzsche said it quite clearly
 ```
 All living is an obeying.
@@ -39,7 +39,7 @@ Thus spoke Zarathustra (1885) Friedrich Nietzsche
 So, if you are not the ruler of your life, if you don't listen carefully, and look in depth into the details...
 if you absently let life choose for you, you are commanded. 
 
-In the following, there is a list of very important aspects that you should have clear in mind
+Now that we hopefully start with the correct mindset, in the following, there is a list of very important aspects that you should have clear in mind
 before moving forwards to the next lessons. You can find all the answers [here](README.md) but be curious!
 - The definitions of hacker and cracker.
 - The CIA-triad... we are all sick of it but it's important.
