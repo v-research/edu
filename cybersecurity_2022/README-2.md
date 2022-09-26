@@ -58,6 +58,34 @@ In this course we are going to:
 3. Test some attacks (logical flaws) on the systems we are going to build. XSS [CAPEC](https://capec.mitre.org/data/definitions/63.html)/[CWE](https://cwe.mitre.org/data/definitions/79.html), SQL-injection [CAPEC](https://capec.mitre.org/data/definitions/66.html)/[CWE](https://cwe.mitre.org/data/definitions/89.html), and CSRF [CAPEC](https://capec.mitre.org/data/definitions/62.html)/[CWE](https://cwe.mitre.org/data/definitions/352.html) will be the first. 
 4. Build a [PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure) (Public Key Infrastructure) so that we are never going to be afraid of generating certificates!
 
-So... Starting from 2. which comes before 1. (as confusing as Star Wars, where the first movie is the third) we are going to build the following architecture.
+Every project start from its design. Please, do never start coding withe are going to build the following architecture.
 
-![](./yals_design.png)
+![](./yals_architecture.png)
+
+### Git & GitHub.com
+GitHub.com is a website that provides repositories as a service. On GitHub,
+you can create a new repository (or repo for brevity) which is a container of
+data. So, a repo is a portion of an hard disk, accessible via Internet (via web
+or terminal) were you can store some data. These repo are `git` repo, meaning that
+the technology used to handle concurrency and version control. See [here](https://en.wikipedia.org/wiki/Git) for more details.
+
+- Download a git repo: `git clone git@github.com:rocchettomarco/yals`
+- Download updated from the remote: `git pull`
+- Add a file to a commit (either a new or a modified file): `git add <file>`
+- Create a commit (comment is mandatory): `git commit -m "this is a comment"`
+- If you want to commit all the modified files, without adding each one of them: `git commmit -am "comment"`
+- Upload the commit to the remote: `git push`
+- Remove a file: `git rm <file>`
+- Remove a directory: `git rm -r <directory>`
+- Check the status of the files: `git status`
+- Create a new local branch: `git checkout -b <branch>`
+- Add the new branch to the online repo (remote): `git push origin <branch>`
+
+### Lesson 2
+- Authentication (we authenticate sw, not ppl), Identity (something you know, have, are), and trust (chain)
+- Auth0 token exchanges (based on identity, public key crypto, tokens)
+- Analysis of token exchange
+- JWT.io
+
+In the following the message sequence chart of the interaction between the frontend and the Auth0.com authentication service.
+![](./yals_functional.png)
