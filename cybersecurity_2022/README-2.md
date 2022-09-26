@@ -63,7 +63,7 @@ Every project start from its design. Please, do never start coding withe are goi
 ![](./yals_architecture.png)
 
 ### Git & GitHub.com
-GitHub.com is a website that provides repositories as a service. On GitHub,
+[GitHub.com](https://github.com/) is a website that provides repositories as a service. On GitHub,
 you can create a new repository (or repo for brevity) which is a container of
 data. So, a repo is a portion of an hard disk, accessible via the Internet (via web
 or terminal) were you can store some data. But GitHub repos are `git` repos, meaning that
