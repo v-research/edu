@@ -89,3 +89,6 @@ the technology used to handle concurrency and version control. See [here](https:
 
 In the following the message sequence chart of the interaction between the frontend and the Auth0.com authentication service.
 ![](./yals_functional.png)
+
+- Authenticated API
+- Auth0 features
