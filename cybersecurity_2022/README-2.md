@@ -43,12 +43,12 @@ Now that we hopefully start with the correct mindset, in the following, there is
 before moving forwards to the next lessons. You can find all the answers [here](README.md) but be curious!
 - The definitions of hacker and cracker.
 - The CIA-triad... we are all sick of it but it's important.
-- The Least privilege principle.
+- The "least privilege principle."
 - Hash functions.
 - Password best practices.
 - Brute-force attack and dictionary attack.
 - Cybersecurity of data in-transit and at-rest.
-- Sniffing attack.
+- Networking and sniffing attack.
 
 ### Go on!
 In this course we are going to: 
@@ -65,12 +65,16 @@ Every project start from its design. Please, do never start coding withe are goi
 ### Git & GitHub.com
 GitHub.com is a website that provides repositories as a service. On GitHub,
 you can create a new repository (or repo for brevity) which is a container of
-data. So, a repo is a portion of an hard disk, accessible via Internet (via web
-or terminal) were you can store some data. These repo are `git` repo, meaning that
-the technology used to handle concurrency and version control. See [here](https://en.wikipedia.org/wiki/Git) for more details.
+data. So, a repo is a portion of an hard disk, accessible via the Internet (via web
+or terminal) were you can store some data. But GitHub repos are `git` repos, meaning that
+the technology used to handle concurrency and version control is git. In the following, 
+there are a few commands that should cover what you need to know to use git and github. 
 
-- Download a git repo: `git clone git@github.com:rocchettomarco/yals`
-- Download updated from the remote: `git pull`
+See [here](https://en.wikipedia.org/wiki/Git) for an overview on Git and the [user manual](https://git-scm.com/docs/user-manual.html) for an in-depth understanding of Git.
+
+- Register on GitHub and create a new repo (I called it `yals` - yet another login system).
+- Download the git repo from GitHub: `git clone git@github.com:rocchettomarco/yals`
+- Align local data with the remote: `git pull`
 - Add a file to a commit (either a new or a modified file): `git add <file>`
 - Create a commit (comment is mandatory): `git commit -m "this is a comment"`
 - If you want to commit all the modified files, without adding each one of them: `git commmit -am "comment"`
