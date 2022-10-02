@@ -4,6 +4,7 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 **Table of Content**
 * [Lesson 1 - Dust It Off and Move on](#lesson-1---dust-it-off-and-move-on)
 * [Lesson 2 - Build a Login System with Auth0](#lesson-2---build-a-login-system-with-auth0)
+* [Lesson 3 - Authenticated API with JWT Tokens](#lesson-2---authenticated-api-with-jwt-tokens)
 
 ## Lesson 1 - Dust it Off and Move on 
 When you start from the beginning, you are supposed to move forward, but let's make a step back instead!
@@ -159,3 +160,9 @@ Well, you won't go into much details on how to generate tokens but they are JSON
 We can now send this `access_token` along with any request to the services that we'll create on `localhost:3000`, to allow our backend application (i.e. the implementation of the services) to provide responses for the specific user who is doing the requests.
 
 WARNING! Do not post your access token, I'm doing it just because it is already expired and I'm doing it on a test application that has been build only for this course.
+
+## Lesson 3 - Authenticated API with JWT Tokens
+We now create a service that only accepts authenticated requests.
+We follow the Auth0.com guide in the quickstart from [here](https://auth0.com/docs/quickstart/spa/vanillajs/02-calling-an-api#test-the-api).
+
+![image](https://user-images.githubusercontent.com/14936492/193477086-b26daef1-fc96-4049-b5c1-dcd8ccf05e5b.png)
