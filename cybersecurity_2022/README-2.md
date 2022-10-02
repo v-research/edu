@@ -3,6 +3,7 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 
 **Table of Content**
 * [Lesson 1 - Dust It Off and Move on](#lesson-1---dust-it-off-and-move-on)
+* [Lesson 2 - Build a Login System with Auth0](#lesson-2---build-a-login-system-with-auth0)
 
 ## Lesson 1 - Dust it Off and Move on 
 When you start from the beginning, you are supposed to move forward, but let's make a step back instead!
@@ -84,3 +85,17 @@ See [here](https://en.wikipedia.org/wiki/Git) for an overview on Git and the [us
 - Check the status of the files: `git status`
 - Create a new local branch: `git checkout -b <branch>`
 - Add the new branch to the online repo (remote): `git push origin <branch>`
+
+## Lesson 2 - Build a Login System with Auth0
+Writing a login system is not an easy task. In the [first module](./README.md) we understood the basic concpets of cybersecurity
+applied to a database system, and we studied how to securely connect to a PostgreSQL database server, using the PostgreSQL default client. 
+PostgreSQL provided us with a login system (even based on certificates) and we *used* it to securely connect and then securely communicate
+with the database server. We now explore how to build our own login system and how to secrely access not just data but *services*.
+
+With a service, in the Web domain, we communicate via HTTP(S) protocol, sending HTTP requests (which are structured data) to 
+software programs (called *service*) that receives, manipulate, and eventually output data. PostgreSQL works similarly, there is a 
+client that connects to a service that accepts network requests (not necessarily HTTP request but TCP using other application layer protocols such as the `PGSQL` protocol).
+The client then sends data to a service that elaborates those data (usually producing SQL queries for the database), and outputs a response.
+
+We now want to build a service that accepts authenticated requests and, in turn, we need to build an authentication system (a.k.a. a login system).
+We don't want to reinvent the wheel so we use [Auth0.com](https://www.auth0.com) instead of building an authentication system from scratch.
