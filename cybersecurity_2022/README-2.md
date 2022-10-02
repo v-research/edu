@@ -157,3 +157,5 @@ Wait! How are these tokens related to my identity and how can I use them to prov
 Well, you won't go into much details on how to generate tokens but they are JSON with some predefined fields. If we take the "access token" and we decode it with [jwt.io](https://jwt.io) we see that there is a unique identifiers (`sub` field) that Auth0 has associated to your account (the one you used to log in). 
 
 We can now send this `access_token` along with any request to the services that we'll create on `localhost:3000`, to allow our backend application (i.e. the implementation of the services) to provide responses for the specific user who is doing the requests.
+
+WARNING! Do not post your access token, I'm doing it just because it is already expired and I'm doing it on a test application that has been build only for this course.
