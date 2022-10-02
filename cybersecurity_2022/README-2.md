@@ -163,6 +163,12 @@ WARNING! Do not post your access token, I'm doing it just because it is already 
 
 ## Lesson 3 - Authenticated API with JWT Tokens
 We now create a service that only accepts authenticated requests.
-We follow the Auth0.com guide in the quickstart from [here](https://auth0.com/docs/quickstart/spa/vanillajs/02-calling-an-api#test-the-api).
+We follow the Auth0.com guide in the quickstart from [here](https://auth0.com/docs/quickstart/spa/vanillajs/02-calling-an-api#test-the-api). The code is available in the branc `api` of the YALS repository:
+
+```
+git clone git@github.com:rocchettomarco/yals
+cd yals
+git checkout api
+```
 
 ![image](https://user-images.githubusercontent.com/14936492/193477086-b26daef1-fc96-4049-b5c1-dcd8ccf05e5b.png)
