@@ -99,3 +99,61 @@ The client then sends data to a service that elaborates those data (usually prod
 
 We now want to build a service that accepts authenticated requests and, in turn, we need to build an authentication system (a.k.a. a login system).
 We don't want to reinvent the wheel so we use [Auth0.com](https://www.auth0.com) instead of building an authentication system from scratch.
+
+### Auth0.com
+Login to auth0.com and you should see the following website
+
+![image](https://user-images.githubusercontent.com/14936492/193473316-22338526-8a93-4126-86ca-8954c88771d1.png)
+
+Go to "Applications"->"Applications" and click on "create Application" (top right corner). Choose a name and select "Regular Web Applications" as in the following. Here note that Auth0 uses the term "application" instead of the term "service" that we used. There is a slight difference between the two but, for this course, we use application and service interchangably.
+
+![image](https://user-images.githubusercontent.com/14936492/193473408-21229fb5-d5da-4564-87cb-9bf7c82f5777.png)
+
+In Applications you can now access your new application. Auth0 provides an authentication service that you can use with multiple applications. Our application is a login system which I'll refer to as YALS (Yet Another Login System). 
+Access you application and go to "Quick Start", select "JavaScript" and follow the instructions to create a login system based on the Auth0 authentication service that you have just initiated (YALS).
+
+The instructtions basically ask you to configure some basic parameters of you Auth0 application as the "callback URLs", the "logout URLs" and "Allowed Web Origins". The Callback URL is the URL where we want to be redirected after a login. Since our application will run in localhost, over the TCP port 3000, using HTTT we set the Callback URLs to: `http://localhost:3000`. Similarly for the other two settings: logout and allowed web origins.
+
+At the end of the instructions you will have written several files and structured into an hierarchy of directories, everything save in a new repository. If you haven't all the files are available in [my YALS repo on GitHub](https://github.com/rocchettomarco/yals) (`git clone git@github.com:rocchettomarco/yals`). It contains the following files (if you don't have `tree` pls install it with `sudo apt install tree`):
+
+![image](https://user-images.githubusercontent.com/14936492/193474289-05a65028-e9eb-40df-88cd-e322f0a70420.png)
+
+### Let Us SEE the Application
+The tmain files that allow us to visually interact with the login system are the followings
+- [index.html](https://github.com/rocchettomarco/yals/blob/main/index.html), with the HTML code of your application
+- [public/css/main.css](https://github.com/rocchettomarco/yals/tree/main/public/css), with the graphical style
+- [server.js](https://github.com/rocchettomarco/yals/blob/main/server.js), the server that "serves" the index.html page via HTTP to the client and all the other necessary file to *visualize* the application on a browser.
+
+Let's try to closely see what this mean!
+First of all, any software, any code, if is not executed the a computer (e.g. `./a.out` of a compiled C code) or interpreted by another software (e.g., `python ciao.py`), it is just a text file. So, we run `npm start` in the main directory of our application to start a server process (i.e., a software that keeps listening on a specific TCP port and will reply on that port). In our case, the server runs in localhost, meaning that it runs locally to our computer and to "mimic" a network communication uses a network endpoint that simply loopbacks the messages.
+
+![image](https://user-images.githubusercontent.com/14936492/193474098-12c219df-9060-4f45-8db0-47762c982d19.png)
+
+We can now open our preferred browser and go to `http://localhost:3000` but before doing that we open the console (`CTRL+SHIFT+C` or `F12`) and click on the Network tab so that we will record the whole HTTP communication between our client (Firefox) and the server (`server.js`).
+
+![image](https://user-images.githubusercontent.com/14936492/193474584-74499a23-55b9-4671-a887-9daef8f9f965.png)
+
+When we go to `http://localhost:3000` we see the following HTTP message exchange.
+
+![image](https://user-images.githubusercontent.com/14936492/193474670-c81055ff-de0e-46a2-8271-6157d37369f1.png)
+
+The first message is an HTTP request to `/` which acts as a wildcard for any index file that is served on the localhost domain port 3000. By clicking on that request you can see that the "Response" tab shows the index file and by clicking on "raw" you can actually see the HTML code you wrote in `index.html`
+
+![image](https://user-images.githubusercontent.com/14936492/193474820-cbf17c7e-e947-4808-ae66-ae2d4e46b7c9.png)
+
+The other requests are similar, except the one sent to the domain `cdn.auth0.com` which we skip for now.
+If we log in (after signing up), there are a number of messages exchanged with our localhost application and auth0.com.
+The very last messages are of interest.
+
+The `auth_config.json` is received by the client that runs on your Firefox browser.
+
+![image](https://user-images.githubusercontent.com/14936492/193475007-ca985d11-d4d3-4613-80a8-ee93e6828201.png)
+
+It then uses it to call your Auth0 application that returns the tokens that your client can use to prove its identity.
+
+![image](https://user-images.githubusercontent.com/14936492/193475073-f2e23521-ef91-47f2-9b72-dd3f29e0ad1d.png)
+
+Wait! How are these tokens related to my identity and how can I use them to prove anything?
+Well, you won't go into much details on how to generate tokens but they are JSON with some predefined fields. If we take the "access token" and we decode it with [jwt.io](https://jwt.io) we see that there is a unique identifiers (`sub` field) that Auth0 has associated to your account (the one you used to log in). 
+
+We can now send this `access_token` along with any request to the services that we'll create on `localhost:3000`, to allow our backend application (i.e. the implementation of the services) to provide responses for the specific user who is doing the requests.
