@@ -4,7 +4,8 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 **Table of Content**
 * [Lesson 1 - Dust It Off and Move on](#lesson-1---dust-it-off-and-move-on)
 * [Lesson 2 - Build a Login System with Auth0](#lesson-2---build-a-login-system-with-auth0)
-* [Lesson 3 - Authenticated API with JWT Tokens](#lesson-2---authenticated-api-with-jwt-tokens)
+* [Lesson 3 - Authenticated API with JWT Tokens](#lesson-3---authenticated-api-with-jwt-tokens)
+* [Lesson 4 - Hack the System](#lesson-4---hack-the-system)
 
 ## Lesson 1 - Dust it Off and Move on 
 When you start from the beginning, you are supposed to move forward, but let's make a step back instead!
