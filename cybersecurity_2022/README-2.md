@@ -192,6 +192,7 @@ We can simply add the following code to have a button that triggers a `callApi()
 ### app.js
 We can first mandate that the button in the `index.html` is disable when the
 user is not authenticated. 
+
 ```
 document.getElementById("btn-call-api").disabled = !isAuthenticated;
 ```
@@ -233,6 +234,7 @@ const callApi = async () => {
 ### server.js
 We update the server with the following two functions so that 
 we handle the token validation.
+
 ```
 app.get("/api/external", checkJwt, (req, res) => {
   res.send({
@@ -274,8 +276,8 @@ If you open the browser inspector (Ctrl+Shift+C or F12 for Firefox), you can cli
 The access token is in the Authorization header and, more importantly, that it is in plaintext. Given that we still have to implement HTTPS, it should not be difficult to steal the access token and to use the API as another user. This is what we are going to do in the next lesson but before moving on, let's quickly explore some of the cool features of Auth0!
 
 ### Auth0 Features
-1. USER MANAGEMENT: You can see the complete list of all the users who are using your application in Auth0 by clicklin on "User Management -> Users". You can then click on any of the user to get some more info. You can *change email*, *change password*, *send verification email*, *block*, or *delete* any accout.
-2. 2FA/MFA: You can easily enforse the 2 Factor Authentication (2FA) in "Security -> Multi-factor Authentication". Auth0 provide many setting to tune it.
+1. USER MANAGEMENT: You can see the complete list of all the users who are using your application in Auth0 by clicking on "User Management -> Users". You can then click on any of the user to get some more info. You can *change email*, *change password*, *send verification email*, *block*, or *delete* any account.
+2. 2FA/MFA: You can easily enforce the 2 Factor Authentication (2FA) in "Security -> Multi-factor Authentication". Auth0 provide many setting to tune it.
 3. Brute-force protection can be enabled in "Security -> Attack Protection"
 4. Finally, In "Monitoring -> Logs" you can see all the activities of all the applications and API you have on Auth0
 
