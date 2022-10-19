@@ -1,4 +1,4 @@
-# Cybersecurity - PASCAL (ITS-Digital I YEAR 2022)
+# Cybersecurity - PASCAL (ITS-Digital II YEAR 2022)
 This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on GitHub; a beautiful place where we learn together cybersecurity and what faith will bring us. In this README I write my notes of the course but much of the content is, for brevity, a link to external resources. If you have any suggestion to improve this text or the course, please open an [issue](https://github.com/v-research/pascal/issues/new/choose).
 
 **Table of Content**
@@ -285,3 +285,18 @@ The access token is in the Authorization header and, more importantly, that it i
 Along with the above 5 features there are many other interesting ones. Please explore Auth0 and customize the UX!
 
 ## Lesson 4 - Hack the System
+In order to hack the system, we can't hack it while it runs on localhost. We may, of course, but that's no fun at all!
+
+**SETUP**
+- 3 computers: one client, one server, one hacker
+- 1 network: the client, server, and the hacker are on the same network.
+
+For this lesson the client IP is 172.16.21.152 while the server IP is 172.16.22.28.
+You can check your IP address using `ip -c a`.
+
+On the server machine, run the server-side application with `npm start`.
+Now you can connect using the client machine to `http://<server-IP-address>:3000`.
+However, you may notice that the buttons are all grayed out. Why?
+Well, you need to change the 
+
+On the client machine, enable the console (Ctr_Shift+C for Firefox) and you'll notice the error "
