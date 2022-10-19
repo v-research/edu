@@ -159,11 +159,12 @@ Well, you won't go into much details on how to generate tokens but they are JSON
 
 We can now send this `access_token` along with any request to the services that we'll create on `localhost:3000`, to allow our backend application (i.e. the implementation of the services) to provide responses for the specific user who is doing the requests.
 
-WARNING! Do not post your access token, I'm doing it just because it is already expired and I'm doing it on a test application that has been build only for this course.
+WARNING! Do not post your access token, I'm doing it just because it is already expired and I'm doing it on a test application that has been built only for this course.
 
 ## Lesson 3 - Authenticated API with JWT Tokens
 We now create a service that only accepts authenticated requests.
-We follow the Auth0.com guide in the quickstart from [here](https://auth0.com/docs/quickstart/spa/vanillajs/02-calling-an-api#test-the-api). The code is available in the branc `api` of the YALS repository:
+We follow the Auth0.com guide in the quickstart from [here](https://auth0.com/docs/quickstart/spa/vanillajs/02-calling-an-api#test-the-api). 
+The code is available in the branch `api` of the YALS repository:
 
 ```
 git clone git@github.com:rocchettomarco/yals
@@ -171,4 +172,86 @@ cd yals
 git checkout api
 ```
 
+We first create a new API in Auth0 (Applications -> API -> Create API), let's call it `http://localhost:3000/api` (in Auth0 this is the identifier - and not the ID).
+We can then change the `auth_config` adding the audience (see [auth_config.json](https://github.com/rocchettomarco/yals/blob/api/auth_config.json)) and
+add the necessary (for the verification of the tokens) npm packets with `npm install express-oauth2-jwt-bearer`.
+
+We can now make a few changes to introduce a service (i.e. an API) which can only be called by authenticated users:
+1. add a button to call the new API in the `index.hmtl`
+2. add the behavior of the API call in the `app.js`
+3. add the token check in the `server.js`
+
+### index.html
+We can simply add the following code to have a button that triggers a `callApi()` function.
+```
+<button id="btn-call-api" disabled="true" onclick="callApi()">Call Api</button>
+<!-- Add a container to hold the response from the call -->
+<pre id="api-call-result"></pre>
+```
+
+### app.js
+We can first mandate that the button in the `index.html` is disable when the
+user is not authenticated. 
+```
+document.getElementById("btn-call-api").disabled = !isAuthenticated;
+```
+
+We then add a new function `callApi` that
+authorize the access to the api `/api/external` only if the Authorization
+header (of the HTTP packet) carries a valid token.
+
+```
+const callApi = async () => {
+  try {
+
+    // Get the access token from the Auth0 client
+    const token = await auth0.getTokenSilently();
+
+    // Make the call to the API, setting the token
+    // in the Authorization header
+    const response = await fetch("/api/external", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    // Fetch the JSON result
+    const responseData = await response.json();
+
+    // Display the result in the output element
+    const responseElement = document.getElementById("api-call-result");
+
+    responseElement.innerText = JSON.stringify(responseData, {}, 2);
+
+} catch (e) {
+    // Display errors in the console
+    console.error(e);
+  }
+};
+```
+
+### server.js
+We update the server with the following two functions so that 
+we handle the token validation.
+```
+app.get("/api/external", checkJwt, (req, res) => {
+  res.send({
+    msg: "Your access token was successfully validated!"
+  });
+});
+
+app.use(function(err, req, res, next) {
+  if (err.name === "UnauthorizedError") {
+    return res.status(401).send({ msg: "Invalid token" });
+  }
+
+  next(err, req, res);
+});
+```
+
+### Test the System
+Once we are done we can connect to the application using `curl` as in the following. 
+
 ![image](https://user-images.githubusercontent.com/14936492/193477086-b26daef1-fc96-4049-b5c1-dcd8ccf05e5b.png)
+
+## Lesson 4 - Hack the System
