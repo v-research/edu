@@ -254,4 +254,31 @@ Once we are done we can connect to the application using `curl` as in the follow
 
 ![image](https://user-images.githubusercontent.com/14936492/193477086-b26daef1-fc96-4049-b5c1-dcd8ccf05e5b.png)
 
+The proper workflow is the following.
+First, we run the application with `npm start` and we use our browser to connect to the website `http://localhost:3000`.
+
+![image](https://user-images.githubusercontent.com/14936492/196701421-52dae59d-0f87-42ca-a7d9-45274f4c1dde.png)
+
+Second, we log in using Auth0
+
+![image](https://user-images.githubusercontent.com/14936492/196701690-7002d419-ca32-4c29-92f4-509301b0ad39.png)
+
+Once you log in, you can click on Call API and wait for the succesfull token validation
+
+![image](https://user-images.githubusercontent.com/14936492/196702393-b6eac59f-b10e-4490-ad1a-77292e48e3d5.png)
+
+If you open the browser inspector (Ctrl+Shift+C or F12 for Firefox), you can click on the network tab and see which packets are exchanged when you click on the "Call API" button. 
+
+![image](https://user-images.githubusercontent.com/14936492/196703714-d3e1c490-ceec-4426-bc9d-7a34fa8263e6.png)
+
+The access token is in the Authorization header and, more importantly, that it is in plaintext. Given that we still have to implement HTTPS, it should not be difficult to steal the access token and to use the API as another user. This is what we are going to do in the next lesson but before moving on, let's quickly explore some of the cool features of Auth0!
+
+### Auth0 Features
+1. USER MANAGEMENT: You can see the complete list of all the users who are using your application in Auth0 by clicklin on "User Management -> Users". You can then click on any of the user to get some more info. You can *change email*, *change password*, *send verification email*, *block*, or *delete* any accout.
+2. 2FA/MFA: You can easily enforse the 2 Factor Authentication (2FA) in "Security -> Multi-factor Authentication". Auth0 provide many setting to tune it.
+3. Brute-force protection can be enabled in "Security -> Attack Protection"
+4. Finally, In "Monitoring -> Logs" you can see all the activities of all the applications and API you have on Auth0
+
+Along with the above 5 features there are many other interesting ones. Please explore Auth0 and customize the UX!
+
 ## Lesson 4 - Hack the System
