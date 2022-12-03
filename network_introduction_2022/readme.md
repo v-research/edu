@@ -1,6 +1,14 @@
 # Network introduction course
 
-## Lesson 1 Riconoscere le componenti fondamentali della rete
+## About
+
+- Titolo: Introduzione alle reti
+- Prof: Mattia Pacchin (mattia@v-research.it)
+- Studenti: 1° anno ITS
+- Quando: novembre 2022 - gennaio 2023
+- Ricevimento: mandatemi un'email e ci mettiamo d'accordo :)
+
+## Lesson 1: Riconoscere le componenti fondamentali della rete
 
 1. 
 2. Esempio: come fanno due dispositivi a scambiarsi delle informazioni?

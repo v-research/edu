@@ -1,3 +1,5 @@
+# IT Introduction 2021
+
 ## About this course
 
 - Title: Introduction to IT
@@ -10,7 +12,7 @@
 This course provides an overview on the problems and challenges related to the foundations of programming. We'll discuss basic concepts such as the concept of algorithm and programs, how the computers work, how to program in C, and the relation between C and Assembly. 
 
 ### Textbook
-jon Erickson, Hacking: The Art of Exploitation (2nd edition)... it is a great book but we'll only focus on chapter 0x200
+Jon Erickson, Hacking: The Art of Exploitation (2nd edition)... it is a great book but we'll only focus on chapter 0x200
 
 ## Lessons
 ### L0. 21-October-2021 (Thursday) [14.00-18.00]
