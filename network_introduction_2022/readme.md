@@ -8,23 +8,27 @@
 - Quando: novembre 2022 - gennaio 2023
 - Ricevimento: mandatemi un'email e ci mettiamo d'accordo :)
 
-## Lesson 1: Riconoscere le componenti fondamentali della rete
+## Lesson 0: Riconoscere le componenti fondamentali della rete
 
-1. 
-2. Esempio: come fanno due dispositivi a scambiarsi delle informazioni?
-3. Dispositivi della rete internet: end-host, router e collegamenti fisici o wireless
-4. Classificazione delle reti
+1. Presentazione
+2. Ripasso comandi terminale
+3. Esempio: come fanno due dispositivi a scambiarsi delle informazioni?
+4. Dispositivi della rete internet: end-host, router e collegamenti fisici o wireless
+5. Classificazione delle reti
    - per estensione geografica
    - per topologia
    - per architettura
    - per tecnologia trasmissiva
-5. ISP
-6. Commutazione di circuito
-7. Commutazione di pacchetto
+6. ISP
+7. Commutazione di circuito
+8. Commutazione di pacchetto
    - Reti a datagramma
    - Reti a circuito virtuale
-8. Ping
-9. Installazione [GNS3](https://docs.gns3.com/docs/getting-started/installation/linux/)
+9. Ping
+10. Installazione [GNS3](https://docs.gns3.com/docs/getting-started/installation/linux/)
+
+#### Lesson 0 - Resources
+- Terminal Instructions ([pdf](material/terminal_instructions.pdf))
 
 ## 2. Livelli ISO-OSI e livelli TCP/IP
 
@@ -50,11 +54,8 @@
 3. Netmask
 4. Subnetting
 5. Indirizzi ip riservati
-
-## 5. Differenza tra TCP e UDP
-
-1. TCP, connection oriented, affidabile, esempi di casi d'uso
-2. UDP, connectionless, non affidabile, esempi di casi d'uso
+6. TCP, connection oriented, affidabile, esempi di casi d'uso
+7. UDP, connectionless, non affidabile, esempi di casi d'uso
 
 ## 6. Come calcolare la larghezza di banda effettiva
 
