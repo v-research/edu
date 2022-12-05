@@ -23,12 +23,14 @@
    - cavo coassiale
    - fibra ottica
    - comunicazione in aria (terrestre)
-   - comnuicazione nel vuoto (satellitare)
+   - comuicazione nel vuoto (satellitare)
+7. Esercizi (?)
 
 #### Lesson 1 - Resources
 - Terminal Instructions ([pdf](material/terminal_instructions.pdf))
 - Networks Classification ([pdf](material/computer_networks.pdf))
 - Transmition Technologies ([pdf](material/transmition_technologies.pdf))
+- Exercises 1 ([pdf](material/exercises_1.pdf))
 
 ## Lesson 2: 
 
