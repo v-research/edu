@@ -12,19 +12,18 @@
 
 1. Presentazione
 2. Esempio: come fanno due dispositivi a scambiarsi delle informazioni e quali problemi possono esserci?
-3. Ripassino uso e comandi del terminale
-4. Installazione [GNS3](https://docs.gns3.com/docs/getting-started/installation/linux/)
-5. Classificazione delle reti
+3. Classificazione delle reti
    - per estensione geografica
    - per topologia
    - per architettura
-6. Mezzi trasmissivi
+4. Mezzi trasmissivi
    - doppino in rame
    - cavo coassiale
    - fibra ottica
    - comunicazione in aria (terrestre)
    - comuicazione nel vuoto (satellitare)
-7. Esercizi (?)
+5. Ripassino uso e comandi del terminale
+6. Installazione [GNS3](https://docs.gns3.com/docs/getting-started/installation/linux/)
 
 #### Lesson 1 - Resources
 - Terminal Instructions ([pdf](material/terminal_instructions.pdf))
@@ -43,24 +42,31 @@
    - 7 livelli
 5. Modello TCP/IP
    - 5 livelli
-6. End system e intermediate system
-7. Comunicazione tra due entità: cos'è un'entità?
+6. Installiamo wireshark
+7. Creazione di un web server flask con una pagina html che contenga almeno una form in cui inserire del testo
+8. Proviamo a connetterci al nostro web server
 
 #### Lesson 2 - Resources
-- Name ([pdf](material/.pdf))
+- ISP & packet commutation ([pdf](material/isp_commutation.pdf))
+- ISO/OSI & TCP/IP p.1 ([pdf](material/isoosi_tcpip_1.pdf))
 
 ## Lesson 3: 
 
-1. Router
-2. Switch
-3. Hub
-4. Bridge
-5. Modem
-6. Ip v4 e v6
-7. Struttura indirizzi ip
-8. Netmask
-9. Indirizzi ip riservati
-10. ping
+1. End system e intermediate system
+2. Comunicazione tra due entità: cos'è un'entità?
+3. Router
+4. Switch
+5. Hub
+6. Bridge
+7. Modem
+8. Ip v4 e v6
+9. Struttura indirizzi ip
+10. Netmask
+11. Indirizzi ip riservati
+12. ping
+13. Riusciamo a pingare il web server dei nostri compagni?
+14. Proviamo a connetterci al web server dei compagni
+15. Con wireshark riusciamo ad intercettare i pacchetti inviati ai web server dei compagni?
 
 #### Lesson 3 - Resources
 - Name ([pdf](material/.pdf))
