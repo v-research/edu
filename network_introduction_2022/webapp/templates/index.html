@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href='/static/style.css' />
+    </head>
+    
+    <body>
+
+        <h2>UDo AP connection</h2>
+
+        <form method="post">
+            <label for="ssid">SSID</label><br>
+            <input type="text" name="ssid" placeholder="ssid" value="{{ request.form['ssid'] }}"></input><br><br>
+            
+            <label for="pwd">Password</label><br>
+            <input type="text" name="pwd" placeholder="password" value="{{ request.form['pwd'] }}"></input><br><br>
+            
+            <button type="submit">Connect</button>            
+        </form>
+        
+        {% for message in get_flashed_messages() %}
+            <h3>{{ message }}</h3>
+        {% endfor %}
+
+    </body>
+</html>
