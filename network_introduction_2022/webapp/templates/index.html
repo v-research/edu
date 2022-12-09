@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href='/static/style.css' />
-    </head>
-    
-    <body>
 
-        <h2>UDo AP connection</h2>
-
-        <form method="post">
-            <label for="ssid">SSID</label><br>
-            <input type="text" name="ssid" placeholder="ssid" value="{{ request.form['ssid'] }}"></input><br><br>
-            
-            <label for="pwd">Password</label><br>
-            <input type="text" name="pwd" placeholder="password" value="{{ request.form['pwd'] }}"></input><br><br>
-            
-            <button type="submit">Connect</button>            
-        </form>
+	<head>
+		<link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+		
+		<title>
+            ITS message
+        </title>
         
-        {% for message in get_flashed_messages() %}
-            <h3>{{ message }}</h3>
-        {% endfor %}
+		<script src="/static/jquery-3.6.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/style.css" />
+	</head>
 
-    </body>
+	<body>
+
+		<div class="row center">
+			<h2 class="title">
+				ITS message
+			</h2>
+		</div>
+
+		<div class="row center">
+			<form method="post">
+				<textarea type="text" class="message_form" name="secret_message" rows="10" placeholder="Write your secret message here :)" value="{{ request.form['secret_message'] }}"></textarea><br><br>
+				<input type="submit" class="button" value="send">            
+			</form>
+		</div>
+		
+		<div class="row center">
+			{% for message in get_flashed_messages() %}
+				<h3>
+					{{ message }}
+				</h3>
+			{% endfor %}
+		</div>
+
+	</body>
+
 </html>
