@@ -69,7 +69,8 @@
 15. Con wireshark riusciamo ad intercettare i pacchetti inviati ai web server dei compagni?
 
 #### Lesson 3 - Resources
-- Name ([pdf](material/.pdf))
+- ISO/OSI & TCP/IP p.2 ([pdf](material/isoosi_tcpip_2.pdf))
+- Webapp template ([folder](webapp))
 
 ## Lesson 4: 
 
