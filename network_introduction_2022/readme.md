@@ -69,10 +69,11 @@
 ## Lesson 4: 
 
 1. Subnetting
-2. Indirizzi ip riservatiTCP, connection oriented, affidabile, esempi di casi d'uso
-3. UDP, connectionless, non affidabile, esempi di casi d'uso
-4. Traceroute e RTT
-5. Larghezza di banda e throughput
+2. Indirizzi ip riservati
+3. TCP, connection oriented, affidabile, esempi di casi d'uso
+4. UDP, connectionless, non affidabile, esempi di casi d'uso
+5. Traceroute e RTT
+6. Larghezza di banda e throughput
 
 #### Lesson 4 - Resources
 - Name ([pdf](material/.pdf))
