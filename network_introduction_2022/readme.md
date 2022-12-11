@@ -39,9 +39,7 @@
    - Reti a datagramma
    - Reti a circuito virtuale
 4. Modello ISO/OSI
-   - 7 livelli
-5. Modello TCP/IP
-   - 5 livelli
+5. Modello TCP/IP p.1
 6. Installiamo wireshark
 7. Creazione di un web server flask con una pagina html che contenga almeno una form in cui inserire del testo
 8. Proviamo a connetterci al nostro web server
@@ -52,41 +50,37 @@
 
 ## Lesson 3: 
 
-1. End system e intermediate system
-2. Comunicazione tra due entità: cos'è un'entità?
-3. Router
-4. Switch
-5. Hub
-6. Bridge
-7. Modem
-8. Ip v4 e v6
-9. Struttura indirizzi ip
-10. Netmask
-11. Indirizzi ip riservati
-12. ping
-13. Riusciamo a pingare il web server dei nostri compagni?
-14. Proviamo a connetterci al web server dei compagni
-15. Con wireshark riusciamo ad intercettare i pacchetti inviati ai web server dei compagni?
+1. Modello TCP/IP p.2
+2. End system e intermediate system
+3. Comunicazione tra due entità: cos'è un'entità?
+4. Indirizzi ip v4 e v6
+5. Notazione decimale puntata
+6. Netmask
+7. Ping
+8. Esercizi
 
 #### Lesson 3 - Resources
 - ISO/OSI & TCP/IP p.2 ([pdf](material/isoosi_tcpip_2.pdf))
+- Intermediate and End System and ip ([pdf](material/intermediate_end_system_ip.pdf))
 - Webapp template ([folder](webapp))
+- How to use Wireshark ([Link](https://www.lifewire.com/wireshark-tutorial-4143298))
+- Exercises ([pdf](material/ip_exercises.pdf))
 
 ## Lesson 4: 
 
-5. Subnetting
-6. TCP, connection oriented, affidabile, esempi di casi d'uso
-7. UDP, connectionless, non affidabile, esempi di casi d'uso
-8. Traceroute e RTT
-9.  Larghezza di banda e throughput
+1. Subnetting
+2. Indirizzi ip riservatiTCP, connection oriented, affidabile, esempi di casi d'uso
+3. UDP, connectionless, non affidabile, esempi di casi d'uso
+4. Traceroute e RTT
+5. Larghezza di banda e throughput
 
 #### Lesson 4 - Resources
 - Name ([pdf](material/.pdf))
+- Cisco Packet Tracer ([Link](https://www.netacad.com/portal/resources/packet-tracer)) 
 
 ## Lesson 5: 
 
 1. Perché è necessario il NAT, cos'è e come funziona
-2. Tupla ip - porta identificativa delle entità che comunicano
 
 #### Lesson 5 - Resources
 - Name ([pdf](material/.pdf))
