@@ -62,7 +62,7 @@
 #### Lesson 3 - Resources
 - ISO/OSI & TCP/IP p.2 ([pdf](material/isoosi_tcpip_2.pdf))
 - Intermediate and End System and ip ([pdf](material/intermediate_end_system_ip.pdf))
-- Webapp template ([zip](material/webapp_template.zip))
+- Webapp template ([folder](https://drive.google.com/drive/folders/1k7RpmG6FnTIlgFRgCB_XRhLSFnkfL9JY?usp=share_link))
 - How to use Wireshark ([Link](https://www.lifewire.com/wireshark-tutorial-4143298))
 - Exercises ([pdf](material/ip_exercises.pdf))
 
