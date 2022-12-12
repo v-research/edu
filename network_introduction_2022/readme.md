@@ -71,17 +71,18 @@
 1. Subnetting
 2. Indirizzi ip riservati
 3. TCP, connection oriented, affidabile, esempi di casi d'uso
-4. UDP, connectionless, non affidabile, esempi di casi d'uso
-5. Traceroute e RTT
-6. Larghezza di banda e throughput
 
 #### Lesson 4 - Resources
-- Name ([pdf](material/.pdf))
+- Subnetting and private ip addresses ([pdf](material/subnetting_private_ip.pdf))
+- TCP and UDP protocol ([pdf](material/tcp_and_udp.pdf))
 - Cisco Packet Tracer ([Link](https://www.netacad.com/portal/resources/packet-tracer)) 
 
 ## Lesson 5: 
 
-1. Perché è necessario il NAT, cos'è e come funziona
+1. UDP, connectionless, non affidabile, esempi di casi d'uso
+2. Traceroute e RTT
+3. Larghezza di banda e throughput
+4. Perché è necessario il NAT, cos'è e come funziona
 
 #### Lesson 5 - Resources
 - Name ([pdf](material/.pdf))
