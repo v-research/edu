@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request#, flash
 #from os import urandom
 
 app = Flask(__name__)
@@ -10,10 +10,11 @@ def index():
 	if request.method == 'POST':
 		secret_message = request.form['secret_message']
 
-		if not secret_message:
-			flash('You must send a message!')
-		else:
-			print(secret_message)
+		#if not secret_message:
+		#	flash('You must send a message!')
+		#else:
+		#	flash('Message correctly sent!')
+		print(secret_message) # indent this line for https
 	return render_template('index.html')
 
 if __name__ == '__main__':
