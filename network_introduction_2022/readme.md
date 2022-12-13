@@ -8,7 +8,7 @@
 - Quando: novembre 2022 - gennaio 2023
 - Ricevimento: mandatemi un'email e ci mettiamo d'accordo :)
 
-## Lesson 1: Riconoscere le componenti fondamentali della rete
+## Lesson 1 - 05/12/2022:
 
 1. Presentazione
 2. Esempio: come fanno due dispositivi a scambiarsi delle informazioni e quali problemi possono esserci?
@@ -23,15 +23,13 @@
    - comunicazione in aria (terrestre)
    - comuicazione nel vuoto (satellitare)
 5. Ripassino uso e comandi del terminale
-6. Installazione [GNS3](https://docs.gns3.com/docs/getting-started/installation/linux/)
 
 #### Lesson 1 - Resources
-- Terminal Instructions ([pdf](material/terminal_instructions.pdf))
-- Networks Classification ([pdf](material/computer_networks.pdf))
-- Transmition Technologies ([pdf](material/transmition_technologies.pdf))
-- Exercises 1 ([pdf](material/exercises_1.pdf))
+- Terminal Instructions ([pdf](material/l1/terminal_instructions.pdf))
+- Networks Classification ([pdf](material/l1/computer_networks.pdf))
+- Transmition Technologies ([pdf](material/l1/transmition_technologies.pdf))
 
-## Lesson 2: 
+## Lesson 2 - 07/12/2022: 
 
 1. ISP
 2. Commutazione di circuito
@@ -40,15 +38,15 @@
    - Reti a circuito virtuale
 4. Modello ISO/OSI
 5. Modello TCP/IP p.1
-6. Installiamo wireshark
+6. Installiamo [wireshark](https://www.wireshark.org/download.html)
 7. Creazione di un web server flask con una pagina html che contenga almeno una form in cui inserire del testo
 8. Proviamo a connetterci al nostro web server
 
 #### Lesson 2 - Resources
-- ISP & packet commutation ([pdf](material/isp_commutation.pdf))
-- ISO/OSI & TCP/IP p.1 ([pdf](material/isoosi_tcpip_1.pdf))
+- ISP & packet commutation ([pdf](material/l2/isp_commutation.pdf))
+- ISO/OSI & TCP/IP p.1 ([pdf](material/l2/isoosi_tcpip_1.pdf))
 
-## Lesson 3: 
+## Lesson 3 - 12/12/2022: 
 
 1. Modello TCP/IP p.2
 2. End system e intermediate system
@@ -60,24 +58,26 @@
 8. Esercizi
 
 #### Lesson 3 - Resources
-- ISO/OSI & TCP/IP p.2 ([pdf](material/isoosi_tcpip_2.pdf))
-- Intermediate and End System and ip ([pdf](material/intermediate_end_system_ip.pdf))
+- ISO/OSI & TCP/IP p.2 ([pdf](material/l3/isoosi_tcpip_2.pdf))
+- Intermediate and End System and ip ([pdf](material/l3/intermediate_end_system_ip.pdf))
 - Webapp template ([link](https://drive.google.com/file/d/1MHHm3W43DTFvdZwNtEs1CcYj-W7zKC5_/view?usp=share_link))
 - How to use Wireshark ([Link](https://www.lifewire.com/wireshark-tutorial-4143298))
-- Exercises ([pdf](material/ip_exercises.pdf))
+- Exercises ([pdf](material/l3/l3_exercises.pdf))
 
-## Lesson 4: 
+## Lesson 4 - 14/12/2022: 
 
 1. Subnetting
 2. Indirizzi ip riservati
 3. TCP, connection oriented, affidabile, esempi di casi d'uso
+4. Switch VS Router (piccola review)
 
 #### Lesson 4 - Resources
-- Subnetting and private ip addresses ([pdf](material/subnetting_private_ip.pdf))
-- TCP and UDP protocol ([pdf](material/tcp_and_udp.pdf))
-- Cisco Packet Tracer ([Link](https://www.netacad.com/portal/resources/packet-tracer)) 
+- Subnetting and private ip addresses ([pdf](material/l4/subnetting_private_ip.pdf))
+- TCP ([pdf](material/l4/tcp.pdf))
+- Cisco Packet Tracer ([Link](https://www.netacad.com/portal/resources/packet-tracer))
+- Exercises ([pdf](material/l4/l4_exercises.pdf))
 
-## Lesson 5: 
+## Lesson 5 - 21/12/2022: 
 
 1. UDP, connectionless, non affidabile, esempi di casi d'uso
 2. Traceroute e RTT
@@ -85,9 +85,9 @@
 4. Perché è necessario il NAT, cos'è e come funziona
 
 #### Lesson 5 - Resources
-- Name ([pdf](material/.pdf))
+- UDP ([pdf](material/l5/udp.pdf))
 
-## Lesson 6: 
+## Lesson 6 - 09/01/2023: 
 
 1. Cos'è e come funziona il Routing
 2. Cos'è un Socket
@@ -97,7 +97,7 @@
 #### Lesson 6 - Resources
 - Name ([pdf](material/.pdf))
 
-## Lesson 7: 
+## Lesson 7 - 11/01/2023: 
 
 1. Come funziona il DHCP
 2. Tipologie di Firewall e funzionamento
@@ -107,7 +107,7 @@
 #### Lesson 7 - Resources
 - Name ([pdf](material/.pdf))
 
-## Lesson 8: 
+## Lesson 8 - 16/01/2023: 
 
 1. Cos'è la crittografia asimmetrica e come funziona
 2. Chiavi pubbliche e private
@@ -117,7 +117,7 @@
 #### Lesson 8 - Resources
 - Name ([pdf](material/.pdf))
 
-## Lesson 9: 
+## Lesson 9 - 18/01/2023: 
 
 1. TLS
 2. HTTPS
