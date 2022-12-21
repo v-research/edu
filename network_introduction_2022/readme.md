@@ -92,9 +92,9 @@
 
 ## Lesson 6 - 21/12/2022:
 
-1. CIDR
-2. DNS e cache
-3. DHCP
+1. DNS e cache
+2. DHCP
+3. Esercizio Packet Tracer
 
 #### Lesson 6 - Resources
 - dns ([pdf](material/l6/dns.pdf))
@@ -104,10 +104,9 @@
 
 1. Traceroute, RTO e RTT
 2. Larghezza di banda e throughput
-3. Cos'è e come funziona il Routing
-4. Tipologie di Firewall e funzionamento
-5. Cos'è una VPN
-6. Come funziona il protocollo HTTP
+3. Tipologie di Firewall e funzionamento
+4. Cos'è una VPN
+5. Come funziona il protocollo HTTP
 
 #### Lesson 7 - Resources
 - Name ([pdf](material/.pdf(https://itexam24.com/14-8-1-packet-tracer-tcp-and-udp-communications-answers/)))
