@@ -92,24 +92,26 @@
 
 ## Lesson 6 - 21/12/2022:
 
-1. DHCP
-2. Cos'è e come funziona il Routing
-3. CIDR
-4. Come funziona il DNS
+1. CIDR
+2. DNS e cache
+3. DHCP
 
 #### Lesson 6 - Resources
-- Name ([pdf](material/.pdf(https://itexam24.com/14-8-1-packet-tracer-tcp-and-udp-communications-answers/)))
+- dns ([pdf](material/l6/dns.pdf))
+- dhcp ([pdf](material/l6/dhcp.pdf))
 
 ## Lesson 7 - 09/01/2023:
 
 1. Traceroute, RTO e RTT
 2. Larghezza di banda e throughput
-3. Tipologie di Firewall e funzionamento
-4. Cos'è una VPN
-5. Come funziona il protocollo HTTP
+3. Cos'è e come funziona il Routing
+4. Tipologie di Firewall e funzionamento
+5. Cos'è una VPN
+6. Come funziona il protocollo HTTP
 
 #### Lesson 7 - Resources
-- Name ([pdf](material/.pdf))
+- Name ([pdf](material/.pdf(https://itexam24.com/14-8-1-packet-tracer-tcp-and-udp-communications-answers/)))
+- routing ([pdf](material/l6/routing.pdf))
 
 ## Lesson 8 - 11/01/2023:
 
@@ -125,7 +127,8 @@
 
 ## Lesson 9 - 16/01/2023:
 
-1. Esercizi
+1. CSMA CA/CD
+2. Esercizi
 
 #### Lesson 9 - Resources
 - Name ([pdf](material/.pdf))
