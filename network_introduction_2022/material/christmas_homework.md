@@ -9,5 +9,5 @@ Ogni gruppo dovrà scegliere un argomento differente, pertanto mettetevi d'accor
 
 ## Argomenti disponibili
 
-1. Cos'è e a cosa serve una VPN? 
+1. Cos'è e a cosa serve una VPN? Quando e perché conviene usarne una? Quali sono alcuni esempi di casi in cui può essere usata? Quali sono vantaggi e svantaggi dell'utilizzo di una VPN?
 2. CSMA
