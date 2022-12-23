@@ -100,6 +100,8 @@
 - dns ([pdf](material/l6/dns.pdf))
 - dhcp ([pdf](material/l6/dhcp.pdf))
 
+## [Christmas Homework](material/christmas_homework.md)
+
 ## Lesson 7 - 09/01/2023:
 
 1. Traceroute, RTO e RTT
