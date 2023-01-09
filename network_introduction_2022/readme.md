@@ -111,8 +111,9 @@
 5. Come funziona il protocollo HTTP
 
 #### Lesson 7 - Resources
-- Name ([pdf](material/.pdf(https://itexam24.com/14-8-1-packet-tracer-tcp-and-udp-communications-answers/)))
-- routing ([pdf](material/l7/routing.pdf))
+- secret_link ([pdf](material/.pdf(https://itexam24.com/14-8-1-packet-tracer-tcp-and-udp-communications-answers/)))
+- packet tracer dhcp dns instructions ([pdf](material/l7/dns_and_dhcp.pdf))
+- packet tracer dhcp dns file ([pka](material/l7/dns_and_dhcp.pka))
 
 ## Lesson 8 - 11/01/2023:
 
@@ -125,7 +126,7 @@
 7. HTTPS
 
 #### Lesson 8 - Resources
-- Name ([pdf](material/.pdf))
+- routing ([pdf](material/l7/routing.pdf))
 - traceroute ([pdf](material/l7/traceroute.pdf))
 
 ## Lesson 9 - 16/01/2023:
