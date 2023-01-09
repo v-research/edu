@@ -104,27 +104,29 @@
 
 ## Lesson 7 - 09/01/2023:
 
-1. Traceroute, RTO e RTT
-2. Larghezza di banda e throughput
-3. Tipologie di Firewall e funzionamento
-4. Cos'è una VPN
+1. Presentazioni
+2. Routing e consegna diretta e indiretta
+3. Larghezza di banda e throughput
+4. Tipologie di Firewall e funzionamento
 5. Come funziona il protocollo HTTP
 
 #### Lesson 7 - Resources
 - Name ([pdf](material/.pdf(https://itexam24.com/14-8-1-packet-tracer-tcp-and-udp-communications-answers/)))
-- routing ([pdf](material/l6/routing.pdf))
+- routing ([pdf](material/l7/routing.pdf))
 
 ## Lesson 8 - 11/01/2023:
 
-1. Cos'è la crittografia asimmetrica e come funziona
-2. Chiavi pubbliche e private
-3. Esempi di algoritmi di crittografia asimmetrica
-4. Perché viene utilizzata nella fase di comunicazione e come si implementa
-5. TLS
-6. HTTPS
+1. Traceroute, RTO e RTT
+2. Cos'è la crittografia asimmetrica e come funziona
+3. Chiavi pubbliche e private
+4. Esempi di algoritmi di crittografia asimmetrica
+5. Perché viene utilizzata nella fase di comunicazione e come si implementa
+6. TLS
+7. HTTPS
 
 #### Lesson 8 - Resources
 - Name ([pdf](material/.pdf))
+- traceroute ([pdf](material/l7/traceroute.pdf))
 
 ## Lesson 9 - 16/01/2023:
 
