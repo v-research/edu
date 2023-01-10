@@ -129,7 +129,7 @@
 - routing ([pdf](material/l7/routing.pdf))
 - traceroute ([pdf](material/l7/traceroute.pdf))
 
-## Lesson 9 - 16/01/2023:
+## Lesson 9 - 20/01/2023:
 
 1. CSMA CA/CD
 2. Esercizi
