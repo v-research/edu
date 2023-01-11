@@ -104,35 +104,36 @@
 
 ## Lesson 7 - 09/01/2023:
 
-1. Presentazioni
-2. Routing e consegna diretta e indiretta
-3. Larghezza di banda e throughput
-4. Tipologie di Firewall e funzionamento
-5. Come funziona il protocollo HTTP
+1. Presentazioni:
+   1. VPN
+   2. ALOHA & SLOTTED ALOHA
+   3. Crittografia simmetrica
+   4. Crittografia asimmetrica
+2. Esercizio packet tracer DHCP e DNS
 
 #### Lesson 7 - Resources
-- secret_link ([pdf](material/.pdf(https://itexam24.com/14-8-1-packet-tracer-tcp-and-udp-communications-answers/)))
 - packet tracer dhcp dns instructions ([pdf](material/l7/dns_and_dhcp.pdf))
 - packet tracer dhcp dns file ([pka](material/l7/dns_and_dhcp.pka))
 
 ## Lesson 8 - 11/01/2023:
 
-1. Traceroute, RTO e RTT
-2. Cos'è la crittografia asimmetrica e come funziona
-3. Chiavi pubbliche e private
-4. Esempi di algoritmi di crittografia asimmetrica
-5. Perché viene utilizzata nella fase di comunicazione e come si implementa
-6. TLS
-7. HTTPS
+1. Presentazione IDS, IPS, DMZ e firewall
+2. Routing e consegna diretta e indiretta
+3. Traceroute, RTO, RTT
+4. Larghezza di banda e throughput
+5. Esercizi
 
 #### Lesson 8 - Resources
-- routing ([pdf](material/l7/routing.pdf))
-- traceroute ([pdf](material/l7/traceroute.pdf))
+- routing ([pdf](material/l8/routing.pdf))
+- traceroute ([pdf](material/l8/traceroute.pdf))
 
 ## Lesson 9 - 20/01/2023:
 
-1. CSMA CA/CD
-2. Esercizi
+1. Presentazione: CSMA CA/CD
+2. Come funziona il protocollo HTTP
+3. TLS
+4. HTTPS
+5. Correzione esercizione
 
 #### Lesson 9 - Resources
 - Name ([pdf](material/.pdf))
