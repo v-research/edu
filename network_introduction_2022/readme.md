@@ -133,7 +133,9 @@
 2. Come funziona il protocollo HTTP
 3. TLS
 4. HTTPS
-5. Correzione esercizione
+5. Flask webserver con HTTPS
+6. Correzione esercizione
 
 #### Lesson 9 - Resources
 - http https tls ([pdf](material/l9/http_https_tls.pdf))
+- soluzione esercizione ([pdf](material/l9/soluzione_esercizione.pdf))
