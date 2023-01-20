@@ -137,5 +137,7 @@
 6. Correzione esercizione
 
 #### Lesson 9 - Resources
+- csma 1 ([pdf](material/l9/csma.pdf))
+- csma 2 ([docx](material/l9/csma.docx))
 - http https tls ([pdf](material/l9/http_https_tls.pdf))
 - soluzione esercizione ([pdf](material/l9/soluzione_esercizione.pdf))
