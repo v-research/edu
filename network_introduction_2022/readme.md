@@ -136,4 +136,4 @@
 5. Correzione esercizione
 
 #### Lesson 9 - Resources
-- Name ([pdf](material/.pdf))
+- http https tls ([pdf](material/l9/http_https_tls.pdf))
