@@ -21,6 +21,10 @@ def find_network_ip():
 	file_text = subprocess.check_output(['cat', '...'])
 	...
 
+def hops_to_site(site):
+	# write in a file how many hops to go to the given site
+	file_text = subprocess.check_output(['traceroute', site])
+
 def main():
 	create_file('')
 	give_read_permissions('filename')
@@ -30,6 +34,7 @@ def main():
 		print('I can\'t connect to the internet! :(')
 	get_ip_info()
 	find_network_ip()
+	hops_to_site('google.it')
 
 if __name__ == '__main__':
 	main()
