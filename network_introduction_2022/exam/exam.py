@@ -1,10 +1,10 @@
 import subprocess
 
 def create_file(filename):
-	subprocess.run(['touch', filename])
+	subprocess.run(['touch', filename, shell=True])
 
-def give_read_permissions():
-	subprocess.run(['sudo', 'chmod', '666', '/path/to/file'])
+def give_permissions():
+	subprocess.run(['chmod', '777', '/path/to/file'])
 
 def check_internet_connection():
 	# can we connect to the internet?
