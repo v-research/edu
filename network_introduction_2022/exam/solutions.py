@@ -29,7 +29,7 @@ def hops_to_site(site):
 	# write in a file how many hops to go to the given site
 	file_text = subprocess.check_output(['traceroute', site]).decode('utf-8')
 	print(file_text)
-
+	
 	#channels = re.findall(r'Channel [0-9]*', output)
 
 def main():
