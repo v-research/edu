@@ -236,7 +236,7 @@ Take home message: security properties are nice and we now know some of them (CI
 Her sister cries and cries... She hurries in her father's room, tells him she
 read the secret diary and that Alice wrote her sister is ugly (tanto va la
 gatta al lardo...). So Alice hears that her sister read her secret diary and
-she gets mad! Not because she cares about the "citation" but because she felt
+she gets mad! Not because she cares about her sister but because she felt
 stupid, she messed up with the only secure thing she had and, most importantly,
 she knows she's too lazy to give herself the key to Bob. Her father has an
 idea.
