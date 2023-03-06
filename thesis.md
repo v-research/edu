@@ -29,6 +29,18 @@ layout: default
 <h3 class="text-center w-100 team-sec-border"> MsC Students <i class="fas fa-user-graduate"></i> </h3>
 
 <div class="row team-people m-top-z">
+    <!-- Enrico Guerra -->
+    <div class="row team-people">
+        <div class="col-12 col-sm-3">
+            <img src="images/enrico-guerra.png">
+        </div>
+        <div class="col-12 col-sm-9 profile-name-margin">
+            <h3> Enrico Guerra - 2022 </h3>
+                <p>Thesis: Formal verification and risk assessment of an implementation of the OPC-UA Protocol
+                [<a href="thesis/thesis-enricoGuerra/thesis-guerra.pdf" target="blank">pdf</a>, <a href="thesis/thesis-enricoGuerra/slides-thesis-guerra.pdf">slide</a>]</p>
+        </div>
+    </div>
+
     <!-- Alessandro Busatto -->
     <div class="row team-people">
         <div class="col-12 col-sm-3">
