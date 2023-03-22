@@ -365,7 +365,8 @@ and cracked by a dictionary attack.
 
 If you want to play a bit with dictionary attacks here is what you need:
 - a [dictionary](https://wiki.skullsecurity.org/index.php/Passwords)
-- [John the ripper](https://www.openwall.com/john/)
+- [John the ripper](https://www.openwall.com/john/) if you want to try another password cracker.
+- with hashcat you can use `-a 0` mode or `-a 1` to combine from multiple wordlists.
 We now focus on brute-force attacks, so that we can play a bit and get a sense on why they always say to have 
 a password length 8 and not, say 6.
 
@@ -375,7 +376,7 @@ To perform the brute-force attack we use [hashcat](https://hashcat.net/hashcat/)
 3. `hashcat -a 3 -m 12 ./ciao.hash -o output.txt` where `-a 3` is for brute-force attack, `-m 12` selects Postgres md5,  (see `hashcat --help` for more information) returns the password "ciao" in a file named `output.txt` in a minute at most!
 
 Note that:
-- `hashcat -a 3 -m 12 ./ciao.hash -o output.txt ?a?a?a?a` tells hashcat that the password length is 4 (to speedup the cracking process)
+- `hashcat -a 3 -m 12 ./ciao.hash -o output.txt ?a?a?a?a` tells hashcat to perform a [mask attack](https://hashcat.net/wiki/doku.php?id=mask_attack) wich optimizes the brute force, reducing the password space. In this case we say that the password length is 4 (to speedup the cracking process).
 - you can run `hashcat -a 3 -m 12 ./ciao.hash --show` (after you have cracked the password) to see the password in cleartext.
 
 ![image](https://user-images.githubusercontent.com/14936492/160302972-d5339cf2-5bfa-48af-ac90-6a3a26df1648.png)
