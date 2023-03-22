@@ -376,6 +376,7 @@ To perform the brute-force attack we use [hashcat](https://hashcat.net/hashcat/)
 3. `hashcat -a 3 -m 12 ./ciao.hash -o output.txt` where `-a 3` is for brute-force attack, `-m 12` selects Postgres md5,  (see `hashcat --help` for more information) returns the password "ciao" in a file named `output.txt` in a minute at most!
 
 Note that:
+- based on the password you want to crack hashcat requires you to use a specific mode and a specific format of the input file you give to hashcat. The format is available [here](https://hashcat.net/wiki/doku.php?id=example_hashes).
 - `hashcat -a 3 -m 12 ./ciao.hash -o output.txt ?a?a?a?a` tells hashcat to perform a [mask attack](https://hashcat.net/wiki/doku.php?id=mask_attack) wich optimizes the brute force, reducing the password space. In this case we say that the password length is 4 (to speedup the cracking process).
 - you can run `hashcat -a 3 -m 12 ./ciao.hash --show` (after you have cracked the password) to see the password in cleartext.
 
