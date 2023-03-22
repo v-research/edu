@@ -1,4 +1,9 @@
-### Courses
+### Current Courses
+- [Cybersecurity 1](cybersecurity_2023/README.md) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 1st Year [PIXEL] (2023)
+- [Cybersecurity 1](cybersecurity_2023/README.md) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 1st Year [ZORIN] (2023)
+
+### Past Courses
+- [Security Risk Assessment Workshop](secra_univr_2022/V-Research_RiskAssessment_05Dec2022_SHARED.pdf) **-** [Data Security & Privacy Course](https://www.corsi.univr.it/?ent=cs&aa=2022%2F2023&codiceCs=S83&codins=4S009066&discr=&discrCd=&id=955&menu=Studiare&tab=Insegnamenti)@[UniVR](https://www.univr.it) (2022)
 - [Introduction to Networks course](network_introduction_2022/readme.md) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs) 1st Year (2022)
 - [Cybersecurity 2](cybersecurity_2022/README-2.md) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 2nd Year [PASCAL] (2022)
 - [Cybersecurity 1](cybersecurity_2022/README.md) **-** [ITS](https://www.itslogistica.it/?fbclid=IwAR0D1ZwL_UCHfXztZji-eYBH8k_UYFdsVwO80sJPlaxnwySHfd9d_9Rzcvs)@[311Verona](https://311verona.com/) 1st Year [PASCAL] (2022)

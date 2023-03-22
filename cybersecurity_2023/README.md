@@ -28,7 +28,7 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 >John Keating, "Dead Poets Society"
 
 ### What is Cybersecurity in the Context of this ITS?
-1. What is something? What does it even mean to understand *what* something *is*? This is too long to be discussed here but there's a friend who is willing to tell you... well, unfortunately he's dead but he left you a [precious book](https://www.amazon.it/scoperta-scientifica-carattere-autocorrettivo-scienza/dp/8806203924/ref=sr_1_1?keywords=popper+la+logica+della+scoperta+scientifica&qid=1646999719&sprefix=popper+la+logica%2Caps%2C85&sr=8-1). We know that ideas on what a phenomenon is (or hypothesis) should be *invented* and **not** defined by observing the phenomenon. 
+What is something? What does it even mean to understand *what* something *is*? This is too long to be discussed here but there's a friend who is willing to tell you... well, unfortunately he's dead but he left you a [precious book](https://www.amazon.it/scoperta-scientifica-carattere-autocorrettivo-scienza/dp/8806203924/ref=sr_1_1?keywords=popper+la+logica+della+scoperta+scientifica&qid=1646999719&sprefix=popper+la+logica%2Caps%2C85&sr=8-1). We know that ideas on what a phenomenon is (or hypothesis) should be *invented* and **not** defined by observing the phenomenon. 
 > "[…] and I think (like you, by the way) that theory cannot be fabricated out of the results of observation, but that it can only be invented." Albert Einstein writing to Karl Popper.
 
 So, cybersecurity cannot be understood out of the results of observation but, in this course, we are going to understand cybersecurity out of the results of observation anyway! Why? Because how could we even conceive to ask ourselves "what is cybersecurity?" if we didn't stumble upon some "observation" or some situation in which cyber-insecurity was evident?
@@ -47,7 +47,7 @@ An *hacker*, instead, is "a person who delights in having an intimate understand
 #### How do we guarantee the CIA-triad holds in a system?
 Using the so-called [Alice-and-Bob notation](https://en.wikipedia.org/wiki/Security_protocol_notation) where Alice (A) and Bob (B) are honest and Eve (E) is the malicious attacker, let us suppose that Alice wants to send "ciao bob" to Bob.
 
-1. To preserve confidentiality, Alice can agree with Bob upon using a specific transformation over each message. Let's say, they will substitute each letter in the message by a letter at some fixed number of positions (which we call `k`) down the alphabet (aka [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)). So, the message "ciao bob" is transformed into "dlbp cpc" if `k=1` and `A->B:dlbp cpc` will only be understood from Bob (since he's the only one who knows how to translate the message back into its meaning - and we assume, for simplicity, that Eve is not so clever to figure out we are doing this "trick").
+To preserve confidentiality, Alice can agree with Bob upon using a specific transformation over each message. Let's say, they will substitute each letter in the message by a letter at some fixed number of positions (which we call `k`) down the alphabet (aka [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)). So, the message "ciao bob" is transformed into "dlbp cpc" if `k=1` and `A->B:dlbp cpc` will only be understood from Bob (since he's the only one who knows how to translate the message back into its meaning - and we assume, for simplicity, that Eve is not so clever to figure out we are doing this "trick").
 
 MUHAHAHAHA! This does not preserve confidentiality as soon as I draw from my deck in attack position: [frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis).
 Long story short, letters in a sentence are bound to be used with a fixed frequency (which may vary from language to language). In Italian we have the following frequencies
@@ -215,7 +215,7 @@ Any hack requires an intimate understanding of a technology so, let's get to kno
 
 For more fun, please have a look at the [PostgresSQL documentation](https://www.postgresql.org/docs/12/auth-pg-hba-conf.html) (I link you a random page, but you can click your way to the table of content).
 
-### Authentication: "I'm not the A of the CIA-triad"
+### Authentication and Authorization: "We are not the A of the CIA-triad"
 We used two important terms in this lesson: *trust* and *authentication*.
 Trust is a basic notion in security. It is always there when you talk about security because you have to trust someone or something.
 If I tell you I'm Marco you can trust me, you can ask my mom and trust her, you can check my ID and trust our nation, you can test my DNA and that of my parents and trust a random lab, etc.
@@ -227,7 +227,23 @@ of verifying the identity" while *identification* (which is important too) is
 input against the result of some process (e.g. by looking at a table in the
 database - and this is a hint for the following questions).
 
-Take home message: security properties are nice and we now know some of them (CIA, authentication, identification, trust) but the technology that we use to guarantee a security property often comes with extra requirements. For example, an authentication process implicitly asks you to save your password in a secure place (security of data at rest and, again, asks security for security), to share a password in a confidential way (data in transit), or to create a complex password (why?).
+Take home message: security properties are nice and we now know some of them
+(CIA, authentication, identification, trust) but the technology that we use to
+guarantee a security property often comes with extra requirements. For example,
+an authentication process implicitly asks you to save your password in a secure
+place (security of data at rest and, again, asks security for security), to
+share a password in a confidential way (data in transit), or to create a
+complex password (why?).
+
+While authentication is concerned with the integrity of the data sent by a user
+by not just requiring that the data have not been altered but also that they
+have been produced by a specific user/identity, authorization deals with the
+confidentiality of data.
+[Authorization](https://en.wikipedia.org/wiki/Authorization) "is the function
+of specifying access rights/privileges to resources, [...] and to authorize is
+to define an access policy".  An authorization mechanism aims at protecting the
+confidentiality of data, limiting the (read) access to the data that a user is
+authorized to read. 
 
 ### Do try this at home!
 - What is the authentication process of PostgreSQL? How does it authenticate the user `postgres` when we use `peer` (for example)?
@@ -334,11 +350,11 @@ We have:
 - 10 digits 0..1
 - let's say 10 special characters ('$','#', etc.)
 
-So with 4 characters we have $4^(26+26+10+10)=4^72=2*10^43$ possible passwords.
+So with a password with lenght 4 we have (26+26+10+10)^4=72^4=26873856 (almost 27 milion) possible passwords.
 If we can compute $10^10$ MD5 hash per second it takes us up to $2*10^33$ seconds which is a very, very, very long time.
 But what if people were lazy and only used, say, a-z letters? Well, if you do the math, you see that in a week we got the hash.
 This is why it is important to choose a strong password where *a strong password is not 
-a short password or a long password but a password which is chosen from a rich alphabet* (our 72 possible character). A brilliant video 
+just a long password but a password which is chosen from a rich alphabet* (our 72 possible character). A brilliant video 
 on passwords by Cormac Herley (Microsoft Research) is [this](https://www.youtube.com/watch?v=vAWyChcB_Vg).
 
 ### Brute-force and Dictionary Attack
@@ -347,12 +363,24 @@ instead of brute-forcing all the possible password we use a "dictionary" with th
 So, don't choose a "supercanifragilistichespiralidoso" and not even "sup3rc4n1fragilisti" because they can be guessed quite easily 
 and cracked by a dictionary attack.
 
-To perform the brute-force attack we use [hashcat](https://hashcat.net/hashcat/).
+If you want to play a bit with dictionary attacks here is what you need:
+- a [dictionary](https://wiki.skullsecurity.org/index.php/Passwords)
+- [John the ripper](https://www.openwall.com/john/)
+We now focus on brute-force attacks, so that we can play a bit and get a sense on why they always say to have 
+a password length 8 and not, say 6.
+
+To perform the brute-force attack we use [hashcat](https://hashcat.net/hashcat/), the "wordl's fastest password cracker" etc etc.
 1. `sudo apt install hashcat`
-2. copy the MD5 hash in a file `echo "2e2af93edc9ab3aea6bbf13b7c409000" > ciao.hash` (here remember to drop the "md5" at the beginnning of the hash)
-3. `hashcat -a 3 -m 12 ./ciao.hash ?a?a?a?a` where `-a 3` is for brute-force attack, `-m 12` selects Postgres md5, `?a?a?a?a` set the length of the password (see `hashcat --help` for more information) returns the password "ciao" in a minute at most!
+2. copy the MD5 hash in a file `echo "2e2af93edc9ab3aea6bbf13b7c409000:user" > ciao.hash` (here remember to drop the "md5" at the beginnning of the hash and to substitute `user` with the correct username)
+3. `hashcat -a 3 -m 12 ./ciao.hash -o output.txt` where `-a 3` is for brute-force attack, `-m 12` selects Postgres md5,  (see `hashcat --help` for more information) returns the password "ciao" in a file named `output.txt` in a minute at most!
+
+Note that:
+- `hashcat -a 3 -m 12 ./ciao.hash -o output.txt ?a?a?a?a` tells hashcat that the password length is 4 (to speedup the cracking process)
+- you can run `hashcat -a 3 -m 12 ./ciao.hash --show` (after you have cracked the password) to see the password in cleartext.
 
 ![image](https://user-images.githubusercontent.com/14936492/160302972-d5339cf2-5bfa-48af-ac90-6a3a26df1648.png)
+
+Now, try to create longer and longer password and see how slow this process becomes. It is due to the exponential nature of the password space: adding 1 more character to your password will increase exponentially the number of possible password. For example, a password with lenght 4 (assuming the alphabet as we did before) has a password space of 72^4, with length 5 is 72^5 and with length N we have 72^N.
 
 There are hash algorithms which are purposely slower in computing the hash to prevent the brute-force attack (such as bcrypt which should be preferred to MD5 - plus MD5 has also serious flaws and should not be used - but it is not supported by postgres and the best we can do is use `sha-scram-256`.
 Obviously, it's difficult to get the hash from the database, can we obtain it from the communication between `psql` and the DBMS during the client authentication?
@@ -453,9 +481,9 @@ If things are NOT working:
    1. `ssl = off` -- we'll re-enable in the next lesson
    2. `listen_address ='*'` -- remember to remove the `#` at the beginning of the file to de-comment it.
 3. `sudo vim /etc/postgresql/12/main/pg_hba.conf`
-   1. enable connections from every IP address (`host  all  all  0.0.0.0/0  md5`). Here the [0.0.0.0/0 means "every IP address"](https://en.wikipedia.org/wiki/Default_route). You should get a pg_hba.conf file as the following.
+   1. enable connections from every IP address (`host  all  all  0.0.0.0/0  md5`). Here the [0.0.0.0/0 means "every IP address"](https://en.wikipedia.org/wiki/Default_route). You should get a `pg_hba.conf` file as the following.
 
-   ![image](https://user-images.githubusercontent.com/14936492/161271705-be870496-744d-4ead-8e14-7efcde7fdcd7.png)
+![image](https://user-images.githubusercontent.com/14936492/161271705-be870496-744d-4ead-8e14-7efcde7fdcd7.png)
 
 ### [Where is Everybody?](https://en.wikipedia.org/wiki/Fermi_paradox) (Step 1)
 Ok, this is our first real step. We now become Eve, another machine on the same local network (IP `172.16.10.66`), and we want to hack into Bob's db but how do we know the IP of Bob or Alice?
@@ -534,7 +562,7 @@ DONE!!! We got the password and we can connect to Bob with
 ![image](https://user-images.githubusercontent.com/14936492/161285209-eb5b32c9-ce69-46cd-ba77-65680253fcaa.png)
 
 ### ROLES and PERMISSIONS
-It is a good practice to follow the [Principle of leas privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)
+It is a good practice to follow the [Principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)
 and to create a ROLE (a user) which is not as powerful as the superuser. For example, a client may
 not be allowed to create a new database or drop databases, similar for tables etc., an example follows.
 Connect to postgres with `psql -U postgres` and run the following.
