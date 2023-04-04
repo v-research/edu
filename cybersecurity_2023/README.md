@@ -566,6 +566,8 @@ DONE!!! We got the password and we can connect to Bob with
    2. has write access, he can also break integrity
    3. can create/drop table... well, the availability of the whole db is at risk
 
+NOTE: PostgresSQL offers 3 types of authentication protocols: password which sends unencrypted passwords, md5 which we just tested, and SCRAM-SHA-256 which can be used as a password exchange mechanisms even on unprotected (e.g., without TLS) networks. Check the [Postgres documentation here](https://www.postgresql.org/docs/current/auth-password.html).
+
 ![image](https://user-images.githubusercontent.com/14936492/161285209-eb5b32c9-ce69-46cd-ba77-65680253fcaa.png)
 
 ### ROLES and PERMISSIONS
