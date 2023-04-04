@@ -575,7 +575,6 @@ not be allowed to create a new database or drop databases, similar for tables et
 Connect to postgres with `psql -U postgres` and run the following.
 ```
 CREATE USER nonSuperUser WITH NOCREATEROLE NOINHERIT NOBYPASSRLS PASSWORD 'strongPassword' VALID UNTIL '2023-01-31';
-REVOKE ALL PRIVILEGES ON SCHEMA public FROM public;
 REVOKE ALL PRIVILEGES ON SCHEMA public FROM nonSuperUser;
 GRANT USAGE ON SCHEMA public TO nonSuperUser;
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO nonSuperUser;
