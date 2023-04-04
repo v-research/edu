@@ -515,6 +515,7 @@ We can exploit a weakness of the [ARP protocol](https://en.wikipedia.org/wiki/Ad
 
 NOTE: ARP poisoning works only between IP address on the *same* subnet. For example, it works with IPs: 172.16.21.1 and 172.16.21.2
 but not with IPs: 172.16.7.1 and 172.16.21.2.
+
 NOTE 2: check that `sudo cat /proc/sys/net/ipv4/ip_forward` returns 1. Otherwise, when you run a MITM attack you won't forward the traffic between the two hosts you are attacking. You can set the `ip_forward` to 1 by editing the file. 
 
 1. `sudo apt install ettercap` (I know... we should use [bettercap](https://www.bettercap.org/installation/), which is better)
