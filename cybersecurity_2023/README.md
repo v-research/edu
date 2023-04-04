@@ -513,6 +513,10 @@ Now that we got their IP, just to have fun, we can run a Man-in-the-Middle Attac
 
 We can exploit a weakness of the [ARP protocol](https://en.wikipedia.org/wiki/Address_Resolution_Protocol) that is a protocol that is used to associate MAC and IP addresses. A MAC address is the identifier of the network card, while the IP address is the identifier of a computer in a network. Due to technical reasons, if you convince Alice that Bob's IP address is associated to your MAC address (and Bob that Alice's IP is associated to your MAC), all the messages exchanged between Alice and Bob will actually be sent to you (and you will forward them). So, you'll be a (Wo)Man-in-the-Middle. The technique we use to perform such attack is [ARP Poisoning](https://en.wikipedia.org/wiki/ARP_spoofing).
 
+NOTE: ARP poisoning works only between IP address on the *same* subnet. For example, it works with IPs: 172.16.21.1 and 172.16.21.2
+but not with IPs: 172.16.7.1 and 172.16.21.2.
+NOTE 2: check that `sudo cat /proc/sys/net/ipv4/ip_forward` returns 1. Otherwise, when you run a MITM attack you won't forward the traffic between the two hosts you are attacking. You can set the `ip_forward` to 1 by editing the file. 
+
 1. `sudo apt install ettercap` (I know... we should use [bettercap](https://www.bettercap.org/installation/), which is better)
 2. `sudo ettercap -G`
 3. select the interface and click on the `V` (accept) at the top of the ettercap window
