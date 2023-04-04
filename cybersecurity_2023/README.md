@@ -665,13 +665,13 @@ By looking at the PGSQL authentication protocol (using `ssl = off` and `md5`) us
 ```
 So, can we open _another_ session of the PGSLQ protocol and re-send the message with the credentials (e.g., with [Bit-Twist](http://bittwist.sourceforge.net/)), captured with wireshark (message 3. above)?
 We can but we **won't** bypass the authentication process since the server
-A. takes the stored `md5(username.password)` and the `salt`
-B. calculate the md5 hash `md5(md5(username.password))` and compares with the one received by the client. 
+1. takes the stored `md5(username.password)` and the `salt`
+2. calculate the md5 hash `md5(md5(username.password))` and compares with the one received by the client. 
 
 Since we are re-using a message from a previous execution of the protocol, the salt will be different and the server will reject our authentication message.
 
 ### Review 2: Hash and Confidentiality
-On the other hand, if the PGSQL protocol would not use salts, it would indeed be vulnerable to replay attacks even if the password is never sent as plaintext but always hash-ed. So, what is md5 protecting? and what is protecting it from?
+On the other hand, if the PGSQL protocol did not use salts, it would indeed be vulnerable to replay attacks even if the password is never sent as plaintext but always hash-ed. So, what is md5 protecting? and what is protecting it from?
 
 Sending an hash of a password for authenticating a client, if sent as plaintext, is not so much different from sending the password itself al plaintext. Without a salt, PGSQL is just calling the hash of the password, the authenticating credentials. What the hash protects here, is the confidentiality of the password from the server [note], but why? Suppose you are using the same password on 2 different services `ser1` and `ser2`. If `ser1` is owned by a malicious attacker, the attacker won't be able to re-use your hash of the password to authenticate on `ser2` as if he were you.
 
