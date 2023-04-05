@@ -692,6 +692,7 @@ Test replay attacks and brute-force attack on credentials.
 Note that in `/var/logs/postgresql` you can find the log of the postgresql server (with errors in case the configuration/server is not working). 
 
 ## Lesson 6 - Cryptography
+- [Asymmetric Encryption - RSA](https://profs.scienze.univr.it/~gregorio/RSA.pdf) by Enrico Gregorio (@UniVR) [Italian].
 - [TLS](https://www.cybertec-postgresql.com/en/tls-demystifying-communication-encryption-in-postgresql/)
 - [TLS in PostgreSQL](https://www.postgresql.org/docs/14/ssl-tcp.html)
 
