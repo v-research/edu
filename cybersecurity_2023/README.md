@@ -779,5 +779,13 @@ cat PKI/db/index
 chmod 400 PKI/private/dbkey.pem
 ```
 
-Another way is to follow the PostgreSQL manual which (at version 14) uses RSA:
+Another way to generate the certificates is to follow the PostgreSQL manual which (at version 14) uses RSA:
 - [TLS in PostgreSQL](https://www.postgresql.org/docs/14/ssl-tcp.html)
+
+What now? In the `/etc/postgresql/12/main/postgresql.conf` add `ssl=on` and change the following:
+- `ssl_cert_file` ($PGDATA/server.crt) 	server certificate 	sent to client to indicate server's identity
+- `ssl_key_file` ($PGDATA/server.key) 	server private key 	proves server certificate was sent by the owner; does not indicate certificate owner is trustworthy
+- `ssl_ca_file` 	trusted certificate authorities 	checks that client certificate is signed by a trusted certificate authority
+- `ssl_crl_file` 	certificates revoked by certificate authorities 	client certificate must not be on this list
+
+If you capture the traffic with Wireshark, you will see that both confidentiality and integrity are preserved! As long as the authorization follows the least privilege principle, you have a secure database :)
