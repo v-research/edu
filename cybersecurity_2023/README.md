@@ -692,9 +692,48 @@ Test replay attacks and brute-force attack on credentials.
 Note that in `/var/logs/postgresql` you can find the log of the postgresql server (with errors in case the configuration/server is not working). 
 
 ## Lesson 6 - Cryptography
-- [Asymmetric Encryption - RSA](https://profs.scienze.univr.it/~gregorio/RSA.pdf) by Enrico Gregorio (@UniVR) [Italian].
+We saw how to use OTP to encrypt a plaintext into a ciphertext to preserve
+the confidentiality of the plaintext (`alice:
+otp(plaintext,shared-key)=ciphertext`) when, for example, we want to send it
+through a non-secure network (`alice->bob:ciperhtext`). That method, however,
+requires the peers that are exchanging the ciphertext knows a common shared
+key (`bob: otp(ciphertext,shared-key)=plaintext`). That key must be private
+and anyone with the shared key can decrypt the ciphertext into the plaintext.
+
+### Asymmetric Encryption
+One of the method (well, algorithm) that can be used to share a private key
+is [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)). RSA is an *asymmetric* crypto system, while OTP is symmetric. All cryptosystems, like OTP, that uses a shared key are called symmetric and RSA does not work like OTP.
+The idea of RSA is the following:
+1. Both Alice and Bob generate two keys, a public (`pk(alice`) and a private key (`pvt(alice)`), such that `rsa-decryption(rsa-encryption(plaintext,pk(alice)),pvt(alice))=plaintext`). In other words, what is encrypted with the public key of an agent, say Alice, (`rsa-encrypt(plaintext, pk(alice))=ciphertext`) can *only* be decrypted with the private key of that agent (`rsa-decrypt(ciphertext, pvt(alice))=plaintext)`)
+2. The *public* key is made public (e.g., publicly available from the personal website of both Alice and Bob) so that Alice can download the public key of Bob (`bob->alice: pk(bob)`) and Bob the one of Alice (`alice->bob: pk(alice)`).
+3. Alice choose a shared key for OTP and sends it to Bob using RSA (`alice->bob: rsa-encrypt(shared-key, pk(bob))`).
+4. Bob decrypts Alice's message with his private key (`bob: rsa-decrypt(rsa-encrypt(shared-key, pk(bob)), pvt(bob))`) obtaining the shared key
+5. The shared key is then used for the confidential communication between Alice and Bob.
+
+Why can't Alice and Bob use RSA instead of OTP? Because asymmetric encryption is computationally more expensive than symmetric encryption and then it is only used (e.g., in TLS that is used to secure HTTP communications into HTTPS communications) to share a symmetric key. Symmetric encryption is cheaper (faster) than asymmetric encryption. And OTP is not used because it requires that the key is changed for every message and other symmetric schemes are used (e.g. [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard))i but OPT was easy enough to understand the basic concept of symmetric encryption in this course.
+
+### A Bit of Math on RSA
+In this section we follow [Asymmetric Encryption - RSA](https://profs.scienze.univr.it/~gregorio/RSA.pdf) by Enrico Gregorio (Prof@UniVR) [Italian].
+
+1. Alice chooses 2 (big usually but here we don't for the sake of clarity) prime numbers `p=5` and `q=11` and calculates `N=pq=5*11=55`. She also calculates a [magic number](https://en.wikipedia.org/wiki/Euler%27s_totient_function)`phi(N)=(p-1)(q-1)=4*10=40`. Finally Alice chooses a number `r` such that `gcd(r, phi(N))=1`, i.e. the greatest common divisor is 1, and then `r` and `phi(N)` are [coprime](https://en.wikipedia.org/wiki/Coprime_integers). Summarizing Alice has: `p=5, q=11, N=55, r=21` (and 21 is coprime with 40 as [coprime calculator](https://www.mathsisfun.com/numbers/coprime-calculator.html) affirms).
+2. Alice publicly shares her *public key* `(N,r)=(55,21)`.
+3. Bob chooses a random shared key `k=42` for OTP and encrypts it with Alice's public key by calculating `ciphertext=plaintext^r mod N=42^21 mod 55=42` (where `h=x mod y` means that `h` is the remainder of the division `x/y` as `1=3 mod 2`) and you can verify the correctness of the calculation with [Wlfram Alpha](https://www.wolframalpha.com/input?i=42%5E21+%28mod+55%29). So, Bob sends the ciphertext to Alice (`bob->alice: 42`).
+4. Alice calculates `s` such that `r*s + t*phi(N)=1` using (e.g.) [Wlfram Alpha](https://www.wolframalpha.com/input?i=%2821*s%29+%2B+%28t*40%29%3D1) and chooses one of the possible `s=40n+21` as `s=61`. Finally, she decrypts the ciphertext sent by Bob by calculating `ciphertext^s mod N=42^61 mod 55=42` which is the correct plaintext!
+
+Another quick example:
+1. Alice: p=3, q=5, N=15, phi(N)=8, r=7
+2. Bob: plain=10, cipher=10^7 mod 15=10, s=15
+3. Alice: plain=10^15 mod 15=10
+
+How does RSA guarantee the confidentiality of the plaintext chosen by Bob?
+The only messages that are exchanged are: `N`,`r`, and the ciphertext. The only
+way for an attacker who performs (e.g.) a sniffing attack to decrypt the
+ciphertext is to guess or calculate the prime number that are the factors of
+`N`. However, there is no known algorithm for the *efficient* factorization of
+`N` and this is known as the [factoring problem](https://en.wikipedia.org/w/index.php?title=Factoring_problem).
+
+### TLS: No Theory, Please!
 - [TLS](https://www.cybertec-postgresql.com/en/tls-demystifying-communication-encryption-in-postgresql/)
 - [TLS in PostgreSQL](https://www.postgresql.org/docs/14/ssl-tcp.html)
 
 ![image](https://user-images.githubusercontent.com/14936492/163371790-fb9116e8-5cf0-4b13-aca3-6d4de3f5264a.png)
-
