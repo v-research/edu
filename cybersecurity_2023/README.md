@@ -733,7 +733,51 @@ ciphertext is to guess or calculate the prime number that are the factors of
 `N` and this is known as the [factoring problem](https://en.wikipedia.org/w/index.php?title=Factoring_problem).
 
 ### TLS: No Theory, Please!
-- [TLS](https://www.cybertec-postgresql.com/en/tls-demystifying-communication-encryption-in-postgresql/)
-- [TLS in PostgreSQL](https://www.postgresql.org/docs/14/ssl-tcp.html)
-
+[TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security), Transport Layer
+Security, is a widely use security protocol. TLS is always used to make HTTPS
+connection secure (The S stands for SSL, which is the old name of TLS). TLS
+uses asymmetric encryption to exchange a symmetric key.  An interesting
+exercise is to find those key and instruct wireshark to use them to decrypt the
+HTTPS traffic - left to the best students.  The only thing left is to clarify
+the terminology used in
+[TLS](https://www.cybertec-postgresql.com/en/tls-demystifying-communication-encryption-in-postgresql/)
 ![image](https://user-images.githubusercontent.com/14936492/163371790-fb9116e8-5cf0-4b13-aca3-6d4de3f5264a.png)
+
+RSA is just *one* algorithm that can be used to implement a PKI (Public Key
+Infrastructure) but there are good reasons not to use RSA but Elliptic Curves
+instead. See, for example, [this
+video](https://www.youtube.com/watch?v=lElHzac8DDI) by Trail of Bits on
+Youtube.  The following script, uses elliptic curve cryptography to generate a
+CA certificate which is then use to sign the CSR (Certificate Signing Request)
+for the database.
+
+```
+#!/bin/bash
+mkdir PKI
+mkdir PKI/certs PKI/csr PKI/private PKI/db PKI/crl PKI/conf
+touch PKI/db/index
+touch PKI/db/serial
+touch PKI/db/crlnumber
+echo "01" > PKI/db/serial
+pwd
+cp ./openssl.cnf PKI/conf #use your openssl.cnf (find / -iname openssl.cnf 2>/dev/null)
+
+echo -e "\nRoot CA - key"
+openssl ecparam -name prime256v1 -genkey -outform pem -out PKI/private/cakey.pem
+echo -e "\nRoot CA - cert"
+openssl req -new -x509 -days 365 -config PKI/conf/openssl.cnf -addext "subjectAltName=DNS:ca.its.com" -addext "certificatePolicies=2.5.29.32.0" -extensions v3_ca -key PKI/private/cakey.pem -out PKI/certs/cacert.crt -outform pem -subj "/C=IT/ST=Italy/L=Verona/O=ITS/OU=Students/CN=ca.its.com/emailAddress=itsec@its.com"
+
+# INTRANET TLS
+echo -e "\ndb.its.com - key"
+openssl ecparam -name prime256v1 -genkey -outform pem -out PKI/private/dbkey.pem
+echo -e "\ndb.its.com - csr"
+openssl req -new -key PKI/private/dbkey.pem -out PKI/csr/db.csr -config PKI/conf/openssl.cnf -addext "subjectAltName=DNS:db.its.com" -addext "certificatePolicies=2.5.29.32.0" -subj "/C=IT/ST=Italy/L=Verona/O=ITS/OU=Students/CN=db.its.com/emailAddress=itsec@its.com"
+echo -e "\ndb.its.com - cert"
+openssl ca -in PKI/csr/db.csr -out PKI/certs/dbcert.pem -config PKI/conf/openssl.cnf -batch
+
+cat PKI/db/index
+chmod 400 PKI/private/dbkey.pem
+```
+
+Another way is to follow the PostgreSQL manual which (at version 14) uses RSA:
+- [TLS in PostgreSQL](https://www.postgresql.org/docs/14/ssl-tcp.html)
