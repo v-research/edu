@@ -566,7 +566,7 @@ DONE!!! We got the password and we can connect to Bob with
    2. has write access, he can also break integrity
    3. can create/drop table... well, the availability of the whole db is at risk
 
-NOTE: PostgresSQL offers 3 types of authentication protocols: password which sends unencrypted passwords, md5 which we just tested, and SCRAM-SHA-256 which can be used as a password exchange mechanisms even on unprotected (e.g., without TLS) networks. Check the [Postgres documentation here](https://www.postgresql.org/docs/current/auth-password.html).
+NOTE: PostgresSQL offers 3 types of authentication protocols: password which sends unencrypted passwords, md5 which we just tested, and SCRAM-SHA-256 which can be used as a password exchange mechanisms even on unprotected (e.g., without TLS) networks. Check the [Postgres documentation here](https://www.postgresql.org/docs/current/auth-password.html)
 
 ![image](https://user-images.githubusercontent.com/14936492/161285209-eb5b32c9-ce69-46cd-ba77-65680253fcaa.png)
 
@@ -713,17 +713,19 @@ The idea of RSA is the following:
 Why can't Alice and Bob use RSA instead of OTP? Because asymmetric encryption is computationally more expensive than symmetric encryption and then it is only used (e.g., in TLS that is used to secure HTTP communications into HTTPS communications) to share a symmetric key. Symmetric encryption is cheaper (faster) than asymmetric encryption. And OTP is not used because it requires that the key is changed for every message and other symmetric schemes are used (e.g. [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard))i but OPT was easy enough to understand the basic concept of symmetric encryption in this course.
 
 ### A Bit of Math on RSA
+[WARNING: WRONG CALCULATIONS... ONGOING WORK]
+
 In this section we follow [Asymmetric Encryption - RSA](https://profs.scienze.univr.it/~gregorio/RSA.pdf) by Enrico Gregorio (Prof@UniVR) [Italian].
 
 1. Alice chooses 2 (big usually but here we don't for the sake of clarity) prime numbers `p=5` and `q=11` and calculates `N=pq=5*11=55`. She also calculates a [magic number](https://en.wikipedia.org/wiki/Euler%27s_totient_function)`phi(N)=(p-1)(q-1)=4*10=40`. Finally Alice chooses a number `r` such that `gcd(r, phi(N))=1`, i.e. the greatest common divisor is 1, and then `r` and `phi(N)` are [coprime](https://en.wikipedia.org/wiki/Coprime_integers). Summarizing Alice has: `p=5, q=11, N=55, r=21` (and 21 is coprime with 40 as [coprime calculator](https://www.mathsisfun.com/numbers/coprime-calculator.html) affirms).
 2. Alice publicly shares her *public key* `(N,r)=(55,21)`.
-3. Bob chooses a random shared key `k=42` for OTP and encrypts it with Alice's public key by calculating `ciphertext=plaintext^r mod N=42^21 mod 55=42` (where `h=x mod y` means that `h` is the remainder of the division `x/y` as `1=3 mod 2`) and you can verify the correctness of the calculation with [Wlfram Alpha](https://www.wolframalpha.com/input?i=42%5E21+%28mod+55%29). So, Bob sends the ciphertext to Alice (`bob->alice: 42`).
-4. Alice calculates `s` such that `r*s + t*phi(N)=1` using (e.g.) [Wlfram Alpha](https://www.wolframalpha.com/input?i=%2821*s%29+%2B+%28t*40%29%3D1) and chooses one of the possible `s=40n+21` as `s=61`. Finally, she decrypts the ciphertext sent by Bob by calculating `ciphertext^s mod N=42^61 mod 55=42` which is the correct plaintext!
+3. Bob chooses a random shared key `k=1732` for OTP and encrypts it with Alice's public key by calculating `ciphertext=plaintext^r mod N=1732^21 mod 55=27` (where `h=x mod y` means that `h` is the remainder of the division `x/y` as `1=3 mod 2`) and you can verify the correctness of the calculation with [Wlfram Alpha](https://www.wolframalpha.com/input?i=1732%5E21+%28mod+55%29). So, Bob sends the ciphertext to Alice (`bob->alice: 27`).
+4. Alice calculates `s` such that `r*s + t*phi(N)=1` using (e.g.) [Wlfram Alpha](https://www.wolframalpha.com/input?i=%2821*s%29+%2B+%28t*40%29%3D1) and chooses one of the possible `s=40n+21` as `s=61`. Finally, she decrypts the ciphertext sent by Bob by calculating `ciphertext^s mod N=27^61 mod 55=1732` which is the correct plaintext!
 
 Another quick example:
 1. Alice: p=3, q=5, N=15, phi(N)=8, r=7
-2. Bob: plain=10, cipher=10^7 mod 15=10, s=15
-3. Alice: plain=10^15 mod 15=10
+2. Bob: plain=10, cipher=57^7 mod 15=3, s=23 (s=8n+7)
+3. Alice: plain=3^23 mod 15=12
 
 How does RSA guarantee the confidentiality of the plaintext chosen by Bob?
 The only messages that are exchanged are: `N`,`r`, and the ciphertext. The only
