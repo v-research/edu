@@ -753,8 +753,9 @@ Youtube.  The following script, uses elliptic curve cryptography to generate a
 CA certificate which is then use to sign the CSR (Certificate Signing Request)
 for the database.
 
+Find the openssl.conf with `find / -iname openssl.conf 2>/dev/null`.
+
 ```
-#!/bin/bash
 mkdir PKI
 mkdir PKI/certs PKI/csr PKI/private PKI/db PKI/crl PKI/conf
 touch PKI/db/index
@@ -762,7 +763,32 @@ touch PKI/db/serial
 touch PKI/db/crlnumber
 echo "01" > PKI/db/serial
 pwd
-cp /etc/ssl/openssl.cnf PKI/conf #use your openssl.cnf (find / -iname openssl.cnf 2>/dev/null)
+```
+
+Change the following section of the openssl.conf.
+
+```
+[ CA_default ]  
+
+dir             = ./PKI                 # Where everything is kept
+certs           = $dir/certs            # Where the issued certs are kept
+crl_dir         = $dir/crl              # Where the issued crl are kept
+database        = $dir/db/index         # database index file.
+serial          = $dir/db/serial        # The current serial number
+crlnumber       = $dir/db/crlnumber     # the current crl number
+certificate     = $dir/certs/cacert.crt # The CA certificate
+private_key     = $dir/private/cakey.pem        # The private key
+crl             = $dir/crl/cacrl.pem            # The current CRL
+x509_extensions = usr_cert              # The extensions to add to the cert
+#unique_subject = no                    # Set to 'no' to allow creation of
+                                        # several certs with same subject.
+new_certs_dir   = $dir/certs            # default place for new certs.
+```
+
+Now you can run the following script to create the certificates and keys.
+
+```
+#!/bin/bash
 
 echo -e "\nRoot CA - key"
 openssl ecparam -name prime256v1 -genkey -outform pem -out PKI/private/cakey.pem
