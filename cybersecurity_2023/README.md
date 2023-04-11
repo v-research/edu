@@ -762,7 +762,7 @@ touch PKI/db/serial
 touch PKI/db/crlnumber
 echo "01" > PKI/db/serial
 pwd
-cp ./openssl.cnf PKI/conf #use your openssl.cnf (find / -iname openssl.cnf 2>/dev/null)
+cp /etc/ssl/openssl.cnf PKI/conf #use your openssl.cnf (find / -iname openssl.cnf 2>/dev/null)
 
 echo -e "\nRoot CA - key"
 openssl ecparam -name prime256v1 -genkey -outform pem -out PKI/private/cakey.pem
