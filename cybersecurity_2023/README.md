@@ -753,7 +753,7 @@ Youtube.  The following script, uses elliptic curve cryptography to generate a
 CA certificate which is then use to sign the CSR (Certificate Signing Request)
 for the database.
 
-Find the openssl.conf with `find / -iname openssl.conf 2>/dev/null`.
+Find the openssl.cnf with `find / -iname openssl.cnf 2>/dev/null`.
 
 ```
 mkdir PKI
@@ -765,7 +765,7 @@ echo "01" > PKI/db/serial
 pwd
 ```
 
-Change the following section of the openssl.conf.
+Change the following section of the openssl.cnf.
 
 ```
 [ CA_default ]  
