@@ -710,22 +710,56 @@ The idea of RSA is the following:
 4. Bob decrypts Alice's message with his private key (`bob: rsa-decrypt(rsa-encrypt(shared-key, pk(bob)), pvt(bob))`) obtaining the shared key
 5. The shared key is then used for the confidential communication between Alice and Bob.
 
-Why can't Alice and Bob use RSA instead of OTP? Because asymmetric encryption is computationally more expensive than symmetric encryption and then it is only used (e.g., in TLS that is used to secure HTTP communications into HTTPS communications) to share a symmetric key. Symmetric encryption is cheaper (faster) than asymmetric encryption. And OTP is not used because it requires that the key is changed for every message and other symmetric schemes are used (e.g. [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard))i but OPT was easy enough to understand the basic concept of symmetric encryption in this course.
+Why can't Alice and Bob use RSA instead of OTP? Because asymmetric encryption
+is computationally more expensive than symmetric encryption and then it is only
+used (e.g., in TLS that is used to secure HTTP communications into HTTPS
+communications) to share a symmetric key. Symmetric encryption is cheaper
+(faster) than asymmetric encryption. And OTP is not used because it requires
+that the key is changed for every message and other symmetric schemes are used
+(e.g. [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard))i but
+OPT was easy enough to understand the basic concept of symmetric encryption in
+this course.
+
+### Signature with Asymmetric Encryption
+Given that the private key is only known by Alice, Alice can choose
+a plaintext and encrypt it with his own private key (`alice: rsa-encrypt(plaintext,pvt(alice))`).
+This process (encrypting with the private key) is called **sign**. Why?
+Given that the public and private key are simply two numbers such that one is
+considered the "inverse" of the other (i.e., `pk(alice)^-1 = pvt(alice)`), and given that 
+the public key is publicly available, alice can send a message of the form:
+
+`alice -> anyone: rsa-encrypt(plaintext,pvt(alice)).plaintext`
+where `.` is a concatenation.
+Anyone can decrypt the message doing
+`anyone: rsa-decrypt(rsa-encrypt(plaintext, pvt(alice)), pk(alice))=plaintext` and
+verify that the plaintext so obtained is the same as the one Alice sent concatenated with the encrypted one.
+So, the encryption with the private key is usually called signature and preserve both the integrity
+and the authenticity of the message.
 
 ### A Bit of Math on RSA
-[WARNING: WRONG CALCULATIONS... ONGOING WORK]
-
 In this section we follow [Asymmetric Encryption - RSA](https://profs.scienze.univr.it/~gregorio/RSA.pdf) by Enrico Gregorio (Prof@UniVR) [Italian].
 
-1. Alice chooses 2 (big usually but here we don't for the sake of clarity) prime numbers `p=5` and `q=11` and calculates `N=pq=5*11=55`. She also calculates a [magic number](https://en.wikipedia.org/wiki/Euler%27s_totient_function)`phi(N)=(p-1)(q-1)=4*10=40`. Finally Alice chooses a number `r` such that `gcd(r, phi(N))=1`, i.e. the greatest common divisor is 1, and then `r` and `phi(N)` are [coprime](https://en.wikipedia.org/wiki/Coprime_integers). Summarizing Alice has: `p=5, q=11, N=55, r=21` (and 21 is coprime with 40 as [coprime calculator](https://www.mathsisfun.com/numbers/coprime-calculator.html) affirms).
-2. Alice publicly shares her *public key* `(N,r)=(55,21)`.
-3. Bob chooses a random shared key `k=1732` for OTP and encrypts it with Alice's public key by calculating `ciphertext=plaintext^r mod N=1732^21 mod 55=27` (where `h=x mod y` means that `h` is the remainder of the division `x/y` as `1=3 mod 2`) and you can verify the correctness of the calculation with [Wlfram Alpha](https://www.wolframalpha.com/input?i=1732%5E21+%28mod+55%29). So, Bob sends the ciphertext to Alice (`bob->alice: 27`).
-4. Alice calculates `s` such that `r*s + t*phi(N)=1` using (e.g.) [Wlfram Alpha](https://www.wolframalpha.com/input?i=%2821*s%29+%2B+%28t*40%29%3D1) and chooses one of the possible `s=40n+21` as `s=61`. Finally, she decrypts the ciphertext sent by Bob by calculating `ciphertext^s mod N=27^61 mod 55=1732` which is the correct plaintext!
-
-Another quick example:
-1. Alice: p=3, q=5, N=15, phi(N)=8, r=7
-2. Bob: plain=10, cipher=57^7 mod 15=3, s=23 (s=8n+7)
-3. Alice: plain=3^23 mod 15=12
+1. Alice chooses 2 (usually big but here we don't for the sake of clarity)
+   prime numbers `p=3` and `q=5` and calculates `N=pq=3*5=15`. She also
+calculates a [magic
+number](https://en.wikipedia.org/wiki/Euler%27s_totient_function)`phi(N)=(p-1)(q-1)=2*4=8`.
+Finally Alice chooses a number `r` such that `gcd(r, phi(N))=1`, i.e. the
+greatest common divisor is 1, and then `r` and `phi(N)` are
+[coprime](https://en.wikipedia.org/wiki/Coprime_integers). Summarizing Alice
+has: `p=3, q=5, N=15, r=3` (and 3 is coprime with 8 as [coprime
+calculator](https://www.mathsisfun.com/numbers/coprime-calculator.html)
+affirms).
+2. Alice publicly shares her *public key* `(N,r)=(15,3)`.
+3. Bob chooses a random shared key `k=12` for OTP and encrypts it with
+   Alice's public key by calculating `ciphertext=plaintext^r mod N=12^3 mod
+15=3` (where `h=x mod y` means that `h` is the remainder of the division `x/y`
+as `1=3 mod 2`) and you can verify the correctness of the calculation with
+[Wlfram Alpha](https://www.wolframalpha.com/input?i=12%5E3+%28mod+15%29).
+So, Bob sends the ciphertext to Alice (`bob->alice: 3`).
+4. Alice calculates `s` such that `r*s + t*phi(N)=1`. So, `3*s + t*8=1` and `s=3, t=-1`. 
+Finally, she decrypts the
+ciphertext sent by Bob by calculating `ciphertext^s mod N=3^3 mod 15=12`
+which is the correct plaintext!
 
 How does RSA guarantee the confidentiality of the plaintext chosen by Bob?
 The only messages that are exchanged are: `N`,`r`, and the ciphertext. The only
