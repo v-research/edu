@@ -841,6 +841,11 @@ cat PKI/db/index
 chmod 400 PKI/private/dbkey.pem
 ```
 
+[TODO: COMMENT ON THE FOLLOWING SENTENCE]
+Public keys of CA are available in your system (you can see them, e.g., with `ls /etc/ssl/certs`).
+So, any operating system comes with a set of public key which are trusted by the operating system.
+
+
 Another way to generate the certificates is to follow the PostgreSQL manual which (at version 14) uses RSA:
 - [TLS in PostgreSQL](https://www.postgresql.org/docs/14/ssl-tcp.html)
 
