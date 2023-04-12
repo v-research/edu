@@ -8,6 +8,7 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 * [Lesson 4 - With Great Power Comes Great Responsibility](#lesson-4---with-great-power-comes-great-responsibility)
 * [Lesson 5 - Summary, Review, & Experiments](#lesson-5---summary-and-reviews-and-experiments)
 * [Lesson 6 - Cryptography](#lesson-6---cryptography)
+* [Lesson 7 - Bittersweet Farewell](#lesson-7---bittersweet-farewell)
 
 
 ## Lesson 1 - Intro
@@ -946,3 +947,14 @@ What now? In the `/etc/postgresql/12/main/postgresql.conf` add `ssl=on` and chan
 - `ssl_crl_file` 	certificates revoked by certificate authorities 	client certificate must not be on this list
 
 If you capture the traffic with Wireshark, you will see that both confidentiality and integrity are preserved! As long as the authorization follows the least privilege principle, you have a secure database :)
+
+## Lesson 7 - Bittersweet Farewell
+Ok, we are done. No more math, no more lessons, we can relax. As a goodbye I must hide a bit of melancholy.
+But what now? If I succeeded in sharing with you my passion for cybersecurity you don't need to wait for the next course:
+- You want to get deeper on what does it means to become an hacker? I suggest "hacking - the art of exploitation (2nd edition)" by Jon Erickson. You can find it online and you can always send me an email and I'll be more than happy to rent you my copy of this beautiful book. Here you are going to know more on how computer works, their internals, C, Assembly, and how to write an Exploit. But you'll also go into the details of network and security protocols.
+- You wanna get into pentesting, learn the tools and how to use them? Then go fo [TryHackMe.com](https://tryhackme.com/). I suggest the Pentester course.
+- You want to better understand Web attacks? Then [WebGoat](https://owasp.org/www-project-webgoat/), [JuiceShop](https://owasp.org/www-project-juice-shop/), and [XSSGame](http://www.xssgame.com/)
+
+I know, some of you may not have liked cyber that much. You may still wonder why the heck you got here. And for you:
+
+![](./imgs/ohme.png)
