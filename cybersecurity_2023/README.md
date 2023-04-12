@@ -692,52 +692,82 @@ Test replay attacks and brute-force attack on credentials.
 Note that in `/var/logs/postgresql` you can find the log of the postgresql server (with errors in case the configuration/server is not working). 
 
 ## Lesson 6 - Cryptography
-We saw how to use OTP to encrypt a plaintext into a ciphertext to preserve
+We already discussed how OTP works by encrypting a plaintext into a ciphertext to preserve
 the confidentiality of the plaintext (`alice:
-otp(plaintext,shared-key)=ciphertext`) when, for example, we want to send it
+otp(plaintext,shared-key)=xor(plaintext,shared-key)=ciphertext`) when, for example, we want to send it
 through a non-secure network (`alice->bob:ciperhtext`). That method, however,
-requires the peers that are exchanging the ciphertext knows a common shared
-key (`bob: otp(ciphertext,shared-key)=plaintext`). That key must be private
+requires that the peers (who are exchanging the ciphertext) know a common shared
+key (`bob: otp(ciphertext,shared-key)=xor(xor(plaintext,shared-key),shared-key)=plaintext`). 
+The shared key must be private (i.e., shared only among those who are allowed to read the plaintext)
 and anyone with the shared key can decrypt the ciphertext into the plaintext.
 
+Pictorially:
+![](./imgs/otp-msc.png)
+Now we are going to explore how that "secure exchange of a random number called key" can be done using asymmetric encryption.
+
 ### Asymmetric Encryption
-One of the method (well, algorithm) that can be used to share a private key
-is [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)). RSA is an *asymmetric* crypto system, while OTP is symmetric. All cryptosystems, like OTP, that uses a shared key are called symmetric and RSA does not work like OTP.
-The idea of RSA is the following:
-1. Both Alice and Bob generate two keys, a public (`pk(alice`) and a private key (`pvt(alice)`), such that `rsa-decryption(rsa-encryption(plaintext,pk(alice)),pvt(alice))=plaintext`). In other words, what is encrypted with the public key of an agent, say Alice, (`rsa-encrypt(plaintext, pk(alice))=ciphertext`) can *only* be decrypted with the private key of that agent (`rsa-decrypt(ciphertext, pvt(alice))=plaintext)`)
-2. The *public* key is made public (e.g., publicly available from the personal website of both Alice and Bob) so that Alice can download the public key of Bob (`bob->alice: pk(bob)`) and Bob the one of Alice (`alice->bob: pk(alice)`).
-3. Alice choose a shared key for OTP and sends it to Bob using RSA (`alice->bob: rsa-encrypt(shared-key, pk(bob))`).
-4. Bob decrypts Alice's message with his private key (`bob: rsa-decrypt(rsa-encrypt(shared-key, pk(bob)), pvt(bob))`) obtaining the shared key
+One of the method (well, algorithm) that can be used to share a private key is
+[RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)). RSA is an *asymmetric*
+crypto system, while OTP is symmetric. All cryptosystems, like OTP, that uses a
+shared key are called symmetric and RSA does not work like OTP.  The idea of
+RSA is the following:
+1. Both Alice and Bob generate a pari of keys, one is called public key (`pk(alice)`), and the other private key (`pvt(alice)`).
+The pair of keys is built so that `rsa-decryption(rsa-encryption(plaintext,pk(alice)),pvt(alice))=plaintext`). 
+In other words, what is encrypted with the public key of an agent, say Alice, (`rsa-encrypt(plaintext, pk(alice))=ciphertext`) can *only* be decrypted with the private key of Alice (`rsa-decrypt(ciphertext, pvt(alice))=plaintext)`)
+2. The *public* key is made public (e.g., publicly available from the personal website of both Alice and Bob) so that Alice and Bob can download the public key of the other agent (and we represent it as if Bob sent his public key to Alice `bob->alice: pk(bob)` and Alice to Bob `alice->bob: pk(alice)`).
+3. Alice chooses a shared key for OTP and sends it to Bob encrypted using RSA (`alice->bob: rsa-encrypt(shared-key, pk(bob))`).
+4. Bob decrypts Alice's message with his private key (`bob: rsa-decrypt(rsa-encrypt(shared-key, pk(bob)), pvt(bob))`) obtaining the OTP shared key.
 5. The shared key is then used for the confidential communication between Alice and Bob.
 
-Why can't Alice and Bob use RSA instead of OTP? Because asymmetric encryption
+NOTE: OTP requires a new fresh key per each message but one may send, along with the encrypted message a new key as, for example, `alice->bob: otp(plaintext.new-shard-key, shared-key)` where the "." in the message represents concatenation. However, OTP is here only used as an example and many other symmetric encryption schemes such as [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) exist.
+
+Why can't Alice and Bob continue using RSA instead of switching to a shared encryption scheme (OTP/AES)? 
+Because asymmetric encryption
 is computationally more expensive than symmetric encryption and then it is only
 used (e.g., in TLS that is used to secure HTTP communications into HTTPS
-communications) to share a symmetric key. Symmetric encryption is cheaper
-(faster) than asymmetric encryption. And OTP is not used because it requires
-that the key is changed for every message and other symmetric schemes are used
-(e.g. [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard))i but
-OPT was easy enough to understand the basic concept of symmetric encryption in
-this course.
+communications) to share a symmetric key. 
+
+Finally, we can depict an RSA exchange.
+![](./imgs/rsa-otp-msc.png)
+
+Which security properties are preserved with RSA?
+The *confidentiality* of the messages encrypted with the public key
 
 ### Signature with Asymmetric Encryption
-Given that the private key is only known by Alice, Alice can choose
-a plaintext and encrypt it with his own private key (`alice: rsa-encrypt(plaintext,pvt(alice))`).
-This process (encrypting with the private key) is called **sign**. Why?
-Given that the public and private key are simply two numbers such that one is
-considered the "inverse" of the other (i.e., `pk(alice)^-1 = pvt(alice)`), and given that 
-the public key is publicly available, alice can send a message of the form:
+Given that the private key (which is only known by Alice), is simply a number
+as any other key, what makes a key private or public is just the fact that one
+has been kept private while the other has been shared publicly.  Therefore,
+Alice can choose a plaintext and "encrypt" it with his own private key (`alice:
+rsa-encrypt(plaintext,pvt(alice))`). 
+The public and private keys in RSA are mathematically (as we are going to 
+see afterwards) related so that:
+- if we encrypt with the public key we can decrypt with the private key, and
+- if we encrypt with the private key we can decrypt with the public key.
+The public and private key are simply two numbers and are often
+described as one the "inverse" of the other (i.e., `pk(alice)^-1 = pvt(alice)`)
 
-`alice -> anyone: rsa-encrypt(plaintext,pvt(alice)).plaintext`
-where `.` is a concatenation.
-Anyone can decrypt the message doing
-`anyone: rsa-decrypt(rsa-encrypt(plaintext, pvt(alice)), pk(alice))=plaintext` and
-verify that the plaintext so obtained is the same as the one Alice sent concatenated with the encrypted one.
-So, the encryption with the private key is usually called signature and preserve both the integrity
-and the authenticity of the message.
+Obviously the confidentiality of the plaintext is not preserved when encrypted
+with the public key. Instead, **authentication** (and then **integrity**) are
+preserved.  The process of encrypting with the private key is called **sign**.
+Why?  
+
+1. `alice -> anyone: rsa-encrypt(plaintext,pvt(alice)).plaintext` where `.` is a concatenation.
+2. Anyone can decrypt the message `anyone: rsa-decrypt(rsa-encrypt(plaintext, pvt(alice)), pk(alice))=plaintext` and verify that the plaintext so obtained is the same as the one Alice sent concatenated with the encrypted one.
+
+So, the encryption with the private key is usually called signature and
+preserve both the integrity and the authenticity of the message. Why integrity?
+If you can verify that I am the one who sent a message you can also verify that
+the message has not been altered (e.g., by a man-in-the-middle) and then that
+integrity is preserved. Encrypting with the private key is really *signing* a message.
+
+Pictorially:
+![](./imgs/rsa-sign-msc.png)
 
 ### A Bit of Math on RSA
-In this section we follow [Asymmetric Encryption - RSA](https://profs.scienze.univr.it/~gregorio/RSA.pdf) by Enrico Gregorio (Prof@UniVR) [Italian].
+In this section we follow [Asymmetric Encryption -
+RSA](https://profs.scienze.univr.it/~gregorio/RSA.pdf) by Enrico Gregorio
+(Prof@UniVR) [Italian].  You can find [here](./egreg-annotated.pdf) the PDF
+annotated with the numbers of the example explained in this section.
 
 1. Alice chooses 2 (usually big but here we don't for the sake of clarity)
    prime numbers `p=3` and `q=5` and calculates `N=pq=3*5=15`. She also
