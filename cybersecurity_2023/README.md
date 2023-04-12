@@ -767,8 +767,7 @@ Pictorially:
 ### A Bit of Math on RSA
 In this section we follow [Asymmetric Encryption -
 RSA](https://profs.scienze.univr.it/~gregorio/RSA.pdf) by Enrico Gregorio
-(Prof@UniVR) [Italian].  You can find [here](./egreg-annotated.pdf) the PDF
-annotated with the numbers of the example explained in this section.
+(Prof@UniVR) [Italian].  
 
 1. Alice chooses 2 (usually big but here we don't for the sake of clarity)
    prime numbers `p=3` and `q=5` and calculates `N=pq=3*5=15`. She also
