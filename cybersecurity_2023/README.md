@@ -934,6 +934,16 @@ The output of the program shows the details of the certificate of the db.
 
 You can now explore what the keys and certificates are by looking at the files in the private and certs folder in the PKI folder.
 
+As mentioned before, HTTPS uses TLS which, in turn, uses asymmetric encryption.
+This means that, when you type [https://edu.v-research.it/](https://edu.v-research.it/)
+it sends you a certificate, signed by a CA you trust. You can click on the lock icon 
+next to the url to get the certificate and obtain something like this:
+![](./imgs/cert-edu.png)
+
+The section "Public Key Info" shows the exponent and modulus `(r,N)=(pk(edu.v-research.it),N)`
+and the issuer name is the CA that released the certificate. As long as you (i.e., your browser)
+trusts the CA and the certificate is valid, you can be sure the connection is secure: authenticated and confidential.
+
 ### Certs in Postgres
 
 Another way to generate the certificates is to follow the PostgreSQL manual which (at version 14) uses RSA:
