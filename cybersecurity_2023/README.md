@@ -960,7 +960,7 @@ If you capture the traffic with Wireshark, you will see that both confidentialit
 ## Lesson 7 - Bittersweet Farewell
 Ok, we are done. No more math, no more lessons, we can relax. As a goodbye I must hide a bit of melancholy.
 But what now? If I succeeded in sharing with you my passion for cybersecurity you don't need to wait for the next course:
-- You want to get deeper on what does it means to become an hacker? I suggest "hacking - the art of exploitation (2nd edition)" by Jon Erickson. You can find it online and you can always send me an email and I'll be more than happy to rent you my copy of this beautiful book. Here you are going to know more on how computer works, their internals, C, Assembly, and how to write an Exploit. But you'll also go into the details of network and security protocols.
+- You want to get deeper on what does it means to become an hacker? I suggest "hacking - the art of exploitation (2nd edition)" by Jon Erickson. You can find it online and you can always send me an email and I'll be more than happy to lend you my copy of this beautiful book. Here you are going to know more on how computer works, their internals, C, Assembly, and how to write an Exploit. But you'll also go into the details of network and security protocols.
 - You wanna get into pentesting, learn the tools and how to use them? Then go fo [TryHackMe.com](https://tryhackme.com/). I suggest the Pentester course.
 - You want to better understand Web attacks? Then [WebGoat](https://owasp.org/www-project-webgoat/), [JuiceShop](https://owasp.org/www-project-juice-shop/), and [XSSGame](http://www.xssgame.com/)
 
