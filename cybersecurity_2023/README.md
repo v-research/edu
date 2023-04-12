@@ -449,7 +449,7 @@ You may have noticed that I used [the CAPEC website](https://capec.mitre.org/) t
 Everyone knows that [power and responsibility](https://en.wikipedia.org/wiki/With_great_power_comes_great_responsibility)
 go together ["like the horse and carriage"](https://www.youtube.com/watch?v=BRDBvKGc1fE) but really... please, don't be stupid! 
 We use tools and techniques that may "attract" you into the dark side but there are SERIOUS consequences if you start craking things here and there.
-So, let's use the material of this course to hack and not to crack which means that you can setup scenarios and see if you can hack your way in, but don't run the tools and technique against other people and their devices.
+So, let's use the material of this course to hack and not to crack which means that you can setup scenarios and see if you can hack your way in, but don't run the tools and technique against other people and their devices. As Carl Sagan [famously said](https://www.youtube.com/watch?v=GO5FwsblpT8) "it underscores our responsibility to deal more kindly with one another and to preserve and cherish the pale blue dot. The only home we've ever known".
 
 The *objective* of this lesson is to put everything together and hack into our Postgres database in a real-world scenario where:
 - Alice's machine with IP `172.16.10.10` is the client and uses `psql -U postgres -h 172.16.10.20` to connect to
