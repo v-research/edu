@@ -772,24 +772,37 @@ annotated with the numbers of the example explained in this section.
 1. Alice chooses 2 (usually big but here we don't for the sake of clarity)
    prime numbers `p=3` and `q=5` and calculates `N=pq=3*5=15`. She also
 calculates a [magic
-number](https://en.wikipedia.org/wiki/Euler%27s_totient_function)`phi(N)=(p-1)(q-1)=2*4=8`.
-Finally Alice chooses a number `r` such that `gcd(r, phi(N))=1`, i.e. the
+number](https://en.wikipedia.org/wiki/Euler%27s_totient_function) `phi(N)=(p-1)(q-1)=2*4=8`.
+Finally, Alice chooses a number `r` such that `gcd(r, phi(N))=1`, i.e. the
 greatest common divisor is 1, and then `r` and `phi(N)` are
 [coprime](https://en.wikipedia.org/wiki/Coprime_integers). Summarizing Alice
-has: `p=3, q=5, N=15, r=3` (and 3 is coprime with 8 as [coprime
-calculator](https://www.mathsisfun.com/numbers/coprime-calculator.html)
-affirms).
-2. Alice publicly shares her *public key* `(N,r)=(15,3)`.
+has: `p=3, q=5, N=15, r=3` (and 3 is coprime with 8 as you can check with [coprime
+calculator](https://www.mathsisfun.com/numbers/coprime-calculator.html)).
+2. Alice publicly shares her *public key* `(N,r)=(15,3)`. The public key is `r=pk(a)=3` but `N=15` is needed by Bob so Alice shares `N` publicly.
 3. Bob chooses a random shared key `k=12` for OTP and encrypts it with
    Alice's public key by calculating `ciphertext=plaintext^r mod N=12^3 mod
 15=3` (where `h=x mod y` means that `h` is the remainder of the division `x/y`
 as `1=3 mod 2`) and you can verify the correctness of the calculation with
 [Wlfram Alpha](https://www.wolframalpha.com/input?i=12%5E3+%28mod+15%29).
 So, Bob sends the ciphertext to Alice (`bob->alice: 3`).
-4. Alice calculates `s` such that `r*s + t*phi(N)=1`. So, `3*s + t*8=1` and `s=3, t=-1`. 
-Finally, she decrypts the
-ciphertext sent by Bob by calculating `ciphertext^s mod N=3^3 mod 15=12`
-which is the correct plaintext!
+4. Alice calculates `s` such that `r*s + t*phi(N)=1`. In our example we have
+   `3*s + t*8=1` and `s=3, t=-1` could be one solution. However, `s=3` is going
+to be our private key and we'd have that the public key `r=3` is equal to the
+private key.  And, obviously, this is to be avoided. Another solution to the
+equation is: `s=11, t=-4`.  Finally, Alice decrypts the ciphertext sent by Bob by
+calculating `ciphertext^s mod N=3^3 mod 15=12` which is the correct plaintext!
+
+We could imagine that Alice then sends a signed ACKnowledge that she 
+received the encrypted key from Bob (and that she managed to decrypt it).
+
+5. Alice encodes the ACK into the number 2, `ACK=2`. She then encrypts it
+with her private key `signedtext=rsa-encrypt(ACK,pvt(a))=ACK^s mod N=2^11 mod 15=8`.
+Alice then sends the `signedtext` concatenated with the plain ACK: `alice->bob: signedtext.ACK=8.2`.
+6. Bob decrypts the signedtext as `rsa=decrypt(rsa-encrypt(ACK,pvt(a)),pk(a))=signedtext^pk(a) mod N=8^3 mod 15=2`.
+Given that the result of the decryption is equal to the ACK shared as plaintext, Bob knows that 
+Alice received the message as only Alice could sign (i.e. encrypt) with her private key.
+
+![](./imgs/rsa-math.png)
 
 How does RSA guarantee the confidentiality of the plaintext chosen by Bob?
 The only messages that are exchanged are: `N`,`r`, and the ciphertext. The only
@@ -798,28 +811,68 @@ ciphertext is to guess or calculate the prime number that are the factors of
 `N`. However, there is no known algorithm for the *efficient* factorization of
 `N` and this is known as the [factoring problem](https://en.wikipedia.org/w/index.php?title=Factoring_problem).
 
+NOTE: While Gregorio in his PDF correctly affirms that the public key is the
+pair `(N,r)` I believe is clearer to affirm that only `r=3` is the public key
+because when we will use the private key to sign a message, we will only change (in the calculation)
+`r=3` and not `N=15`.
+
+A GOOD QUESTION: What if an attacker performs a MITM attack and changes the public key that 
+Alice is sharing to Bob with the public key of the attacker? This problem has no mathematical solution.
+The notion of trust is still at the beginning of any communication. However, afterwards we 
+see the practical solution to this problem: Certification Authorities.
+
 ### TLS: No Theory, Please!
 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security), Transport Layer
 Security, is a widely use security protocol. TLS is always used to make HTTPS
 connection secure (The S stands for SSL, which is the old name of TLS). TLS
-uses asymmetric encryption to exchange a symmetric key.  An interesting
+uses asymmetric encryption to exchange a symmetric key which is then used to encrypt the message exchange.  An interesting
 exercise is to find those key and instruct wireshark to use them to decrypt the
 HTTPS traffic - left to the best students.  The only thing left is to clarify
 the terminology used in
 [TLS](https://www.cybertec-postgresql.com/en/tls-demystifying-communication-encryption-in-postgresql/)
-![image](https://user-images.githubusercontent.com/14936492/163371790-fb9116e8-5cf0-4b13-aca3-6d4de3f5264a.png)
 
-RSA is just *one* algorithm that can be used to implement a PKI (Public Key
+- the public key is called **certificate**. Well, a certificate, e.g. [X509](https://en.wikipedia.org/wiki/X.509), comes
+with some more information than the public key as we are going to see later on.
+- the private key is called **key**.
+
+There are a number of companies who owns servers that are trusted by operating systems, browsers, human being.
+Why? Mostly because... we need to trust someone. There are processes to perform, and standards to meet to become
+a certification authority but at the end of the day, we trust them because: yes.
+[Let's Encrypt](https://en.wikipedia.org/wiki/Let%27s_Encrypt) is a certification authority, founded by Mozilla employees,
+highly skilled researcher, collaborate with the Linux Foundation and has a decade of history.
+Still, a flaw in their software made them release over 3 million faulty certificates.
+Should you trust their security? Should you believe that they didn't make it on purpose to spy some traffic?
+That is on you to decide. I, personally, use Let's Encrypt certificates.
+
+So, once we trust a certification authority (CA), what do we do?
+1. We create a public key `pk(a)`
+2. We send it to a CA with our name/domain: `alice->CA: pk(a).alice`
+3. The CA checks that you actually own that domain (e.g. by asking you to add some record in your DNS or by installing some software on the server associated to your domain)
+4. The CA sends you you public key signed by the CA: `CA->alice: sign(pk(a),pvt(CA))`
+5. Now you can send your public key, signed by the CA. Anyone who trusts the CA is going to trust you. `alice->bob: sign(pk(a),pvt(CA)).pk(a)`
+
+Do you want to see which CA your OS trusts? `ls /etc/ssl/certs`
+
+![](./imgs/debian-certs.png)
+
+You can also check your Firefox browser going to Settings -> Privacy & Security -> Certificates -> View Certificates:
+
+![](./imgs/firefox-certs.png)
+
+Now, RSA is just *one* algorithm that can be used to implement a PKI (Public Key
 Infrastructure) but there are good reasons not to use RSA but Elliptic Curves
 instead. See, for example, [this
 video](https://www.youtube.com/watch?v=lElHzac8DDI) by Trail of Bits on
 Youtube.  The following script, uses elliptic curve cryptography to generate a
 CA certificate which is then use to sign the CSR (Certificate Signing Request)
-for the database.
+for the database. However, for this course, we assume that elliptic curve is just
+another method to do asymmetric encryption, exactly like RSA. The math is different but
+the type of encryption is the very same.
 
-Find the openssl.cnf with `find / -iname openssl.cnf 2>/dev/null`.
 
+Create a new file `vim dirs.sh` and copy the following script:
 ```
+#!/bin/bash
 mkdir PKI
 mkdir PKI/certs PKI/csr PKI/private PKI/db PKI/crl PKI/conf
 touch PKI/db/index
@@ -829,7 +882,10 @@ echo "01" > PKI/db/serial
 pwd
 ```
 
-Change the following section of the openssl.cnf.
+Add exec permissions by `chmod u+x ./dirs.sh` and run it with `./dirs.sh`
+
+Find the openssl.cnf with `find / -iname openssl.cnf 2>/dev/null`. It should be in `/etc/ssl/openssl.cnf`.
+Copy it to `cp /etc/ssl/openssl.cnf ./PKI/conf` and change the file `PKI/conf/openssl.cnf` as follows:
 
 ```
 [ CA_default ]  
@@ -849,32 +905,36 @@ x509_extensions = usr_cert              # The extensions to add to the cert
 new_certs_dir   = $dir/certs            # default place for new certs.
 ```
 
-Now you can run the following script to create the certificates and keys.
+Create a new file `vim pki.sh` and copy the following script.
 
 ```
 #!/bin/bash
 
-echo -e "\nRoot CA - key"
+echo "Root CA - key"
 openssl ecparam -name prime256v1 -genkey -outform pem -out PKI/private/cakey.pem
-echo -e "\nRoot CA - cert"
+echo "Root CA - cert"
 openssl req -new -x509 -days 365 -config PKI/conf/openssl.cnf -addext "subjectAltName=DNS:ca.its.com" -addext "certificatePolicies=2.5.29.32.0" -extensions v3_ca -key PKI/private/cakey.pem -out PKI/certs/cacert.crt -outform pem -subj "/C=IT/ST=Italy/L=Verona/O=ITS/OU=Students/CN=ca.its.com/emailAddress=itsec@its.com"
 
 # INTRANET TLS
-echo -e "\ndb.its.com - key"
+echo "db.its.com - key"
 openssl ecparam -name prime256v1 -genkey -outform pem -out PKI/private/dbkey.pem
-echo -e "\ndb.its.com - csr"
+echo "db.its.com - csr"
 openssl req -new -key PKI/private/dbkey.pem -out PKI/csr/db.csr -config PKI/conf/openssl.cnf -addext "subjectAltName=DNS:db.its.com" -addext "certificatePolicies=2.5.29.32.0" -subj "/C=IT/ST=Italy/L=Verona/O=ITS/OU=Students/CN=db.its.com/emailAddress=itsec@its.com"
-echo -e "\ndb.its.com - cert"
+echo "db.its.com - cert"
 openssl ca -in PKI/csr/db.csr -out PKI/certs/dbcert.pem -config PKI/conf/openssl.cnf -batch
 
 cat PKI/db/index
 chmod 400 PKI/private/dbkey.pem
 ```
 
-[TODO: COMMENT ON THE FOLLOWING SENTENCE]
-Public keys of CA are available in your system (you can see them, e.g., with `ls /etc/ssl/certs`).
-So, any operating system comes with a set of public key which are trusted by the operating system.
+Now you can run the `pki.sh` script (`chmod u+x pki.sh` and then `./pki.sh`) to create a certification authority and sign the certificates of your db.
+The output of the program shows the details of the certificate of the db.
 
+![](./imgs/pki-script.png)
+
+You can now explore what the keys and certificates are by looking at the files in the private and certs folder in the PKI folder.
+
+### Certs in Postgres
 
 Another way to generate the certificates is to follow the PostgreSQL manual which (at version 14) uses RSA:
 - [TLS in PostgreSQL](https://www.postgresql.org/docs/14/ssl-tcp.html)
