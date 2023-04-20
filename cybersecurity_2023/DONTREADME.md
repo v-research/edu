@@ -23,4 +23,4 @@ And the same for sinners and bad consciences!
 And if a friend does evil to you [Ed. by not following the rules above], then say: 'I forgive you what you have done to me; but that you did it to yourself - how could I forgive that!'"
 
 # PLAY THE GAME
-Ok, now, [dance with yourself](https://www.youtube.com/watch?v=FG1NrQYXjLU) by downloading the game from here: 
+Ok, now, [dance with yourself](https://www.youtube.com/watch?v=FG1NrQYXjLU) by downloading the game from [here](https://drive.google.com/file/d/11NAgJKiikz9wi8oIg6BM06Ciaiwz2WI5) 
