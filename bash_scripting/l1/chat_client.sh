@@ -4,15 +4,19 @@ cdef='\e[0m' #color default
 cred='\e[0;31m' #color green
 cgreen='\e[0;32m' #color green
 usr=$(whoami)
+chatlog='chat.log'
+
+#tail -f $chatlog &
+#pidtail="$!"
 
 while [[ true ]]
 do
 	echo -n "> "
 	read i
 
-	if [[ $i == "?" || $i == "help" ]]
+	if [[ $i == "help" ]]
 	then
-		echo -e "\nCOMMANDS\n\tusername: change username\n\tsend: send message\n\texit: quit chat\n"
+		echo "[$(date +%r)] $usr: -help" | nc -N 127.0.0.1 4444
 	fi
 
 	if [[ $i == "username" ]]
@@ -30,6 +34,7 @@ do
 
 	if [[ $i == "exit" ]]
 	then
+		#sudo kill -9 $pidtail
 		exit
 	fi
 done
