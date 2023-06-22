@@ -16,7 +16,11 @@ def get_ip_info():
 	# net-tools lib should be installed with atp for using ifconfig
 	ifconfig_out = subprocess.check_output(['ifconfig']).decode('utf-8')
 	info = re.findall(r'inet [0-9].+', ifconfig_out)
+	print("Info: ")
+	print(info)
 	splitted_info = re.split(r'[\W]+', info[0])
+	print("Splitted info: ")
+	print(splitted_info)
 	return splitted_info
 
 def write_ip_info(info):
