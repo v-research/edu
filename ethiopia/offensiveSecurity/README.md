@@ -17,14 +17,15 @@ For any doubt, curiosity or anything else, feel free to drop me an email (marco@
 6. Reporting attacks and vulnerabilities identified during network or web app penetration tests. Analyze and document security tests and report to the end user (customer).
 
 **Table of Content**
-* [Lesson 1 - Intro](#lesson-1---intro)
-* Lesson 2 - Password Cracking (Brute Force and Dictionary Attack)
-* Lesson 3 - Network Protocols and Man-in-the-Middle Attack
-* Lesson 4 - Web Attacks: SQL Injection
-* Lesson 5 - Web Attacks: XSS
-* Lesson 6 (Virtual) - Web Attacks: XSRF
+* [Intro](#intro)
+* [Penetration Testing](#penetration-testing)
+* Password Cracking (Brute Force and Dictionary Attack)
+* Network Protocols and Man-in-the-Middle Attack
+* Web Attacks: SQL Injection
+* Web Attacks: XSS
+* Web Attacks: XSRF
 
-## Lesson 1 - Intro
+## Intro
 
 ### Requisite (because it is a logical AND between all the following) to attend this course:
 1. Use the *pen-and-paper* approach to take notes during each lecture! This is the most important part of the whole course. If you don't take notes, it is likely that you won't remember what we have done. Mis-understanding will pile up in time and we won't be speaking the same language very very soon (as you won't understand what I'm saying).
@@ -77,6 +78,18 @@ We can surely go to some tools like [this](https://www.dcode.fr/frequency-analys
 We can also try all possible decryption with tools such as [md5decrypt.net](https://md5decrypt.net/en/Caesar/) and, by clicking on "bruteforce" you will easily spot what I wanted to say.
 
 - How can we guarantee integrity or availability? We'll look into this in the following lessons.
+
+# Penetration Testing
+* Why? Penetration Testing and the Engineering Model
+* White/Black/box Penetration testing Phases
+* Terminology. Threat (weak password), Vulnerability (password guessing), Attack (dictionary), Exploit (implementation)
+
+The process of penetration testing may be simplified into the following five phases:
+1. Reconnaissance: The act of gathering important information on a target system. This information can be used to better attack the target. For example, open source search engines can be used to find data that can be used in a social engineering attack.
+2. Scanning: Uses technical tools to further the attacker's knowledge of the system. For example, Nmap can be used to scan for open ports.
+3. Gaining access: Using the data gathered in the reconnaissance and scanning phases, the attacker can use a payload to exploit the targeted system. For example, Metasploit can be used to automate attacks on known vulnerabilities.
+4. Maintaining access: Maintaining access requires taking the steps involved in being able to be persistently within the target environment in order to gather as much data as possible.
+5. Covering tracks: The attacker must clear any trace of compromising the victim system, any type of data gathered, log events, in order to remain anonymous.[22]
 
 ### Do you speak techy?
 0. have a decent computer (we can give you one if your is "old" or "tired")
