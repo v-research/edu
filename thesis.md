@@ -5,24 +5,12 @@ layout: default
 <div class="row super-bottom-margin">
     <h3 class="text-center w-100">Thesis Proposals</h3>
     <p>
-        In the following three thesis which should be interpreted more as areas where the student will start her journey, rather than a "point" that the student should follow. In other words, we expect you to build and propose your own views on the subjects, to critically analyze your steps and... ours too. If you don't know exactly what we mean, opt for "I'm a believer".
-    </p>
-    <ul>
-        <li>
-            <i>I'm a believer:</i> A quantitative but non-inductive approach to cyber-security risk assessment<br>
-            <a href="./thesis/thesis-1.html">read more</a>
-        </li>
-        <li>
-            <i>I'm an engineer:</i> A formal approach to the engineering of security protocols and cyber-physical systems<br>
-            <a href="./thesis/thesis-2.html">read more</a>
-        </li>
-        <li>
-            <i>Pff... I'm a scientist, give me a challenge!</i> An attacker model beyond the Dolev-Yao one<br>
-            <a href="./thesis/thesis-3.html">read more</a>
-        </li>
-    </ul>
-    <p>
-        Full Thesis Proposals (2020-2021) available in <a href="./thesis/v-research_thesis_2020-2021.pdf">pdf</a>
+	Want to do your thesis on cybersecurity with us? We can share our time and resources, our research or business-related challenges with you!
+	At V-Research we do research and consultancy in the field of GRC (Governance, Risk, and Compliance) and cybersecurity threat and risk assessment. 
+	We are interested in scientific and engineering thesis 
+	that may help us in better structure our cybersecurity (threat and risk) assessment processes. 
+	We can connect your with our customers for real-world use cases, to give you a better understanding of the challenges we are facing in our day-to-day consultancies.
+	Interested? Send an email to marco@v-research.it
     </p>
 </div>
 
