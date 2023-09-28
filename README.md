@@ -1,5 +1,5 @@
 ### Current Courses
-- [Offensive Security](ethiopia/offensiveSecurity/README.md)@Addis Ababa Institute of Technology - AAIT (2023)
+- [Offensive Security](ethiopia/README.md)@Addis Ababa Institute of Technology - AAIT (2023)
 - [Cybersecurity Operations](https://drive.google.com/drive/folders/1X3TBGIII7lW8oS9-_BkECt9hfABXKFDN?usp=sharing)@Addis Ababa Institute of Technology - AAIT (2023)
 - [Reverse Engineering](https://drive.google.com/drive/folders/1n2uB4XVXlfx5A3KFM7NskwpEBBJ0xI8u?usp=drive_link)@Addis Ababa Institute of Technology - AAIT (2023)
 - [Formal Methods and Cybersecurity Workshop](https://drive.google.com/drive/folders/15iUA4H5hKGj3qUq8n_1mxVlQ_UMXrSlz?usp=sharing)@King's College London (2023)
