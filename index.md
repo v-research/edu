@@ -1,9 +1,15 @@
 ### Current Courses
+- [Offensive Security](ethiopia/offensiveSecurity/README.md)@Addis Ababa Institute of Technology - AAIT (2023)
+- [Cybersecurity Operations](https://drive.google.com/drive/folders/1X3TBGIII7lW8oS9-_BkECt9hfABXKFDN?usp=sharing)@Addis Ababa Institute of Technology - AAIT (2023)
+- [Reverse Engineering](https://drive.google.com/drive/folders/1n2uB4XVXlfx5A3KFM7NskwpEBBJ0xI8u?usp=drive_link)@Addis Ababa Institute of Technology - AAIT (2023)
+- [Formal Methods and Cybersecurity Workshop](https://drive.google.com/drive/folders/15iUA4H5hKGj3qUq8n_1mxVlQ_UMXrSlz?usp=sharing)@King's College London (2023)
+- [Modeling Cyber-Physical System Cybersecurity]()Lecture @[FDL](https://fdl-conference.com/summerschool.html#summerschooldetails) Summer School (2023) 
+
+
+### Past Courses
 - [Cybersecurity 1](cybersecurity_2023/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [PIXEL] (2023)
 - [Cybersecurity 1](cybersecurity_2023/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [ZORIN] (2023)
 - [BASH Scripting](https://github.com/v-research/lastchat) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [ZORIN] (2023)
-
-### Past Courses
 - [Security Risk Assessment Workshop](secra_univr_2022/V-Research_RiskAssessment_05Dec2022_SHARED.pdf) **-** [Data Security & Privacy Course](https://www.corsi.univr.it/?ent=cs&aa=2022%2F2023&codiceCs=S83&codins=4S009066&discr=&discrCd=&id=955&menu=Studiare&tab=Insegnamenti)@[UniVR](https://www.univr.it) (2022)
 - [Introduction to Networks course](network_introduction_2022/readme.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist) 1st Year (2022)
 - [Cybersecurity 2](cybersecurity_2022/README-2.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 2nd Year [PASCAL] (2022)
