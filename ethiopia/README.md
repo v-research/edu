@@ -22,6 +22,7 @@ For any doubt, curiosity or anything else, feel free to drop me an email (marco@
 * [Authentication in Depth](#authentication-in-depth)
 * [With Great Power Comes Great Responsibility](#with-great-power-comes-great-responsibility)
 * [Summary, Review, & Experiments](#summary-and-reviews-and-experiments)
+* [Web Pentesting](#web-pentesting)
 
 ## Intro
 
@@ -715,7 +716,7 @@ Sending an hash of a password for authenticating a client, if sent as plaintext,
 Test replay attacks and brute-force attack on credentials.
 Note that in `/var/logs/postgresql` you can find the log of the postgresql server (with errors in case the configuration/server is not working). 
 
-## Web Cybersecurity
+## Web Pentesting
 1. install docker (there is a nice tutorial by DigitalOcean for Ubuntu 22.04 [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04))
 	1. `sudo apt update`
 	2. `sudo apt install apt-transport-https ca-certificates curl software-properties-common`
