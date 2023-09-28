@@ -714,3 +714,18 @@ Sending an hash of a password for authenticating a client, if sent as plaintext,
 
 Test replay attacks and brute-force attack on credentials.
 Note that in `/var/logs/postgresql` you can find the log of the postgresql server (with errors in case the configuration/server is not working). 
+
+## Web Cybersecurity
+1. install docker (there is a nice tutorial by DigitalOcean for Ubuntu 22.04 [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04))
+	1. `sudo apt update`
+	2. `sudo apt install apt-transport-https ca-certificates curl software-properties-common`
+	3. `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg`
+	4. `echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
+	5. `sudo apt update`
+	6. `apt-cache policy docker-ce`
+	7. `sudo apt install docker-ce`
+	8. check the status with `sudo systemctl status docker`
+2. create [docker instance of webgoat](https://hub.docker.com/r/webgoat/webgoat)
+	1. `sudo docker pull webgoat/webgoat`
+	2. `sudo docker run -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 -e TZ=Europe/Amsterdam webgoat/webgoat`
+
