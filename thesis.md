@@ -17,6 +17,17 @@ layout: default
 <h3 class="text-center w-100 team-sec-border"> MsC Students <i class="fas fa-user-graduate"></i> </h3>
 
 <div class="row team-people m-top-z">
+    <!-- Emanuel Cirabisi -->
+    <div class="row team-people">
+        <div class="col-12 col-sm-3">
+            <img src="images/emanuel-cirabisi.png">
+        </div>
+        <div class="col-12 col-sm-9 profile-name-margin">
+            <h3> Emanuel Cirabisi - 2023 </h3>
+                <p>Thesis: Working on it</p>
+        </div>
+    </div>
+
     <!-- Enrico Guerra -->
     <div class="row team-people">
         <div class="col-12 col-sm-3">
