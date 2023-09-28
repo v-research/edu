@@ -84,12 +84,11 @@ We can also try all possible decryption with tools such as [md5decrypt.net](http
 * White/Black/box Penetration testing Phases
 * Terminology. Threat (weak password), Vulnerability (password guessing), Attack (dictionary), Exploit (implementation)
 
-The process of penetration testing may be simplified into the following five phases:
+The process of penetration testing may be simplified into the following five phases (see [Wiki](https://en.wikipedia.org/wiki/Penetration_test)]:
 1. Reconnaissance: The act of gathering important information on a target system. This information can be used to better attack the target. For example, open source search engines can be used to find data that can be used in a social engineering attack.
-2. Scanning: Uses technical tools to further the attacker's knowledge of the system. For example, Nmap can be used to scan for open ports.
-3. Gaining access: Using the data gathered in the reconnaissance and scanning phases, the attacker can use a payload to exploit the targeted system. For example, Metasploit can be used to automate attacks on known vulnerabilities.
-4. Maintaining access: Maintaining access requires taking the steps involved in being able to be persistently within the target environment in order to gather as much data as possible.
-5. Covering tracks: The attacker must clear any trace of compromising the victim system, any type of data gathered, log events, in order to remain anonymous.[22]
+2. Scanning & Vulnerability Assessment: Uses technical tools to further the attacker's knowledge of the system. For example, Nmap can be used to scan for open ports.
+3. Exploitation: Using the data gathered in the reconnaissance and scanning phases, the attacker can use a payload to exploit the targeted system. For example, Metasploit can be used to automate attacks on known vulnerabilities.
+5. Reporting: Once the exploitation phase is complete, the tester prepares a report documenting the penetration test's findings. The report generated in this final penetration testing phase can be used to fix any vulnerabilities found in the system and improve the organization's security posture.
 
 ### Do you speak techy?
 0. have a decent computer (we can give you one if your is "old" or "tired")
