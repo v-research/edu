@@ -683,7 +683,7 @@ port associated to each one of our services. So that we can send a message for a
 ![image](https://user-images.githubusercontent.com/14936492/162470918-8e4e1c36-69ab-487f-b620-18e894e8d1f2.png)
 
 #### ARP and MITM
-The ARP protocol works at layer 2 and the switch layer 2 only works at layer 1 and 2. The swithc layer 2 doesn't even look at information above layer 2 and then it doesn't look at the IP addresses or TCP ports etc. When we perform a MITM attack (as shown in the previous lesson) we convince, for example, Alice that the MAC of Bob is our MAC (note that your PC has a table similar to that depicted for the switch -- run the following command to see yours `arp`). The switch looks at the MAC to forward the messages so we'll receive all the messages that Alice wants to send to Bob if the MITM is successful.
+The ARP protocol works at layer 2 and the switch layer 2 only works at layer 1 and 2. The switch layer 2 doesn't even look at information above layer 2 and then it doesn't look at the IP addresses or TCP ports etc. When we perform a MITM attack (as shown in the previous lesson) we convince, for example, Alice that the MAC of Bob is our MAC (note that your PC has a table similar to that depicted for the switch -- run the following command to see yours `arp`). The switch looks at the MAC to forward the messages so we'll receive all the messages that Alice wants to send to Bob if the MITM is successful.
 
 ### Experiment 1: Replay Attack
 
@@ -715,6 +715,9 @@ Sending an hash of a password for authenticating a client, if sent as plaintext,
 
 Test replay attacks and brute-force attack on credentials.
 Note that in `/var/logs/postgresql` you can find the log of the postgresql server (with errors in case the configuration/server is not working). 
+
+#### Promiscuous Mode
+Not part of the exam but for those how are interested in network security: "In computer networking, promiscuous mode is a mode for a wired network interface controller (NIC) or wireless network interface controller (WNIC) that causes the controller to pass all traffic it receives to the central processing unit (CPU) rather than passing only the frames that the controller is specifically programmed to receive. This mode is normally used for packet sniffing that takes place on a router or on a computer connected to a wired network or one being part of a wireless LAN." (see [wiki](https://en.wikipedia.org/wiki/Promiscuous_mode).
 
 ## Web Pentesting
 1. install docker (there is a nice tutorial by DigitalOcean for Ubuntu 22.04 [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04))
