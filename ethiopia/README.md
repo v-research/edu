@@ -730,3 +730,14 @@ Note that in `/var/logs/postgresql` you can find the log of the postgresql serve
 	1. `sudo docker pull webgoat/webgoat`
 	2. `sudo docker run -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 -e TZ=Europe/Amsterdam webgoat/webgoat`
 
+### SQL-Injection
+A brief introduction to SQL-injection is available [here](https://docs.google.com/presentation/d/1I58_ZnMO4Lp4vwPGc4H8TzABYg2ATOw0/edit?usp=drive_link&ouid=106548220549566743868&rtpof=true&sd=true). 
+Once you read it, you can follow the WebGoat lesson: A3 Injection [SQLinjection lessons].
+
+Once you undetstood the basics on SQLinject, there is a tool to automate the process of testing for SQLinjections: SQLmap. 
+Introductory videos are available [here](https://www.youtube.com/user/inquisb/videos).
+
+### XSS
+A brief introduction on XSS is available [here](https://docs.google.com/presentation/d/1LQ4UrJ9jPv3WO4zN2IlnLcwj2WwxxuXU/edit?usp=drive_link&ouid=106548220549566743868&rtpof=true&sd=true). 
+Once you read it, you can follow the WebGoat lesson: A3 Injection [XSS lessons].
+
