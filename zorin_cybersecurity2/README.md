@@ -59,11 +59,13 @@ We now list the topic-specific policies (and procedures) we are going to address
 
 1. Password Policy and Password Management Procedure
 2. Access Control Policy and Access Control Management Procedure
-3. Threat Intelligence Policy
+3. ~Threat Intelligence Policy~
 4. Management of technical vulnerabilities
 5. Information backup
 6. Logging
 7. Network security
+8. Information classification
+9. Clock Sync
 
 ## Password Policy
 The password policy is the requirements that the CISO gives to us, the IT Manager.
