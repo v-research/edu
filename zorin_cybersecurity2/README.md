@@ -381,4 +381,295 @@ Now we can generate the first six parameter of the settings file running the fol
 docker run --rm -ti psono/psono-combo:latest python3 ./psono/manage.py generateserverkeys
 ```
 
-##### Tipimail
+and update the config file in `/opt/docker/psono/settings.yaml`.
+
+##### Email Configuration
+For the authentication process, Psono requires to have an email server (or service) available.
+While [Tipimail](https://www.tipimail.com/) or similar services could be used, for our experiment
+we'll use our personal GMail account. The idea is to use our personal email account but without
+sharing our GMail password.
+
+On your Gmail account, click on the icon (as in the following picture) of your user. Then click on 
+"manage account" and search for "App passwords". Now you can register a new password that can be 
+used by Psono to send account activation emails using the Google SMTP service 
+
+![](./gmail.png)
+
+Now we can edit the Psono config file with `vim /opt/docker/psono/settings.yaml`
+and add the following configuration (where the email and password must be changed with yours).
+
+![](./mailpsono.png)
+
+We can test that the email process works by running the following command in our VM (changing something@something.com with
+an email account you own. If, after executing the following command, you received an email, everything should
+be working properly.
+
+```
+docker run --rm \
+  -v /opt/docker/psono/settings.yaml:/root/.psono_server/settings.yaml \
+  -ti psono/psono-combo:latest python3 ./psono/manage.py sendtestmail something@something.com
+```
+
+#### Database Preparation
+Psono requires a database to run. We can prepare the database using the (data migration](https://en.wikipedia.org/wiki/Data_migration) process that Psono publicly shares in the official documentation:
+
+```
+docker run --rm \
+  -v /opt/docker/psono/settings.yaml:/root/.psono_server/settings.yaml \
+  -ti psono/psono-combo:latest python3 ./psono/manage.py migrate
+```
+
+#### Backend Preparation
+Finally, we setup the backend, which requires the following config file to be
+stored in `/opt/docker/psono-client/config.json` (`psono-client` directory may
+not exists, so use `mkdir` to create it).
+
+```
+{
+  "backend_servers": [{
+    "title": "Psono ITS 2023",
+    "url": "https://psono.example.com/server"
+  }],
+  "base_url": "https://psono.example.com/",
+  "allow_custom_server": true,
+  "allow_registration": true,
+  "allow_lost_password": true,
+  "disable_download_bar": false,
+  "authentication_methods": ["AUTHKEY", "LDAP"],
+  "saml_provider": []
+}
+```
+
+To run the docker container, exposing the backend we run the following command.
+```
+docker run --name psono-combo \
+    --sysctl net.core.somaxconn=65535 \
+    -v /opt/docker/psono/settings.yaml:/root/.psono_server/settings.yaml \
+    -v /opt/docker/psono-client/config.json:/usr/share/nginx/html/config.json \
+    -v /opt/docker/psono-client/config.json:/usr/share/nginx/html/portal/config.json \
+    -d --restart=unless-stopped -p 10200:80 psono/psono-combo:latest
+```
+
+You can now test that everything is up and running by using the browser on your local machine and
+open `http://ip-of-the-vm:10200/server/info`.
+
+You can also check the health status of the containers with `docker ps -a`.  If
+you just started the backend you should see its health status as "starting", it
+requires a bit of time. If it becomes "unhealthy" but seems to be running
+properly, don't worry, we'll fix it later on.
+
+![](./dockerpsono.png)
+
+#### Troubleshooting
+
+If your psono installation is not working you can first check the IP Addresses of the various containers and
+1. check that they all are on the same subnet (e.g., `docker inspect psono-database | grep IPAddr*`)
+2. check that the settings.yml uses the correct database IP, as in the following picture
+
+![](./psonodbsettings.png)
+
+#### Cleanup Job
+As required by Psono, a cleanup process must take place regularly. 
+Open Cron with 
+```
+crontab -e
+```
+and add the following.
+```
+30 2 * * * docker run --rm -v /opt/docker/psono/settings.yaml:/root/.psono_server/settings.yaml -ti psono/psono-combo:latest python3 ./psono/manage.py cleartoken >> /var/log/cron.log 2>&1```
+```
+
+### Reverse Proxy
+The Psono docs for the [installation of a reverse proxy](https://doc.psono.com/admin/installation/install-reverse-proxy.html)
+uses [NGINX](https://en.wikipedia.org/wiki/Nginx). To install NGINX on your VM run: `sudo apt install nginx`.
+
+Now create the following NGINX config file in `/etc/nginx/sites-available/psono.example.com.conf`.
+Note here that I changed the location for the key and certificate (w.r.t. the original config shared in the psono documentation).
+
+```
+server {
+    listen 80;
+    server_name psono.example.com;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name psono.example.com;
+
+    ssl_protocols TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_tickets off;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+    ssl_session_timeout 1d;
+    resolver 8.8.8.8 8.8.4.4 valid=300s;
+    resolver_timeout 5s;
+    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+
+    # Comment this in if you know what you are doing
+    # add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+
+    add_header Referrer-Policy same-origin;
+    add_header X-Frame-Options DENY;
+    add_header X-Content-Type-Options nosniff;
+    add_header X-XSS-Protection "1; mode=block";
+
+    # If you have the fileserver too, then you have to add your fileserver URL e.g. https://fs01.example.com as connect-src too:
+    add_header Content-Security-Policy "default-src 'none';  manifest-src 'self'; connect-src 'self' https://static.psono.com https://api.pwnedpasswords.com https://storage.googleapis.com https://*.digitaloceanspaces.com https://*.blob.core.windows.net https://*.s3.amazonaws.com; font-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'self'; child-src 'self'";
+
+    ssl_certificate /etc/ssl/certs/fullchain.pem;
+    ssl_certificate_key /etc/ssl/private/privkey.pem;
+
+    client_max_body_size 256m;
+
+    gzip on;
+    gzip_disable "msie6";
+
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_buffers 16 8k;
+    gzip_http_version 1.1;
+    gzip_min_length 256;
+    gzip_types text/plain text/css application/json application/x-javascript application/javascript text/xml application/xml application/xml+rss text/javascript application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon;
+
+    root /var/www/html;
+
+    location ~* \.(?:ico|css|js|gif|jpe?g|png|eot|woff|woff2|ttf|svg|otf)$ {
+        expires 30d;
+        add_header Pragma public;
+        add_header Cache-Control "public";
+
+        proxy_set_header        Host $host;
+        proxy_set_header        X-Real-IP $remote_addr;
+        proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header        X-Forwarded-Proto $scheme;
+        proxy_hide_header Content-Security-Policy;
+        
+        proxy_pass          http://localhost:10200;
+        proxy_redirect      http://localhost:10200 https://psono.example.com;
+    }
+
+
+    location / {
+        proxy_set_header        Host $host;
+        proxy_set_header        X-Real-IP $remote_addr;
+        proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header        X-Forwarded-Proto $scheme;
+        proxy_hide_header Content-Security-Policy;
+	
+        proxy_pass          http://localhost:10200;
+        proxy_read_timeout  90;
+	
+        proxy_redirect      http://localhost:10200 https://psono.example.com;
+    }
+}
+```
+
+#### HTTPS - TLS Keys
+As we learnt in [the first course](https://edu.v-research.it/cybersecurity_2023/#lesson-6---cryptography)
+we can create a small PKI to handle this certificates for our testing purposes.
+
+So we create our certificates using the following scripts (see [previous course](https://edu.v-research.it/cybersecurity_2023/#lesson-6---cryptography) for more details).
+
+Create and execute the following script
+```
+#!/bin/bash
+mkdir PKI
+mkdir PKI/certs PKI/csr PKI/private PKI/db PKI/crl PKI/conf
+touch PKI/db/index
+touch PKI/db/serial
+touch PKI/db/crlnumber
+echo "01" > PKI/db/serial
+pwd
+```
+Find the openssl.cnf with `find / -iname openssl.cnf 2>/dev/null`. It should be in `/etc/ssl/openssl.cnf`. Copy it to `cp /etc/ssl/openssl.cnf ./PKI/conf` and change the file `PKI/conf/openssl.cnf` as follows.
+
+```
+[ CA_default ]  
+
+dir             = ./PKI                 # Where everything is kept
+certs           = $dir/certs            # Where the issued certs are kept
+crl_dir         = $dir/crl              # Where the issued crl are kept
+database        = $dir/db/index         # database index file.
+serial          = $dir/db/serial        # The current serial number
+crlnumber       = $dir/db/crlnumber     # the current crl number
+certificate     = $dir/certs/cacert.crt # The CA certificate
+private_key     = $dir/private/cakey.pem        # The private key
+crl             = $dir/crl/cacrl.pem            # The current CRL
+x509_extensions = usr_cert              # The extensions to add to the cert
+#unique_subject = no                    # Set to 'no' to allow creation of
+                                        # several certs with same subject.
+new_certs_dir   = $dir/certs            # default place for new certs.
+```
+
+Create and execute the following script to genreate the new TLS key and certificate.
+
+```
+#!/bin/bash
+
+echo "Root CA - key"
+openssl ecparam -name prime256v1 -genkey -outform pem -out PKI/private/cakey.pem
+echo "Root CA - cert"
+openssl req -new -x509 -days 365 -config PKI/conf/openssl.cnf -addext "subjectAltName=DNS:ca.its.com" -addext "certificatePolicies=2.5.29.32.0" -extensions v3_ca -key PKI/private/cakey.pem -out PKI/certs/cacert.crt -outform pem -subj "/C=IT/ST=Italy/L=Verona/O=ITS/OU=Students/CN=ca.its.com/emailAddress=itsec@its.com"
+
+# INTRANET TLS
+echo "psono.example.com - key"
+openssl ecparam -name prime256v1 -genkey -outform pem -out PKI/private/psonokey.pem
+echo "psono.example.com - csr"
+openssl req -new -key PKI/private/psonokey.pem -out PKI/csr/psono.csr -config PKI/conf/openssl.cnf -addext "subjectAltName=DNS:psono.example.com" -addext "certificatePolicies=2.5.29.32.0" -subj "/C=IT/ST=Italy/L=Verona/O=ITS/OU=Students/CN=psono.example.com/emailAddress=itsec@its.com"
+echo "psono.example.com - cert"
+openssl ca -in PKI/csr/psono.csr -out PKI/certs/psonocert.pem -config PKI/conf/openssl.cnf -batch
+
+cat PKI/db/index
+chmod 400 PKI/private/psonokey.pem
+```
+
+Now we can copy the private key and the certificate to the VM and move it to the proper location
+as defined in the NGINX config file `psono.example.com.conf`.
+
+```
+scp PKI/private/psonokey.pem x@192.168.1.12:~/privkey.pem
+scp PKI/certs/psonocert.pem x@192.168.1.12:~/fullchain.pem
+[ssh into the VM]
+sudo mv ~/privkey.pem /etc/ssl/private
+sudo mv ~/fullchain.pem /etc/ssl/certs
+```
+
+We can now enable the NGINX config we just created.
+
+```
+ln -s /etc/nginx/sites-available/psono.example.com.conf /etc/nginx/sites-enabled/
+```
+
+We can test it `sudo nginx -t` and finally restart the NGINX `sudo service nginx restart`.
+
+Open your browser (on the local machine) and test if its working at: `https://psono.example.com/server/info/`.
+You should see something like `{"info":"{\"version\": \"....}` as a response.
+
+#### Unhealthy time out of sync
+If you go to https://psono.example.com/server/healthcheck/ and the clock sync is `unhealthy`, dates are out of sync you should fix it.
+
+[Explanation TBD]
+
+![](./datetest.png)
+
+
+### Finalize - User Creation
+
+The documentation on the final steps are provided by Psono [here](https://doc.psono.com/admin/installation/install-finalize.html#preamble).
+
+Create the first user by registering a new user from the web interface at `https://psono.example.com/`.
+
+, and promote it to admin
+
+```
+docker run --rm \
+  -v /opt/docker/psono/settings.yaml:/root/.psono_server/settings.yaml \
+  -ti psono/psono-combo:latest python3 ./psono/manage.py promoteuser username@example.com superuser
+```
+
+Enjoy your admin user `https://psono.example.com/portal/`.
+You can now create a snapshot of your VM with the name `Psono v0.1`!
