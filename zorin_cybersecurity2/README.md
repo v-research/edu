@@ -680,7 +680,7 @@ docker run --rm \
 Enjoy your admin user `https://psono.example.com/portal/`.
 You can now create a snapshot of your VM with the name `Psono v0.1`!
 
-## Non-Conformance Evaluation
+## Non-Conformities Evaluation
 
 ## Cybersecurity Analysis
 - information classification policy (secrets - e.g. in yml, passwords, certificates, configs, user data)
