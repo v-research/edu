@@ -1,9 +1,13 @@
 # Cybersecurity 2
-This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on GitHub; a beautiful place where we learn together cybersecurity and what faith will bring us. In this README I write my notes of the course but much of the content is, for brevity, a link to external resources. If you have any suggestion to improve this text or the course, please open an [issue](https://github.com/v-research/pascal/issues/new/choose).
+This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on GitHub; a beautiful place where we learn together cybersecurity and what faith will bring us. In this README I write my notes of the course but much of the content is, for brevity, a link to external resources. If you have any suggestion to improve this text or the course, please open an [issue](https://github.com/v-research/edu/issues).
 
 **Table of Content**
-* [Lesson 1 - Intro](#lesson-1---intro)
-* [Lesson 2 - A Small Step for a Man](#lesson-2---a-small-step-for-a-man)
+* [Intro](#intro)
+* [Policies for information security](#policies-for-information-security)
+* [Password Policy](#password-policy)
+* [Password Manager / Psono](#password-manager)
+* [Non-Conformities Evaluation](#non-conformities-evaluation)
+* [Cybersecurity Analysis](#cybersecurity-analysis)
 
 ## Intro
 This course explores some of the real-world cybersecurity requests that an IT Manager (or
@@ -673,3 +677,13 @@ docker run --rm \
 
 Enjoy your admin user `https://psono.example.com/portal/`.
 You can now create a snapshot of your VM with the name `Psono v0.1`!
+
+## Non-Conformance Evaluation
+
+## Cybersecurity Analysis
+- information classification policy (secrets - e.g. in yml, passwords, certificates, configs, user data)
+- sensitivity of information in transit and at-rest wrt info classification policy
+
+[Drawio Psono Architecture](./PsonoITSArchitecture.drawio)
+
+![](./psonoitsarch.png)
