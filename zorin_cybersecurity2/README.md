@@ -682,6 +682,8 @@ You can now create a snapshot of your VM with the name `Psono v0.1`!
 
 ## Non-Conformities Evaluation
 
+[Non-Conformities Evaluation Spreadsheet](./NonConformitiesPsono.xlsx)
+
 ## Cybersecurity Analysis
 - information classification policy (secrets - e.g. in yml, passwords, certificates, configs, user data)
 - sensitivity of information in transit and at-rest wrt info classification policy
