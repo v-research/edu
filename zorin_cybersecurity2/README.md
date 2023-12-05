@@ -665,11 +665,10 @@ If you go to https://psono.example.com/server/healthcheck/ and the clock sync is
 
 ### Finalize - User Creation
 
-The documentation on the final steps are provided by Psono [here](https://doc.psono.com/admin/installation/install-finalize.html#preamble).
-
-Create the first user by registering a new user from the web interface at `https://psono.example.com/`.
-
-, and promote it to admin
+The documentation on the final steps are provided by Psono
+[here](https://doc.psono.com/admin/installation/install-finalize.html#preamble).
+Create the first user by registering a new user from the web interface at
+`https://psono.example.com/`, and promote it to admin:
 
 ```
 docker run --rm \
@@ -681,13 +680,30 @@ Enjoy your admin user `https://psono.example.com/portal/`.
 You can now create a snapshot of your VM with the name `Psono v0.1`!
 
 ## Non-Conformities Evaluation
+The non-conformities evaluation is done by the IT Manager by
+verifying if the requirements of the password policy can be enforced
+by the technology under evaluation (i.e., the PSono password manager).
 
-[Non-Conformities Evaluation Spreadsheet](./NonConformitiesPsono.xlsx)
+Here is the [Non-Conformities Evaluation Spreadsheet](./NonConformitiesPsono.xlsx)
+which we send to the CISO so that he can evaluate the risks associated
+with the non-conformities and identify a mitigation strategy.
+For example, PSono does not allow an enforcement against the storing
+of passphrases. The CISO may choose to accept this non-conformity
+and extend the employment contracts with an "Individual User Agreement" stating
+that it is forbidden to store passphrases in PSono.
 
 ## Cybersecurity Analysis
-- information classification policy (secrets - e.g. in yml, passwords, certificates, configs, user data)
-- sensitivity of information in transit and at-rest wrt info classification policy
+In this step we assess the cybersecurity of the PSono infrastructure.
+1. System Model: Design the architecture of the system under analysis
+2. Identify potential threats 
+	1. considering the information classification policy (For example, the secrecy requirements should make you investigate how secrets are used; in yml, passwords, certificates, configurations, user data etc.)
+	2. For the threat assessment consider the sensitivity of information in-transit and at-rest wrt info classification policy
 
-[Drawio Psono Architecture](./PsonoITSArchitecture.drawio)
+#### System Model
+You can download the "source" [Drawio Psono Architecture](./PsonoITSArchitecture.drawio) or use the following image.
 
 ![](./psonoitsarch.png)
+
+#### Treat Analysis 
+
+
