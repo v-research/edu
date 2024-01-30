@@ -1,4 +1,5 @@
 ### Current Courses
+- [Cybersecurity 1](cybersecurity_2024/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [SUSE] (2024)
 - [BASH Scripting Game-course](https://github.com/rocchettomarco/ZORIN2Y) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [ZORIN] (2023/2024)
 - [Cybersecurity 2](zorin_cybersecurity2/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 2nd Year [ZORIN] (2023)
 - [Offensive Security](ethiopia/README.md)@Addis Ababa Institute of Technology - AAIT (2023)
