@@ -24,7 +24,7 @@ layout: default
         </div>
         <div class="col-12 col-sm-9 profile-name-margin">
             <h3> Emanuel Cirabisi - 2023 </h3>
-                <p>Thesis: Working on it</p>
+                <p>Thesis: A methodology for the risk analysis of industrial control systems</p>
         </div>
     </div>
 
