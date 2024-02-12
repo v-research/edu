@@ -748,7 +748,7 @@ The public and private key are simply two numbers and are often
 described as one the "inverse" of the other (i.e., `pk(alice)^-1 = pvt(alice)`)
 
 Obviously the confidentiality of the plaintext is not preserved when encrypted
-with the public key. Instead, **authentication** (and then **integrity**) are
+with the private key. Instead, **authentication** (and then **integrity**) are
 preserved.  The process of encrypting with the private key is called **sign**.
 Why?  
 
