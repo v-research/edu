@@ -783,7 +783,7 @@ calculator](https://www.mathsisfun.com/numbers/coprime-calculator.html)).
    Alice's public key by calculating `ciphertext=plaintext^r mod N=12^3 mod
 15=3` (where `h=x mod y` means that `h` is the remainder of the division `x/y`
 as `1=3 mod 2`) and you can verify the correctness of the calculation with
-[Wlfram Alpha](https://www.wolframalpha.com/input?i=12%5E3+%28mod+15%29).
+[Wolfram Alpha](https://www.wolframalpha.com/input?i=12%5E3+%28mod+15%29).
 So, Bob sends the ciphertext to Alice (`bob->alice: 3`).
 4. Alice calculates `s` such that `r*s + t*phi(N)=1`. In our example we have
    `3*s + t*8=1` and `s=3, t=-1` could be one solution. However, `s=3` is going
