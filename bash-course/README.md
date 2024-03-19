@@ -312,3 +312,8 @@ done
 BUG#3 fixed!
 
 BONUS: checkout `man tee`!
+
+# Code-and-Patch vs Design-and-Code
+So far, any bug we fixed actually introduced more bugs.  This is the usual issue with the code-and-patch approach, the approach is useful to explore and test but not to properly implement some decent software/script. We need to reason a bit on the design of what we aim to implement and *then* we can reason on how to implement it.
+
+You can download the design from [HERE](./MSC.excalidraw) but, in the following, I describe the design I have in mind. [TBD]
