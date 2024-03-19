@@ -244,7 +244,6 @@ cdef='\e[0m' #color default
 cred='\e[0;31m' #color green
 cgreen='\e[0;32m' #color green
 usr=$(whoami)
-chatlog='chat.log'
 
 echo "WELCOME TO LAST CHAT!"
 
