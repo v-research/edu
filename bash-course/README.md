@@ -316,4 +316,8 @@ BONUS: checkout `man tee`!
 # Code-and-Patch vs Design-and-Code
 So far, any bug we fixed actually introduced more bugs.  This is the usual issue with the code-and-patch approach, the approach is useful to explore and test but not to properly implement some decent software/script. We need to reason a bit on the design of what we aim to implement and *then* we can reason on how to implement it.
 
-You can download the design from [HERE](./MSC.excalidraw) but, in the following, I describe the design I have in mind. [TBD]
+You can download the design from [HERE](./MSC.excalidraw) but, in the following, I describe the design I have in mind.
+
+## UDP and Broadcast
+The type of architecture suited for a chat is a client-server one, where mutiple clients connect to the same server which, in turn, manages the different client-client communications. 
+A server should then first be discoverable somehow. The `ip` command shows the broadcast IP address of network, meaning that any message sent to the broadcast IP will be sent to all the nodes of the network (and to all our clients too). 
