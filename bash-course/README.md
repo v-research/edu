@@ -70,6 +70,7 @@ You can then open another shell and write some data (say, "ciao") to that TCP li
 
 Great! We have a chat. DONE! :P
 You don't believe me? You can use Wireshark to inspect what the `nc` does:
+
 ![image](https://user-images.githubusercontent.com/14936492/234995560-2c621d6b-34ad-40da-bc32-25cbfca86028.png)
 
 But:
@@ -316,8 +317,63 @@ BONUS: checkout `man tee`!
 # Code-and-Patch vs Design-and-Code
 So far, any bug we fixed actually introduced more bugs.  This is the usual issue with the code-and-patch approach, the approach is useful to explore and test but not to properly implement some decent software/script. We need to reason a bit on the design of what we aim to implement and *then* we can reason on how to implement it.
 
-You can download the design from [HERE](./MSC.excalidraw) but, in the following, I describe the design I have in mind.
+You can download the design from [HERE](./MSC.excalidraw) and have a look at it but I share here the whole design with 3 screenshots:
+
+![image](https://github.com/v-research/edu/assets/14936492/9a6fb397-9cc4-4c69-81be-55b70fbfedd5)
+
+![image](https://github.com/v-research/edu/assets/14936492/ed71697d-7600-42ac-ada8-80fe4c193a52)
+
+![image](https://github.com/v-research/edu/assets/14936492/7794862f-8906-4a96-9032-d32bfae927f6)
+
+
+In the following, I describe some hints to implement this design.
 
 ## UDP and Broadcast
 The type of architecture suited for a chat is a client-server one, where mutiple clients connect to the same server which, in turn, manages the different client-client communications. 
 A server should then first be discoverable somehow. The `ip` command shows the broadcast IP address of network, meaning that any message sent to the broadcast IP will be sent to all the nodes of the network (and to all our clients too). 
+
+![Screenshot from 2024-03-25 22-39-48](https://github.com/v-research/edu/assets/14936492/0ca59dce-0604-4239-ba8c-9f68b268e5c0)
+
+With netcat we can send a message to the broadcast and listen to any message sent by the broadcast.
+```
+receive: nc -luk <broadcast> <port>
+send: nc -ub <broadcast> <port>
+```
+
+## Multiple Processes
+IF a server waits for incoming communications from multiple clients on the broadcast and, at the same time, sends messages (even over TCP) to multiple clients then we need multiple processes running on the same machine.
+The `&` is what can be of use here as if we run the program `listen-braodcast.sh ` in a bash script with `./listen-broadcast.sh &` the program is executed in background, allowing us to run `send-to-client.sh` from the same script as in
+```
+./listen-broadcast.sh &
+./send-to-client.sh &
+```
+
+## Pipes and Coprocesses
+If we have multiple programs running, how do we make them communicate? With pipes!
+First, we create a shared variable between two programs, say the variable `CHATPIPE` as in the following
+```
+# main script
+export CHATPIPE='chatpipe'
+./send-to-client.sh &
+./listen-broadcast.sh > CAHTPIPE
+```
+
+```
+# send-to-cline script
+read mex < $CHATPIPE
+echo $mex
+```
+
+The proper way to do this is by using [coprocesses](https://www.gnu.org/software/bash/manual/bash.html#Coprocesses).
+
+## Kill and Special Parameters
+Having a subprocess (i.e., a process that runs in "the background" of another process) may creates zombies processes when the main script is killed before all its subrpocesses.
+
+We can get the process IDentifier (PID) of the process that executes a script from the [special parameter](https://www.gnu.org/software/bash/manual/bash.html#Special-Parameters) `$$`. Then, we can kill all the subprocesses using `pkill` (see `man pkill` after installing it with `sudo apt install pkill`) but we first need to understand when the main script is closed (e.g., by a Ctrl+c). For this, we can use `trap` that will triggers a command (e.g., `pkill`) when a specific signal is sent to the process running the main script. What is a signal? The BASH shell associates signals to events. The event caused by Ctrl+c is mapped to the signal SIGINT which stops the running process. 
+
+```
+pid=$$
+trap 'pkill -P $pid; exit' SIGINT
+```
+
+You can get more info on signals with `man 7 signal`.
