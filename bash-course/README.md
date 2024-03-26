@@ -336,7 +336,7 @@ A server should then first be discoverable somehow. The `ip` command shows the b
 
 With netcat we can send a message to the broadcast and listen to any message sent by the broadcast.
 ```
-receive: nc -luk <broadcast> <port>
+receive: nc -lu <broadcast> <port>
 send: nc -ub <broadcast> <port>
 ```
 
@@ -355,7 +355,7 @@ First, we create a shared variable between two programs, say the variable `CHATP
 # main script
 export CHATPIPE='chatpipe'
 ./send-to-client.sh &
-./listen-broadcast.sh > CAHTPIPE
+./listen-broadcast.sh > CHATPIPE
 ```
 
 ```
