@@ -26,7 +26,6 @@
 
 ### Contacts
 - Marco Rocchetto (marco@v-research.it)
-- Mattia Pacchin (mattia@v-research.it)
 
 ### Licenses
 - code under [MIT License](./LICENSE-code.txt)
