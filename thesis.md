@@ -20,11 +20,21 @@ layout: default
     <!-- Emanuel Cirabisi -->
     <div class="row team-people">
         <div class="col-12 col-sm-3">
-            <img src="images/emanuel-cirabisi.png">
+            <img src="images/emanuel-cirabisi.jpeg">
         </div>
         <div class="col-12 col-sm-9 profile-name-margin">
-            <h3> Emanuel Cirabisi - 2023 </h3>
-                <p>Thesis: A methodology for the risk analysis of industrial control systems</p>
+            <h3> Emanuel Cirabisi - 2024 </h3>
+                <p>Thesis: A methodology for the risk analysis of industrial control systems
+                [<a href="thesis/thesis-emanuelCirabisi/thesis-EC.pdf" target="blank">pdf</a>, <a href="thesis/thesis-emanuelCirabisi/slides-thesis-cirabisi-short.pdf">slide (short)</a>, <a href="thesis/thesis-emanuelCirabisi/slides-thesis-cirabisi-ext.pdf">slide (extended)</a>]</p>
+            <a href="https://it.linkedin.com/in/emanuel-cirabisi-1876ab212" target="blank">
+                <i class="fab fa-linkedin fa-lg social-icon"></i>
+            </a>
+            <a href="https://www.facebook.com/emanuel.cirabisi" target="blank">
+                <i class="fab fa-facebook-f fa-lg social-icon"></i>
+            </a>
+            <a href="mailto: cirabisiemanuel99@gmail.com" target="blank">
+                <i class="fas fa-envelope fa-lg social-icon"></i>
+            </a>
         </div>
     </div>
 
