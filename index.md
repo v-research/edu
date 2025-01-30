@@ -1,12 +1,14 @@
-- [BASH course](bash-course/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [SUSE] (2024)
+- [Cybersecurity 1](cybersecurity_1/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year
+- [Cybersecurity 2](cybersecurity_2/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 2nd Year
+
+
+### Past Courses
 - [Cybersecurity 1](cybersecurity_2024/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [SUSE] (2024)
 - [Cybersecurity 2](zorin_cybersecurity2/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 2nd Year [ZORIN] (2023)
 - [Offensive Security](ethiopia/README.md)@Addis Ababa Institute of Technology - AAIT (2023)
 - [Cybersecurity Operations](https://drive.google.com/drive/folders/1X3TBGIII7lW8oS9-_BkECt9hfABXKFDN?usp=sharing)@Addis Ababa Institute of Technology - AAIT (2023)
 - [Reverse Engineering](https://drive.google.com/drive/folders/1n2uB4XVXlfx5A3KFM7NskwpEBBJ0xI8u?usp=drive_link)@Addis Ababa Institute of Technology - AAIT (2023)
-
-
-### Past Courses
+- [BASH course](bash-course/README.md) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [SUSE] (2024)
 - [Formal Methods and Cybersecurity Workshop](https://drive.google.com/drive/folders/15iUA4H5hKGj3qUq8n_1mxVlQ_UMXrSlz?usp=sharing)@King's College London (2023)
 - [Modeling Cyber-Physical System Cybersecurity]()Lecture @[FDL](https://fdl-conference.com/summerschool.html#summerschooldetails) Summer School (2023) 
 - [BASH Scripting Game-course](https://github.com/rocchettomarco/ZORIN2Y) **-** [ITS](https://www.itslogistica.it/tecnico-superiore-digital-transformation-specialist)@[311Verona](https://311verona.com/) 1st Year [ZORIN] (2023/2024)
