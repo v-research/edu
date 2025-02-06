@@ -2,17 +2,37 @@
 This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on GitHub; a beautiful place where we learn together cybersecurity and what faith will bring us. In this README I write my notes of the course but much of the content is, for brevity, a link to external resources. If you have any suggestion to improve this text or the course, please open an [issue](https://github.com/v-research/edu/issues).
 
 **Table of Content**
-* [Intro](#intro)
+* [Intro - NIS 2 and 27001](#intro)
 * [Policies for information security](#policies-for-information-security)
-* [Password Policy](#password-policy)
-* [Password Manager / Psono](#password-manager)
-* [Non-Conformities Evaluation](#non-conformities-evaluation)
-* [Cybersecurity Analysis](#cybersecurity-analysis)
+* Password Management
+	* [Password Policy](#password-policy)
+	* [Password Manager / Psono](#password-manager)
+	* [Non-Conformities Evaluation](#non-conformities-evaluation)
+	* [Cybersecurity Analysis](#cybersecurity-analysis)
+* [Vulnerability Management](#vulnerability-management)
 
 ## Intro
 This course explores some of the real-world cybersecurity requests that an IT Manager (or
-an IT Office of a company) may receive. The requests are going to be driven by one of the leading
-cybersecurity standards: ISO 27001.
+an IT Office of a company) may receive. The requests are going to be driven by the NIS 2 Directive and one of the leading cybersecurity standards: ISO 27001.
+
+### NIS 2
+The NIS2 Directive is the new European regulation designed to strengthen the cybersecurity of critical infrastructures, expanding the requirements of the previous NIS directive. In addition to requiring technical measures, NIS2 emphasizes the importance of a cultural shift, involving executives and employees in a shared approach to cybersecurity. The goal is to create a more aware and responsible security culture, integrating cybersecurity protection at every level of the organization.
+
+In Italy, the implementation of the directive is managed by the National Cybersecurity Agency (ACN), which is responsible for supporting and overseeing the compliance of companies in essential sectors. The ACN provides guidelines, technical support, and, if necessary, sanctions for those who fail to comply with the regulations, with potential fiscal and criminal consequences.
+
+#### What are the main requirements of NIS2?
+
+- Risk Management and Security Measures: Organizations must implement security measures that match the risks they face, tailored to their structure and sector. This includes managing vulnerabilities, securing networks, and adopting data protection technologies.
+- Incident Notification: Serious incidents must be reported to the National Cybersecurity Agency (ACN) within 24 hours of detection, followed by a detailed report within 72 hours, outlining the impact and actions taken.
+- Business Continuity and Resilience Plans: Organizations must develop and maintain business continuity and resilience plans to ensure operations can be restored in the event of a cyber incident.
+- Management’s Role and Responsibilities: NIS2 assigns specific responsibilities to company leadership, requiring top management to be actively involved in security compliance and in shaping cybersecurity strategies.
+- Supply Chain Assessment: Companies must assess the security of their supply chain, including conducting risk analyses of suppliers and ensuring appropriate security measures are in place.
+- Ongoing Training and Awareness: The directive requires continuous cybersecurity training for employees to build a company-wide culture focused on protecting against threats.
+- Subjects shall take into account the specific vulnerabilities of each direct supplier and service provider, as well as the overall quality of the products and cybersecurity practices of their suppliers and service providers, including their secure development procedures.
+- Security of the acquisition, development, and maintenance of IT and network systems, including the management and disclosure of vulnerabilities.
+- Security of human resources, access control strategies, and asset management. Use of multi-factor authentication or continuous authentication solutions, secure voice, video, and text communications, and protected emergency communication systems by the entity internally, where applicable.
+
+Of all the requests of the NIS 2 we will focus on **Vulnerability Management and Password Managment** which addresses the last two requests of the above list. Before moving on to the implementation and strategy, let's have a look at the ISO 27001... no one wants to "reinvent the wheel".
 
 ### ISO 27001
 The [ISO 27001](https://en.wikipedia.org/wiki/ISO/IEC_27001) is a cybersecurity **standard**.
@@ -59,9 +79,9 @@ We now list the topic-specific policies (and procedures) we are going to address
 
 1. Password Policy and Password Management Procedure
 2. Access Control Policy and Access Control Management Procedure
-3. ~Threat Intelligence Policy~
+3. ~Threat Intelligence Policy~ (TBD)
 4. Management of technical vulnerabilities
-5. Information backup
+5. ~Information backup~  (TBD)
 6. Logging
 7. Network security
 8. Information classification
@@ -709,4 +729,66 @@ You can download the Threat Analysis Spreadsheet [HERE](./ThreatAnalysis.xlsx)
 
 ![](./securityarch.png)
 
+## Vulnerability Management
+The ISO 27002 details the Vulnerability Management Control description of the ISO 27001. The following is an extract of the standard.
 
+```
+The organization should have an accurate inventory of assets (see 5.9 to 5.14) as a prerequisite for
+effective technical vulnerability management; the inventory should include the software vendor,
+software name, version numbers, current state of deployment (e.g. what software is installed on what
+systems) and the person(s) within the organization responsible for the software.
+To identify technical vulnerabilities, the organization should consider:
+
+a) defining and establishing the roles and responsibilities associated with technical vulnerability
+management, including vulnerability monitoring, vulnerability risk assessment, updating, asset
+tracking and any coordination responsibilities required;
+
+b) for software and other technologies (based on the asset inventory list, see 5.9), identifying
+information resources that will be used for identifying relevant technical vulnerabilities and
+maintaining awareness about them. Updating the list of information resources based on changes in
+the inventory or when other new or useful resources are found;
+
+c) requiring suppliers of information system (including their components) to ensure vulnerability
+reporting, handling and disclosure, including the requirements in applicable contracts (see 5.20);
+
+d) using vulnerability scanning tools suitable for the technologies in use to identify vulnerabilities
+and to verify whether the patching of vulnerabilities was successful;
+
+e) conducting planned, documented and repeatable penetration tests or vulnerability assessments
+by competent and authorized persons to support the identification of vulnerabilities. Exercising
+caution as such activities can lead to a compromise of the security of the system;
+
+f) tracking the usage of third-party libraries and source code for vulnerabilities. This should be
+included in secure coding (see 8.28).
+
+The organization should develop procedures and capabilities to:
+
+a) detect the existence of vulnerabilities in its products and services including any external component
+used in these;
+
+b) receive vulnerability reports from internal or external sources.
+```
+
+### Implement Vulnerability Management
+There are two possible scenarios: your company has its own product/server/service that needs to be protected or there's a list of them. 
+
+### First scenario
+If there's a service that is critical for the company, such as the password manager we just installed, the best strategy is to:
+1. list the software and hardware of the critical service
+2. check known vulnerabilities for all the listed software and hardware
+
+The first item of the list requires us to create a BOM: Bill Of Material which should encompass:
+- SBOM: Software bill of material
+- HBOM: hardware bill of material
+- CBOM: Crypto bill of material
+- SaaSBOM
+
+Usefull technologies to implement a BOM are: 
+- [OWASP cdxgen](https://github.com/CycloneDX/cdxgen)
+- [Syft](https://github.com/anchore/syft)
+
+Once the BOM is obtained, we can use [OWASP Dependency Track](https://owasp.org/www-project-dependency-track/) to map the signatures of the items in our BOM with the known vulneabilies.
+
+### Second Scenario (TBD)
+- OpenVAS
+- NESSUS
