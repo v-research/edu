@@ -25,12 +25,14 @@ In Italy, the implementation of the directive is managed by the National Cyberse
 - Risk Management and Security Measures: Organizations must implement security measures that match the risks they face, tailored to their structure and sector. This includes managing vulnerabilities, securing networks, and adopting data protection technologies.
 - Incident Notification: Serious incidents must be reported to the National Cybersecurity Agency (ACN) within 24 hours of detection, followed by a detailed report within 72 hours, outlining the impact and actions taken.
 - Business Continuity and Resilience Plans: Organizations must develop and maintain business continuity and resilience plans to ensure operations can be restored in the event of a cyber incident.
-- Management’s Role and Responsibilities: NIS2 assigns specific responsibilities to company leadership, requiring top management to be actively involved in security compliance and in shaping cybersecurity strategies.
+- Management's Role and Responsibilities: NIS2 assigns specific responsibilities to company leadership, requiring top management to be actively involved in security compliance and in shaping cybersecurity strategies.
 - Supply Chain Assessment: Companies must assess the security of their supply chain, including conducting risk analyses of suppliers and ensuring appropriate security measures are in place.
 - Ongoing Training and Awareness: The directive requires continuous cybersecurity training for employees to build a company-wide culture focused on protecting against threats.
-- Subjects shall take into account the specific vulnerabilities of each direct supplier and service provider, as well as the overall quality of the products and cybersecurity practices of their suppliers and service providers, including their secure development procedures.
-- Security of the acquisition, development, and maintenance of IT and network systems, including the management and disclosure of vulnerabilities.
-- Security of human resources, access control strategies, and asset management. Use of multi-factor authentication or continuous authentication solutions, secure voice, video, and text communications, and protected emergency communication systems by the entity internally, where applicable.
+- Vulnerability Management: Subjects shall take into account the specific vulnerabilities of each direct supplier and service provider, as well as the overall quality of the products and cybersecurity practices of their suppliers and service providers, including their secure development procedures.
+- Secure Development: Security of the acquisition, development, and maintenance of IT and network systems, including the management and disclosure of vulnerabilities.
+- HR Security: Security of human resources, access control strategies, and asset management. Use of multi-factor authentication or continuous authentication solutions, secure voice, video, and text communications, and protected emergency communication systems by the entity internally, where applicable.
+- Cyptography: implementation robust cryptographic controls to protect network and information systems from cyber threats. This includes the use of strong encryption algorithms, secure key management practices, and compliance with state-of-the-art cryptographic standards to ensure data confidentiality, integrity, and authenticity.
+- Strong Authentication: 
 
 Of all the requests of the NIS 2 we will focus on **Vulnerability Management and Password Managment** which addresses the last two requests of the above list. Before moving on to the implementation and strategy, let's have a look at the ISO 27001... no one wants to "reinvent the wheel".
 
@@ -789,6 +791,6 @@ Usefull technologies to implement a BOM are:
 
 Once the BOM is obtained, we can use [OWASP Dependency Track](https://owasp.org/www-project-dependency-track/) to map the signatures of the items in our BOM with the known vulneabilies.
 
-### Second Scenario (TBD)
-- OpenVAS
+### Second Scenario
+- Instlal OpenVAS from [HERE](https://greenbone.github.io/docs/latest/22.4/kali/index.html). You can build it from source, install the docker version, or simply via `apt`.
 - NESSUS
