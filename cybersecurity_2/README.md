@@ -792,5 +792,5 @@ Usefull technologies to implement a BOM are:
 Once the BOM is obtained, we can use [OWASP Dependency Track](https://owasp.org/www-project-dependency-track/) to map the signatures of the items in our BOM with the known vulneabilies.
 
 ### Second Scenario
-- Instlal OpenVAS from [HERE](https://greenbone.github.io/docs/latest/22.4/kali/index.html). You can build it from source, install the docker version, or simply via `apt`.
+- Install OpenVAS from [HERE](https://greenbone.github.io/docs/latest/22.4/kali/index.html). You can build it from source, install the docker version, or simply via `apt`.
 - NESSUS
