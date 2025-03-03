@@ -8,7 +8,8 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 * [Lesson 4 - With Great Power Comes Great Responsibility](#lesson-4---with-great-power-comes-great-responsibility)
 * [Lesson 5 - Summary, Review, & Experiments](#lesson-5---summary-and-reviews-and-experiments)
 * [Lesson 6 - Cryptography](#lesson-6---cryptography)
-* [Lesson 7 - Bittersweet Farewell](#lesson-7---bittersweet-farewell)
+* [Lesson 7.5 - Cyberchallenge](#lesson-7.5---Cyberchallenge)
+* [Lesson 8 - Bittersweet Farewell](#lesson-7---bittersweet-farewell)
 
 
 ## Lesson 1 - Intro
@@ -957,7 +958,40 @@ What now? In the `/etc/postgresql/12/main/postgresql.conf` add `ssl=on` and chan
 
 If you capture the traffic with Wireshark, you will see that both confidentiality and integrity are preserved! As long as the authorization follows the least privilege principle, you have a secure database :)
 
-## Lesson 7 - Bittersweet Farewell
+## Lesson 7.5 - Cyberchallenge
+
+```
+-- BEGIN OF WARNING --
+By playing this game you accept the following rules: 
+
+00) You will play alone.
+01) You will not share publicly nor to any other person that you are playing this game. 
+10) You will not share publicly nor to any other person anything about this game. 
+
+-- END OF WARNING --
+```
+
+If you do not agree, please don't play.
+If you spend your time playing this game, you will hack
+the questions of the next exam but, by hacking them, you will prove yourself you know
+the answers to those questions. I just give you a more complex way to answer them with a game.
+I believe the understanding of cybersecurity (and of anything else) should not be weighted
+with a score. You are not a cucumber, nor is your knowledge. But if you share the answers 
+to others, you won't allow them to learn. As Nietzsche famously wrote in the Zarathustra (On the Pitying):
+
+"Indeed, I do not like them, the merciful who are blissful in their pitying: they lack too much in shame.
+If I must be pitying, then I certainly do not want to be called such [...]
+Gladly would I cover my head and flee before I am recognized, and thus I bid you do as well, my friends!
+[...] For inasmuch I saw the sufferer suffering, I was ashamed for the sake of his shame; and when I helped him I severely violated his pride.
+[...] beggars should be abolish completely! Indeed one is angered in giving and angered in not giving.
+And the same for sinners and bad consciences!
+[...] But if you have a suffering friend, then be a resting place to his suffering, yet at the same time a hard bed, a camp bed: thus you will be most useful to him.
+And if a friend does evil to you [Ed. by not following the rules above], then say: 'I forgive you what you have done to me; but that you did it to yourself - how could I forgive that!'"
+
+### PLAY THE GAME
+Ok, now, [dance with yourself](https://www.youtube.com/watch?v=FG1NrQYXjLU) by downloading the game from [here](https://drive.google.com/file/d/11NAgJKiikz9wi8oIg6BM06Ciaiwz2WI5) 
+
+## Lesson 8 - Bittersweet Farewell
 Ok, we are done. No more math, no more lessons, we can relax. As a goodbye I must hide a bit of melancholy.
 But what now? If I succeeded in sharing with you my passion for cybersecurity you don't need to wait for the next course:
 - You want to get deeper on what does it means to become an hacker? I suggest "hacking - the art of exploitation (2nd edition)" by Jon Erickson. You can find it online and you can always send me an email and I'll be more than happy to lend you my copy of this beautiful book. Here you are going to know more on how computer works, their internals, C, Assembly, and how to write an Exploit. But you'll also go into the details of network and security protocols.
