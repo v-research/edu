@@ -8,8 +8,8 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 * [Lesson 4 - With Great Power Comes Great Responsibility](#lesson-4---with-great-power-comes-great-responsibility)
 * [Lesson 5 - Summary, Review, & Experiments](#lesson-5---summary-and-reviews-and-experiments)
 * [Lesson 6 - Cryptography](#lesson-6---cryptography)
-* [Lesson 7.5 - Cyberchallenge](#lesson-7.5---cyberchallenge)
-* [Lesson 8 - Bittersweet Farewell](#lesson-7---bittersweet-farewell)
+* [Lesson 7.5 - Cyberchallenge](#lesson-7---cyberchallenge)
+* [Lesson 8 - Bittersweet Farewell](#lesson-8---bittersweet-farewell)
 
 
 ## Lesson 1 - Intro
@@ -958,7 +958,7 @@ What now? In the `/etc/postgresql/12/main/postgresql.conf` add `ssl=on` and chan
 
 If you capture the traffic with Wireshark, you will see that both confidentiality and integrity are preserved! As long as the authorization follows the least privilege principle, you have a secure database :)
 
-## Lesson 7.5 - Cyberchallenge
+## Lesson 7 - Cyberchallenge
 
 ```
 -- BEGIN OF WARNING --
