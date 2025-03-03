@@ -8,7 +8,7 @@ This is a [git repository](https://en.wikipedia.org/wiki/Git) which is hosted on
 * [Lesson 4 - With Great Power Comes Great Responsibility](#lesson-4---with-great-power-comes-great-responsibility)
 * [Lesson 5 - Summary, Review, & Experiments](#lesson-5---summary-and-reviews-and-experiments)
 * [Lesson 6 - Cryptography](#lesson-6---cryptography)
-* [Lesson 7.5 - Cyberchallenge](#lesson-7.5---Cyberchallenge)
+* [Lesson 7.5 - Cyberchallenge](#lesson-7.5---cyberchallenge)
 * [Lesson 8 - Bittersweet Farewell](#lesson-7---bittersweet-farewell)
 
 
