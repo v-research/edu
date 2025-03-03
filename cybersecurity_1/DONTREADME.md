@@ -1,8 +1,10 @@
 # -- BEGIN OF WARNING --
 By playing this game you accept the following rules: 
+
 00) You will play alone.
 01) You will not share publicly nor to any other person that you are playing this game. 
 10) You will not share publicly nor to any other person anything about this game. 
+
 # -- END OF WARNING --
 
 If you do not agree, please don't play.
